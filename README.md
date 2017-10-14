@@ -1,6 +1,6 @@
 # Object-Detector
 <h3>Circle Object Detection and Tracking Using OpenCV and Qt for win</h3>
-<h3>Requires:</h3> Qt 5.x for mingw or MSVC 13, Opencv v3.0 
+<h3>Requires:</h3> Qt 5.x C++ for mingw or MSVC 13, Opencv v3.0 
 <h3>set envirnoment Variables:</h3>
   <h4>OPENCV_DIR = //Opencv Directory
   OPENCV_MINGW_PATH = //Mingw Build Directory
