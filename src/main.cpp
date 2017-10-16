@@ -1,4 +1,4 @@
-#include "view\mainwindow.h"
+#include "view/mainwindow.h"
 #include <QApplication>
 #include <iostream>
 using namespace std;
