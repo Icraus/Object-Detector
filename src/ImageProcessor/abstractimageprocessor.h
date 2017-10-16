@@ -9,7 +9,7 @@ namespace ImageProcessor {
 class ImageProcessor::AbstractImageProcessor : public QObject
 {
     Q_OBJECT
-
+//TODO add Decorator Pattern If Necessary
 public:
     cv::Mat getImg() const;
 
