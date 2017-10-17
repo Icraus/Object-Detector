@@ -1,39 +1,17 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2017-10-12T19:05:28
+# Project created by QtCreator 2017-10-17T01:03:07
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += gui
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
-#TODO add Android and raspberry pi
+TARGET = Utils
+TEMPLATE = lib
+CONFIG += staticlib
 
-TARGET = CircleDetection
-TEMPLATE = app
-
-# The following define makes your compiler emit warnings if you use
-# any feature of Qt which as been marked as deprecated (the exact warnings
-# depend on your compiler). Please consult the documentation of the
-# deprecated API in order to know how to port your code away from it.
-DEFINES += QT_DEPRECATED_WARNINGS
-
+QT  += core
 INCLUDEPATH += $$(OPENCV_INCLUDE)
-# You can also make your code fail to compile if you use deprecated APIs.
-# In order to do so, uncomment the following line.
-# You can also select to disable deprecated APIs only up to a certain version of Qt.
-#DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
-
-
-SOURCES += \
-        main.cpp \
-    ImageProcessor/abstractimageprocessor.cpp \
-    ImageProcessor/detectcircle.cpp \
-    ImageProcessor/detectcolor.cpp \
-    ImageProcessor/dilate.cpp \
-    ImageProcessor/objectdetection.cpp \
-    Utilities/utils.cpp \
-    View/mainwindow.cpp
 win32{
     win32-g++{
         LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_core300.dll
@@ -116,18 +94,25 @@ linux{
 
     }
 }
+
+# The following define makes your compiler emit warnings if you use
+# any feature of Qt which as been marked as deprecated (the exact warnings
+# depend on your compiler). Please consult the documentation of the
+# deprecated API in order to know how to port your code away from it.
+DEFINES += QT_DEPRECATED_WARNINGS
+
+# You can also make your code fail to compile if you use deprecated APIs.
+# In order to do so, uncomment the following line.
+# You can also select to disable deprecated APIs only up to a certain version of Qt.
+#DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
+
+SOURCES += \
+    Utilities/utils.cpp
+
 HEADERS += \
-    headers.h \
-    ImageProcessor/abstractimageprocessor.h \
-    ImageProcessor/detectcircle.h \
-    ImageProcessor/detectcolor.h \
-    ImageProcessor/dilate.h \
-    ImageProcessor/objectdetection.h \
     Utilities/utils.h \
-    View/mainwindow.h \
     headers.h
-
-
-
-FORMS += \
-        View/mainwindow.ui
+unix {
+    target.path = /usr/lib
+    INSTALLS += target
+}
