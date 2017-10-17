@@ -3,13 +3,15 @@
 
 #include <QObject>
 #include <headers.h>
+
 namespace ImageProcessor {
-    class AbstractImageProcessor;
+    class IMAGEPROCESSORSSHARED_EXPORT AbstractImageProcessor;
 }
 class ImageProcessor::AbstractImageProcessor : public QObject
 {
     Q_OBJECT
 //TODO add Decorator Pattern If Necessary
+    //TODO ADD DOCS
 public:
     cv::Mat getImg() const;
 

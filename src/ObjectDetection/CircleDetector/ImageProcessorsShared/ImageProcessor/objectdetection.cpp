@@ -1,5 +1,4 @@
 #include "objectdetection.h"
-
 #include <QImage>
 using namespace cv;
 using namespace ImageProcessor;
