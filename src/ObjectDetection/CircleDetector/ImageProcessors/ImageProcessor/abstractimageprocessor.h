@@ -5,7 +5,12 @@
 #include <headers.h>
 
 namespace ImageProcessor {
+#ifdef IMAGEPROCESSORS_LIBRARY
+    class IMAGEPROCESSORSSHARED_EXPORT AbstractImageProcessor;
+#else
     class AbstractImageProcessor;
+#endif
+
 }
 class ImageProcessor::AbstractImageProcessor : public QObject
 {

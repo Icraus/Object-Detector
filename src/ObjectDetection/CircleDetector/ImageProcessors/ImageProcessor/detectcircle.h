@@ -6,7 +6,11 @@
 #include <ImageProcessor/abstractimageprocessor.h>
 using namespace ImageProcessor;
 namespace ImageProcessor {
+#ifdef IMAGEPROCESSORS_LIBRARY
+    class IMAGEPROCESSORSSHARED_EXPORT DetectCircle;
+#else
     class DetectCircle;
+#endif
 }
 class ImageProcessor::DetectCircle : public AbstractImageProcessor
 {

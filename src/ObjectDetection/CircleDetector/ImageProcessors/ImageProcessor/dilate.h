@@ -6,7 +6,11 @@
 #include <QObject>
 #include <headers.h>
 namespace ImageProcessor {
+#ifdef IMAGEPROCESSORS_LIBRARY
+    class IMAGEPROCESSORSSHARED_EXPORT Dilate;
+#else
     class Dilate;
+#endif
 }
 using namespace ImageProcessor;
 

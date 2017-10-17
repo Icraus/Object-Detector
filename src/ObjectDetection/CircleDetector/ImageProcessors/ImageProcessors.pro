@@ -10,9 +10,9 @@ TARGET = ImageProcessorsStatic
 TEMPLATE = lib
 CONFIG += staticlib
 
+
 DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
-        imageprocessorsstatic.cpp \
     ImageProcessor/abstractimageprocessor.cpp \
     ImageProcessor/detectcircle.cpp \
     ImageProcessor/detectcolor.cpp \
@@ -20,13 +20,17 @@ SOURCES += \
     ImageProcessor/objectdetection.cpp
 
 HEADERS += \
-        imageprocessorsstatic.h \
     ImageProcessor/abstractimageprocessor.h \
     ImageProcessor/detectcircle.h \
     ImageProcessor/detectcolor.h \
     ImageProcessor/dilate.h \
     ImageProcessor/objectdetection.h \
     headers.h
+CONFIG(!staticlib){
+    HEADERS += imageprocessors_global.h
+    DEFINES += IMAGEPROCESSORS_LIBRARY
+}
+
 unix {
     target.path = /usr/lib
     INSTALLS += target

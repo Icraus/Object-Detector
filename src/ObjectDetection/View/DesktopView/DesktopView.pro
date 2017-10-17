@@ -26,7 +26,7 @@ FORMS += \
 include(../../OPENCVLinking.pro)
 
 #message($(IMG_PROC))
-LIBS += -L$(IMG_PROC)/CircleDetector/ImageProcessorsStatic/debug \
+LIBS += -L$(IMG_PROC)/CircleDetector/ImageProcessors/debug \
     -lImageProcessorsStatic
 INCLUDEPATH += $(IMG_PROC)/headers \
 INCLUDEPATH += $(IMG_PROC)/headers/imgproc \
