@@ -2,7 +2,7 @@
 #define DETECTCOLOR_H
 
 #include "ImageProcessor/abstractimageprocessor.h"
-
+//TODO Use PIMPL C++ Idiom
 #include <QObject>
 #include <headers.h>
 namespace ImageProcessor {

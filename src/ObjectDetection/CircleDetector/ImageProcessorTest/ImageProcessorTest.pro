@@ -22,3 +22,8 @@ SOURCES += \
 
 DEFINES += SRCDIR=\\\"$$PWD/\\\"
 include(../../OPENCVLinking.pro)
+
+contains(ANDROID_TARGET_ARCH,armeabi-v7a) {
+    ANDROID_EXTRA_LIBS = \
+        $$PWD/../../View/DesktopView/android/libopencv_java3.so
+}

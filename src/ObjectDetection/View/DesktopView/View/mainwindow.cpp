@@ -3,6 +3,7 @@
 #include <QColorDialog>
 #include <ImageProcessor/objectdetection.h>
 #include <Utilities/utils.h>
+#include <math.h>
 using namespace Utilities;
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -29,8 +30,8 @@ void MainWindow::getFrame(){
             ui->xCenterLabel->setText(toString(i[0]));
             ui->yLabelCenter->setText(toString(i[1]));
             ui->radiusLabel->setText(toString(i[2]));
-            cv::Point center(std::round(i[0]), std::round(i[1]));
-            int radius = std::round(i[2]);
+            cv::Point center(round(i[0]), round(i[1]));
+            int radius = round(i[2]);
             cv::circle(t, center, radius, circleColor, 3, 8, 0 );
 
         }
