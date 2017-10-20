@@ -7,3 +7,8 @@
 		<h4>Update Project Directories and Fixed some Bugs Merged ImageProcessor static and dynamic libs </h3>	
 	<h2>v2.2</h2>
 		<h4>Add Android Support</h4>
+	<h2>v3.0</h2>
+		<h4>added CodeRefactor Branch For which has major improvements including: </h4>
+			<h4>	Major Code Refactoring (Used PIMPL Idiom to avoid recompilation for shared Libs in Image Processor and provided A Unified Interface)</h4>
+			<h4>	added Controller For Window to Be be Interface For Further Upgrades</h4>
+		<h4> added Serialization Branch for Using Bluetooth and Serial port //TODO</h4>		

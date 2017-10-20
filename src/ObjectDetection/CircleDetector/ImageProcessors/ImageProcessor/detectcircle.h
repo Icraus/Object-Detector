@@ -12,14 +12,17 @@ namespace ImageProcessor {
     class DetectCircle;
 #endif
 }
+Q_DECLARE_METATYPE(std::vector<cv::Vec3f>)
 class ImageProcessor::DetectCircle : public AbstractImageProcessor
 {
     Q_OBJECT
-    int param1 = 70, param2 = 30, minDist = 75;
+private:
+    class _DetectCircleImpl;
+    std::unique_ptr<_DetectCircleImpl> _pimpl;
 public:
     explicit DetectCircle(QObject *parent = nullptr);
     std::vector<cv::Vec3f> detectCircle()const;
-
+    virtual ~DetectCircle();
     int getMinDist() const;
 
     int getParam2() const;
@@ -27,12 +30,18 @@ public:
     int getParam1() const;
 
 signals:
+    void circlesDetected(const std::vector<cv::Vec3f>&);
 public slots:
     void setMinDist(int value);
     void setParam2(int value);
     void setParam1(int value);
 
 
+
+    // ImageProcessor::AbstractImageProcessor interface
+public:
+    QVariant processImage() override;
 };
+
 
 #endif // DETECTCIRCLE_H

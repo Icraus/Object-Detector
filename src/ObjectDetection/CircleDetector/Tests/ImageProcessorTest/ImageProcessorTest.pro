@@ -4,24 +4,25 @@
 #
 #-------------------------------------------------
 
-QT       += testlib
+QT       += testlib core
 
 QT       -= gui
 
 TARGET = tst_imageprocessortest
-CONFIG   += console
+CONFIG   += console c++14
 CONFIG   -= app_bundle
 
 TEMPLATE = app
 
-DEFINES += QT_DEPRECATED_WARNINGS
+DEFINES += QT_DEPRECATED_WARNINGS IMGPROCTESTS
 
 
 SOURCES += \
         tst_imageprocessortest.cpp 
 
 DEFINES += SRCDIR=\\\"$$PWD/\\\"
-include(../../OPENCVLinking.pro)
+include(../Tests.pri)
+
 
 contains(ANDROID_TARGET_ARCH,armeabi-v7a) {
     ANDROID_EXTRA_LIBS = \
