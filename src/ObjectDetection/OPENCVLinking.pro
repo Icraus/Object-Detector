@@ -89,9 +89,9 @@ contains(ANDROID_TARGET_ARCH,armeabi-v7a) {
 }
 
 android{
-    INCLUDEPATH += F:\Programs\JAVA\OpenCV-3.0.0-android-sdk-1_2\OpenCV-android-sdk\sdk\native\jni\include
-    OPENCVLIBPATH=F:\Programs\JAVA\OpenCV-3.0.0-android-sdk-1_2\OpenCV-android-sdk\sdk\native\libs\armeabi-v7a
-    OCV3RDPATH=F:\Programs\JAVA\OpenCV-3.0.0-android-sdk-1_2\OpenCV-android-sdk\sdk\native\3rdparty\libs\armeabi-v7a
+    INCLUDEPATH += $$(OPENCV_ANDROID)\sdk\native\jni\include
+    OPENCVLIBPATH=$$(OPENCV_ANDROID)\sdk\native\libs\armeabi-v7a
+    OCV3RDPATH=$$(OPENCV_ANDROID)\sdk\native\3rdparty\libs\armeabi-v7a
 
 LIBS += \
         $$OPENCVLIBPATH\libopencv_core.a \

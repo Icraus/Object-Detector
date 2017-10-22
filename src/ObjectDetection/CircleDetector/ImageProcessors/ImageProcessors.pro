@@ -8,7 +8,7 @@ QT       -= gui
 
 TARGET = ImageProcessorsStatic
 TEMPLATE = lib
-CONFIG += staticlib c++14
+CONFIG += c++14
 
 
 DEFINES += QT_DEPRECATED_WARNINGS
@@ -30,9 +30,6 @@ CONFIG(!staticlib){
     HEADERS += imageprocessors_global.h
     DEFINES += IMAGEPROCESSORS_LIBRARY
 }
-   targets.path += F:\Important\libs\CircleDetector\ImageProcessors\debug
-  INSTALLS += targets
-
 unix {
     target.path = /usr/lib
     INSTALLS += target
