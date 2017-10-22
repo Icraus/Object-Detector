@@ -3,6 +3,8 @@
 #include <QColorDialog>
 #include <ImageProcessor/objectdetection.h>
 #include <Utilities/utils.h>
+
+#include <math.h>
 using namespace Utilities;
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -10,31 +12,19 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     cap.open(0);
+    connect(&detector, SIGNAL(xyrChanged(int,int,int)), this, SLOT(setXYR(int, int, int)));
     timer.setInterval(33);
     connect(&timer, SIGNAL(timeout()), this,  SLOT(getFrame()));
     connect(ui->param1Slider, SIGNAL(sliderMoved(int)), &detector,SLOT(setParam1(int)));
     connect(ui->param2Slider, SIGNAL(sliderMoved(int)), &detector,SLOT(setParam2(int)));
     connect(ui->minDistSlider, SIGNAL(sliderMoved(int)), &detector,SLOT(setMinDist(int)));
     connect(ui->dilSlider, SIGNAL(sliderMoved(int)), &detector,SLOT(setDilationSize(int)));
-
-
     timer.start();
 }
 void MainWindow::getFrame(){
     if(cap.isOpened()){
         cap >> t;
-        detector.setImg(t);
-        std::vector<cv::Vec3f> vec = detector.getCircles();
-        for(const cv::Vec3f& i : vec){
-            ui->xCenterLabel->setText(toString(i[0]));
-            ui->yLabelCenter->setText(toString(i[1]));
-            ui->radiusLabel->setText(toString(i[2]));
-            cv::Point center(std::round(i[0]), std::round(i[1]));
-            int radius = std::round(i[2]);
-            cv::circle(t, center, radius, circleColor, 3, 8, 0 );
-
-        }
-        ui->label->setPixmap(QPixmap::fromImage(Utils::toImage(t)));
+        ui->label->setPixmap(QPixmap::fromImage(detector.detectObject(t)));
         ui->label_2->setPixmap(QPixmap::fromImage(Utils::toImage(detector.colored)));
         ui->label_3->setPixmap(QPixmap::fromImage(Utils::toImage(detector.dialted)));
 
@@ -68,5 +58,13 @@ void MainWindow::on_pushButton_clicked()
     QColor color = QColorDialog::getColor(Qt::white, this);
     detector.setMinColor(std::get<0>(Utils::toRange(color)));
     detector.setMaxColor(std::get<1>(Utils::toRange(color)));
+
+}
+
+void MainWindow::setXYR(int x, int y, int r)
+{
+    ui->xCenterLabel->setText(toString(x));
+    ui->yLabelCenter->setText(toString(y));
+    ui->radiusLabel->setText(toString(r));
 
 }

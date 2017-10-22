@@ -17,14 +17,14 @@ using namespace ImageProcessor;
 class ImageProcessor::Dilate : public AbstractImageProcessor
 {
     Q_OBJECT
-    cv::MorphShapes shap = cv::MORPH_RECT;
-    int dilationSize = 4;
-
+private:
+    class _DilateImpl;
+    std::unique_ptr<_DilateImpl> _pimpl;
 public:
     explicit Dilate(QObject *parent = nullptr);
-    cv::Mat dialteImg()const;
+    void dialteImg();
     int getDilationSize() const;
-
+    virtual ~Dilate();
     cv::MorphShapes getShap() const;
 
 signals:
@@ -32,6 +32,10 @@ signals:
 public slots:
     void setDilationSize(int value);
     void setShap(const cv::MorphShapes &value);
+
+    // ImageProcessor::AbstractImageProcessor interface
+public:
+    virtual QVariant processImage() override;
 };
 
 #endif // DILATE_H

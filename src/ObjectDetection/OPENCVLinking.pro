@@ -1,6 +1,6 @@
 QT  *= core
-INCLUDEPATH += $$(OPENCV_INCLUDE)
 win32{
+    INCLUDEPATH += $$(OPENCV_INCLUDE)
     win32-g++{
         LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_core300.dll
         LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_highgui300.dll
@@ -59,7 +59,7 @@ win32{
     }
 
 }
-linux{
+linux:!android{
     linux-g++{
     LIBS += -L$$(OPENCV_LIB) \
         -lopencv_calib3d \
@@ -81,4 +81,44 @@ linux{
         -lopencv_stitching
 
     }
+}
+
+contains(ANDROID_TARGET_ARCH,armeabi-v7a) {
+    ANDROID_EXTRA_LIBS = \
+        $$PWD/android/libopencv_java3.so
+}
+
+android{
+    INCLUDEPATH += F:\Programs\JAVA\OpenCV-3.0.0-android-sdk-1_2\OpenCV-android-sdk\sdk\native\jni\include
+    OPENCVLIBPATH=F:\Programs\JAVA\OpenCV-3.0.0-android-sdk-1_2\OpenCV-android-sdk\sdk\native\libs\armeabi-v7a
+    OCV3RDPATH=F:\Programs\JAVA\OpenCV-3.0.0-android-sdk-1_2\OpenCV-android-sdk\sdk\native\3rdparty\libs\armeabi-v7a
+
+LIBS += \
+        $$OPENCVLIBPATH\libopencv_core.a \
+        $$OPENCVLIBPATH\libopencv_flann.a \
+        $$OPENCVLIBPATH\libopencv_imgproc.a \
+        $$OPENCVLIBPATH\libopencv_photo.a \
+        $$OPENCVLIBPATH\libopencv_video.a \
+        $$OPENCVLIBPATH\libopencv_imgcodecs.a \
+        $$OPENCVLIBPATH\libopencv_shape.a \
+        $$OPENCVLIBPATH\libopencv_videoio.a \
+        $$OPENCVLIBPATH\libopencv_highgui.a \
+        $$OPENCVLIBPATH\libopencv_objdetect.a \
+        $$OPENCVLIBPATH\libopencv_superres.a \
+        $$OPENCVLIBPATH\libopencv_java3.so \
+        $$OPENCVLIBPATH\libopencv_ts.a \
+        $$OPENCVLIBPATH\libopencv_features2d.a \
+        $$OPENCVLIBPATH\libopencv_calib3d.a \
+        $$OPENCVLIBPATH\libopencv_stitching.a \
+        $$OPENCVLIBPATH\libopencv_hal.a \
+        $$OPENCVLIBPATH\libopencv_videostab.a \
+        $$OPENCVLIBPATH\libopencv_ml.a \
+        $$OCV3RDPATH\liblibtiff.a \
+        $$OCV3RDPATH\liblibjpeg.a \
+        $$OCV3RDPATH\liblibwebp.a \
+        $$OCV3RDPATH\liblibjasper.a \
+        $$OCV3RDPATH\liblibpng.a \
+        $$OCV3RDPATH\libIlmImf.a \
+        $$OCV3RDPATH\libtbb.a
+
 }

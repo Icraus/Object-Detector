@@ -1,146 +1,140 @@
 #include "objectdetection.h"
 using namespace cv;
 using namespace ImageProcessor;
-ObjectDetection::ObjectDetection(QObject *parent) : AbstractImageProcessor(parent)
+class ObjectDetection::_ObjectDetectionImpl
 {
-    setCirDetector(new DetectCircle);
-    setColDetector(new DetectColor);
-    setDiler(new Dilate);
-    connect(this , SIGNAL(dilationSizeChanged(int)), getDiler(), SLOT(setDilationSize(int)));
-    connect(this , SIGNAL(maxColorChanged(cv::Scalar)), getColDetector(), SLOT(setMaxColor(cv::Scalar)));
-    connect(this , SIGNAL(minColorChanged(cv::Scalar)), getColDetector(), SLOT(setMinColor(cv::Scalar)));
-    connect(this , SIGNAL(param1Changed(int)), getCirDetector(), SLOT(setParam1(int)));
-    connect(this , SIGNAL(param2Changed(int)), getCirDetector(), SLOT(setParam2(int)));
-    connect(this , SIGNAL(minDistChanged(int)), getCirDetector(), SLOT(setMinDist(int)));
+private:
+    DetectCircle *_cirDetector;
+    DetectColor *_colDetector;
+    Dilate *_diler;
+    ObjectDetection *const _ptr;
+public:
+    _ObjectDetectionImpl(ObjectDetection *const ptr);
+    Dilate *getDiler() const;
+    DetectColor *getColDetector() const;
+    DetectCircle *getCirDetector() const;
+    std::vector<cv::Vec3f> getCircles();
+    void setCirDetector(DetectCircle *cirDetector);
+    void setDiler(Dilate *diler);
+    void setColDetector(DetectColor *colDetector);
+
+
+    QVariant processImage();
+};
+
+ObjectDetection::ObjectDetection(QObject *parent) : AbstractImageProcessor(parent),
+    _pimpl {std::make_unique<_ObjectDetectionImpl>(this)}
+{
+
 
 
 }
-
-
 
 Dilate *ObjectDetection::getDiler() const
 {
-    return _diler;
-}
+    return _pimpl->getDiler();
 
-void ObjectDetection::setDiler(Dilate *diler)
-{
-    _diler = diler;
-    _diler->setParent(this);
-    connect(this, &ObjectDetection::imageChanged, getDiler(), &DetectCircle::setImg);
 }
 
 DetectColor *ObjectDetection::getColDetector() const
 {
-    return _colDetector;
-}
-
-void ObjectDetection::setColDetector(DetectColor *colDetector)
-{
-    _colDetector = colDetector;
-    _colDetector->setParent(this);
-    connect(this, &ObjectDetection::imageChanged, getColDetector(), &DetectCircle::setImg);
-
-}
-
-int ObjectDetection::getMinDist() const
-{
-    return minDist;
-}
-
-void ObjectDetection::setMinDist(int value)
-{
-    minDist = value;
-    emit minDistChanged(value);
-}
-
-int ObjectDetection::getParam2() const
-{
-    return param2;
-}
-
-void ObjectDetection::setParam2(int value)
-{
-    param2 = value;
-    emit param2Changed(value);
-
-}
-
-int ObjectDetection::getParam1() const
-{
-    return param1;
-}
-
-void ObjectDetection::setParam1(int value)
-{
-    param1 = value;
-    emit param1Changed(value);
-
-}
-
-
-
-cv::Scalar ObjectDetection::getMaxColor() const
-{
-    return maxColor;
-}
-
-void ObjectDetection::setMaxColor(const cv::Scalar &value)
-{
-    maxColor = value;
-    emit maxColorChanged(value);
-
-}
-
-cv::Scalar ObjectDetection::getMinColor() const
-{
-    return minColor;
-}
-
-void ObjectDetection::setMinColor(const cv::Scalar &value)
-{
-    minColor = value;
-    emit minColorChanged(value);
-}
-
-void ObjectDetection::setImg(const Mat &img)
-{
-    AbstractImageProcessor::setImg(img);
-    emit imageChanged(img);
+    return _pimpl->getColDetector();
 }
 
 DetectCircle *ObjectDetection::getCirDetector() const
 {
-    return _cirDetector;
-}
-
-void ObjectDetection::setCirDetector(DetectCircle *cirDetector)
-{
-    _cirDetector = cirDetector;
-    _cirDetector->setParent(this);
-    connect(this, &ObjectDetection::imageChanged, getCirDetector(), &DetectCircle::setImg);
-
+    return _pimpl->getCirDetector();
 }
 
 std::vector<Vec3f> ObjectDetection::getCircles()
 {
-
-    colored = getColDetector()->detectColor();
-    setImg(colored);
-    dialted = getDiler()->dialteImg();
-    emit AbstractImageProcessor::imageChanged(dialted);
-    return getCirDetector()->detectCircle();
+    return _pimpl->getCircles();
 }
 
-
-int ObjectDetection::getDilationSize() const
+void ObjectDetection::setCirDetector(DetectCircle *cirDetector)
 {
-    return dilationSize;
+    _pimpl->setCirDetector(cirDetector);
 }
 
-void ObjectDetection::setDilationSize(int value)
+void ObjectDetection::setDiler(Dilate *diler)
 {
-    dilationSize = value;
-    emit dilationSizeChanged(value);
+    _pimpl->setDiler(diler);
 }
+
+void ObjectDetection::setColDetector(DetectColor *colDetector)
+{
+    _pimpl->setColDetector(colDetector);
+}
+
+ObjectDetection::_ObjectDetectionImpl::_ObjectDetectionImpl(ObjectDetection * const ptr):
+    _ptr{ptr}
+{
+    setCirDetector(new DetectCircle);
+    setColDetector(new DetectColor);
+    setDiler(new Dilate);
+}
+
+Dilate *ObjectDetection::_ObjectDetectionImpl::_ObjectDetectionImpl::getDiler() const
+{
+    return _diler;
+}
+
+void ObjectDetection::_ObjectDetectionImpl::_ObjectDetectionImpl::setDiler(Dilate *diler)
+{
+    _diler = diler;
+    _diler->setParent(_ptr);
+}
+
+DetectColor *ObjectDetection::_ObjectDetectionImpl::getColDetector() const
+{
+    return _colDetector;
+}
+
+void ObjectDetection::_ObjectDetectionImpl::setColDetector(DetectColor *colDetector)
+{
+    _colDetector = colDetector;
+    _colDetector->setParent(_ptr);
+
+}
+
+
+ObjectDetection::~ObjectDetection()
+{
+
+}
+
+
+QVariant ObjectDetection::processImage()
+{
+    return _pimpl->processImage();
+}
+
+QVariant ObjectDetection::_ObjectDetectionImpl::processImage()
+{
+    return QVariant::fromValue(getCircles());
+}
+
+DetectCircle *ObjectDetection::_ObjectDetectionImpl::getCirDetector() const
+{
+    return _cirDetector;
+}
+
+void ObjectDetection::_ObjectDetectionImpl::setCirDetector(DetectCircle *cirDetector)
+{
+    _cirDetector = cirDetector;
+    _cirDetector->setParent(_ptr);
+
+}
+
+std::vector<Vec3f> ObjectDetection::_ObjectDetectionImpl::getCircles()
+{
+    //TODO add image Cache
+    getColDetector()->setImg(_ptr->getImg());
+    getColDetector()->processImage();
+    getDiler()->setImg(getColDetector()->getDst());
+    getDiler()->processImage();
+    getCirDetector()->setImg(getDiler()->getDst());
+    return getCirDetector()->processImage().value<std::vector<cv::Vec3f>>();
+}
+
 

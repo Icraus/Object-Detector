@@ -1,6 +1,6 @@
 TEMPLATE = subdirs
 
 SUBDIRS += \
-    ImageProcessorTest \
-    ImageProcessors
+    ImageProcessors \
+    Tests
 # Deprecated    ImageProcessorsShared \

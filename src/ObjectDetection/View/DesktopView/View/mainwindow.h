@@ -1,6 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
+#include "colordetectorcontroller.h"
 #include <QMainWindow>
 #include <QTimer>
 #include <vector>
@@ -33,9 +33,9 @@ private slots:
     void on_pushButton_2_clicked();
 
     void on_pushButton_clicked();
-
+    void setXYR(int x, int y, int r);
 private:
-    ImageProcessor::ObjectDetection detector;
+    ColorDetectorController detector;
     cv::VideoCapture cap;
     cv::Mat t;
     QTimer timer;
