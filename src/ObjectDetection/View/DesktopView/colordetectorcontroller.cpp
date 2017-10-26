@@ -36,6 +36,26 @@ void ColorDetectorController::setPro(ImageProcessor::AbstractImageProcessor *val
     pro = value;
 }
 
+int ColorDetectorController::getThickness() const
+{
+    return thickness;
+}
+
+void ColorDetectorController::setThickness(int value)
+{
+    thickness = std::max(std::max(1, value), std::min(value, 20));
+}
+
+cv::Scalar ColorDetectorController::getCircleColor() const
+{
+    return circleColor;
+}
+
+void ColorDetectorController::setCircleColor(const cv::Scalar &value)
+{
+    circleColor = value;
+}
+
 
 int ColorDetectorController::getParam2() const
 {
@@ -86,7 +106,7 @@ QImage ColorDetectorController::detectObject(const cv::Mat &t)
         emit xyrChanged(i[0], i[1], i[2]);
         cv::Point center(round(i[0]), round(i[1]));
         int radius = round(i[2]);
-        cv::circle(t, center, radius, circleColor, 3, 8, 0 );
+        cv::circle(t, center, radius, circleColor, thickness, 8, 0 );
 
     }
     return Utilities::Utils::toImage(t);

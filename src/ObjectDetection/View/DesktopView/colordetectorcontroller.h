@@ -20,10 +20,16 @@ public:
     int getParam1() const;
     int getParam2() const;
     int getMinDist() const;
+    cv::Scalar getCircleColor() const;
+    void setCircleColor(const cv::Scalar &value);
+
+    int getThickness() const;
+
 public slots:
     void setParam1(int value);
     void setParam2(int value);
     void setMinDist(int value);
+    void setThickness(int value);
 
     ImageProcessor::AbstractImageProcessor *getPro() const;
     void setPro(ImageProcessor::AbstractImageProcessor *value);
@@ -38,6 +44,7 @@ signals:
     void xyrChanged(int, int, int);
 
 private:
+    int thickness = 2;
     cv::Scalar circleColor = cv::Scalar(0, 255, 0);
     cv::Scalar minColor;
     cv::Scalar maxColor;

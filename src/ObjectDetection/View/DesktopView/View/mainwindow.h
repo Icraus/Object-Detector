@@ -5,6 +5,8 @@
 #include <QTimer>
 #include <vector>
 #include <ImageProcessor/objectdetection.h>
+#include <QSerialPort>
+#include <QStringListModel>
 #include <tuple>
 #include "opencv2/core.hpp"
 #include "opencv2/imgproc.hpp"
@@ -26,7 +28,6 @@ public:
 public slots:
     void getFrame();
 
-
 private slots:
     void on_pushButton_3_clicked();
 
@@ -34,11 +35,18 @@ private slots:
 
     void on_pushButton_clicked();
     void setXYR(int x, int y, int r);
+    void on_pushButton_4_clicked();
+
+    void on_circleThicknessSlider_valueChanged(int value);
+
 private:
     ColorDetectorController detector;
     cv::VideoCapture cap;
     cv::Mat t;
+    QStringListModel model;
+    QStringList ls;
     QTimer timer;
+    QSerialPort _port;
     Ui::MainWindow *ui;
     cv::Scalar circleColor = cv::Scalar(0,0,255);
 
