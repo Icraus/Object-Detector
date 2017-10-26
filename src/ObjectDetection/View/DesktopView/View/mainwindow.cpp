@@ -3,7 +3,9 @@
 #include <QColorDialog>
 #include <ImageProcessor/objectdetection.h>
 #include <Utilities/utils.h>
-
+#include <QListView>
+#include <QSerialPortInfo>
+#include <QStringListModel>
 #include <math.h>
 using namespace Utilities;
 MainWindow::MainWindow(QWidget *parent) :
@@ -19,7 +21,16 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->param2Slider, SIGNAL(sliderMoved(int)), &detector,SLOT(setParam2(int)));
     connect(ui->minDistSlider, SIGNAL(sliderMoved(int)), &detector,SLOT(setMinDist(int)));
     connect(ui->dilSlider, SIGNAL(sliderMoved(int)), &detector,SLOT(setDilationSize(int)));
+
+    QList<QSerialPortInfo> ports = QSerialPortInfo::availablePorts();
+    for(auto i : ports)
+    {
+        ls << i.systemLocation();
+    }
+    model.setStringList(ls);
+    ui->listView->setModel(&model);
     timer.start();
+
 }
 void MainWindow::getFrame(){
     if(cap.isOpened()){
@@ -44,27 +55,41 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_3_clicked()
 {
     QColor color = QColorDialog::getColor(Qt::white, this);
-    circleColor = Utils::toScalar(color);
+    detector.setCircleColor(Utils::toScalar(color));
 }
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    QColor color = QColorDialog::getColor(Qt::white, this);
-    detector.setMaxColor(Utils::toScalar(color));
+    cv::Scalar maxCol(ui->hMaxSlider->value(), ui->sMaxSlider->value(), ui->vMaxSlider->value());
+    detector.setMaxColor(maxCol);
 }
 
 void MainWindow::on_pushButton_clicked()
 {
-    QColor color = QColorDialog::getColor(Qt::white, this);
-    detector.setMinColor(std::get<0>(Utils::toRange(color)));
-    detector.setMaxColor(std::get<1>(Utils::toRange(color)));
-
+     cv::Scalar minCol(ui->hMinSlider->value(), ui->sMinSlider->value(), ui->vMinSlider->value());
+    detector.setMinColor(minCol);
 }
 
 void MainWindow::setXYR(int x, int y, int r)
 {
-    ui->xCenterLabel->setText(toString(x));
-    ui->yLabelCenter->setText(toString(y));
-    ui->radiusLabel->setText(toString(r));
+    QString s = QString("(%1, %2, %3)").arg(x).arg(y).arg(r);
+    ui->xCenterLabel->setText(QString("x: ") + toString(x));
+    ui->yLabelCenter->setText(QString("y: ") + toString(y));
+    ui->radiusLabel->setText(QString("R: ") + toString(r));
+    if(!_port.isOpen() || !_port.isWritable())
+        return;
+    _port.write(s.toLocal8Bit().data());
+}
 
+void MainWindow::on_pushButton_4_clicked()
+{
+    QString le = ui->listView->currentIndex().data().toString();
+    _port.setPortName(le);
+    _port.open(QIODevice::WriteOnly);
+}
+
+
+void MainWindow::on_circleThicknessSlider_valueChanged(int value)
+{
+    detector.setThickness(value);
 }

@@ -11,3 +11,5 @@
 		<h4>added CodeRefactor Branch For which has major improvements including: </h4>
 			<h4>	Major Code Refactoring (Used PIMPL Idiom to avoid recompilation for shared Libs in Image Processor and provided A Unified Interface)</h4>
 			<h4>	added Controller For Window to Be be Interface For Further Upgrades</h4>
+	<h2>v3.1</h2>
+		<h4>added Serial Interfacing To send x, y, r using Serial Port (can use serial bluetooth or serial WIFI)//TODO change Impl to support Device Manager to support bluetooth on android </h4>

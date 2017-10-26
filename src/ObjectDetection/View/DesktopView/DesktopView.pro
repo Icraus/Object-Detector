@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       *= gui
+QT       *= gui serialport
 CONFIG += c++11
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -23,7 +23,7 @@ HEADERS += \
     colordetectorcontroller.h
 
 FORMS += \
-        View/MainWindow.ui
+        View/mainwindow.ui
 
 include(../../OPENCVLinking.pro)
 
@@ -47,9 +47,9 @@ LIBS += -L$(IMG_PROC)/CircleDetector/ImageProcessors/debug \
 
 
 LIBS += -L$(IMG_PROC)/Utilities/Utils/debug \
- -lUtils
+    -lUtils
 }
 
 contains(ANDROID_TARGET_ARCH,armeabi-v7a) {
-    ANDROID_EXTRA_LIBS = F:/Important/Object-Detector/src/ObjectDetection/View/DesktopView/android/libopencv_java3.so
+    ANDROID_EXTRA_LIBS = $$PWD/android/libopencv_java3.so
 }

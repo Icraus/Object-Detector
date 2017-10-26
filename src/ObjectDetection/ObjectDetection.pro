@@ -3,4 +3,6 @@ TEMPLATE = subdirs
 SUBDIRS += \
     CircleDetector \
     View \
-    Utilities
+    Utilities \
+#    DevicesInterfaces
+
