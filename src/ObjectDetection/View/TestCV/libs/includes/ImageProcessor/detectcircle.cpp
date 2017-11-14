@@ -63,7 +63,7 @@ void DetectCircle::setParam1(int value)
  * \sa ImageProcessor::AbstractImageProcessor::processImage
  * \return std::vector<cv::Vec3f> a vector of cv::Vec3f where each index in it represents a circle which centers are x, y and radius.
  * \code
- * using circleVec = std::vector<cv::Vec3f>;
+ * using std::vector<cv::Vec3f> = circleVec;
  * auto i = circleDetector.processImage().value<circleVec>();
  * for(auto a : i){
  *      qDebug() << "x = " << a[0] << ", y = " << a[1] << ", r = " << a[2]; //should iterate on each element and prints it's x, y, and radius.
@@ -157,7 +157,7 @@ QVariant DetectCircle::_DetectCircleImpl::processImage()
  *  \code
  *  connect(crcleDetector, &DetectCircle::circlesDetected, [=](const std::vector<cv::Vec3f>& vec){
  *      for_each(vec.begin(), vec.end(), [](cv::Vec3f v){ qDebug() << v[0] << ", " << v[1] << ", " << v[2];});
- * });
+ * };
  *  std::vector<cv::Vec3f> vec = crcleDetector.processImage().value<std::vector<cv::Vec3f>>(); //and prints each x, y, r of every circle.
  * \endcode
  * \sa ImageProcessor::DetectCircle::circlesDetected

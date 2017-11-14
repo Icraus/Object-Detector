@@ -23,7 +23,8 @@ private:
 //TODO add Decorator Pattern If Necessary
 public:
     cv::Mat getImg() const;
-    cv::Mat getDst() const;
+    cv::Mat getDst()&;
+    cv::Mat&& getDst()&&;
     virtual QVariant processImage() = 0;
     virtual ~AbstractImageProcessor();
 

@@ -7,8 +7,8 @@ class AbstractImageProcessor::_AbstractImageProcessorImpl{
     cv::Mat _dst;
 public:
     cv::Mat getImg() const;
-    cv::Mat getDst() const;
-
+    cv::Mat getDst() &;
+    cv::Mat&& getDst()&&;
 
 public slots:
     virtual void setImg(const cv::Mat &img);
@@ -29,14 +29,18 @@ AbstractImageProcessor::AbstractImageProcessor(QObject *parent) : QObject(parent
  * \brief returns A cv::Mat Object which represents the output of the image processing operation
  * \return cv::Mat
  */
-cv::Mat AbstractImageProcessor::getDst()const
+cv::Mat AbstractImageProcessor::getDst()&
 {
     std::cout << "From copy" << std::endl;
 
     return _pimpl->getDst();
 }
 
-
+cv::Mat &&AbstractImageProcessor::getDst() &&
+{
+    std::cout << "From move" << std::endl;
+    return std::move(_pimpl->getDst());
+}
 /*!
  * \brief sets The output of the operation
  * \param dst
@@ -80,11 +84,15 @@ cv::Mat AbstractImageProcessor::_AbstractImageProcessorImpl::getImg() const
     return _img.clone();
 }
 
-cv::Mat AbstractImageProcessor::_AbstractImageProcessorImpl::getDst()const
+cv::Mat AbstractImageProcessor::_AbstractImageProcessorImpl::getDst()&
 {
     return _dst.clone();
 }
 
+cv::Mat&& AbstractImageProcessor::_AbstractImageProcessorImpl::getDst() &&
+{
+    return std::move(_dst);
+}
 
 void AbstractImageProcessor::_AbstractImageProcessorImpl::setImg(const cv::Mat &img)
 {
