@@ -1,0 +1,195 @@
+\hypertarget{class_image_processor_1_1_dilate}{}\section{Image\+Processor\+:\+:Dilate Class Reference}
+\label{class_image_processor_1_1_dilate}\index{Image\+Processor\+::\+Dilate@{Image\+Processor\+::\+Dilate}}
+
+
+this Class is used to perform morphological dilate operation on image see \href{https://docs.opencv.org/trunk/d9/d61/tutorial_py_morphological_ops.html}{\tt Morphological Operation}.  
+
+
+
+
+Inheritance diagram for Image\+Processor\+:\+:Dilate\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{dd/d84/class_image_processor_1_1_dilate__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Image\+Processor\+:\+:Dilate\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d6/d27/class_image_processor_1_1_dilate__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries \+\_\+\+Dilate\+Impl}
+\end{DoxyCompactItemize}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_image_processor_1_1_dilate_addfbd49b040fc54c9a8985c764f4a144}{set\+Dilation\+Size} (int value)
+\begin{DoxyCompactList}\small\item\em sets the Dilation Size of the Morphological Operation \end{DoxyCompactList}\item 
+void \hyperlink{class_image_processor_1_1_dilate_a675b54d7fa85c5bce578a625a1f8ec38}{set\+Shap} (const cv\+::\+Morph\+Shapes \&value)
+\begin{DoxyCompactList}\small\item\em sets The Shape of the Dialtion pixels \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_image_processor_1_1_dilate_a38993d0496edc207df78bb98d37e816f}\label{class_image_processor_1_1_dilate_a38993d0496edc207df78bb98d37e816f}} 
+void {\bfseries set\+Dilation\+Size} (int value)
+\item 
+\mbox{\Hypertarget{class_image_processor_1_1_dilate_a244c872bec041a97fc2ef5c7ea89402e}\label{class_image_processor_1_1_dilate_a244c872bec041a97fc2ef5c7ea89402e}} 
+void {\bfseries set\+Shap} (const cv\+::\+Morph\+Shapes \&value)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_image_processor_1_1_dilate_a062fba258056f4e1e1fed226eb05c5f8}\label{class_image_processor_1_1_dilate_a062fba258056f4e1e1fed226eb05c5f8}} 
+{\bfseries Dilate} (Q\+Object $\ast$parent=nullptr)
+\item 
+\mbox{\Hypertarget{class_image_processor_1_1_dilate_aa69a7e5d14912755bd43fdf48f994899}\label{class_image_processor_1_1_dilate_aa69a7e5d14912755bd43fdf48f994899}} 
+void {\bfseries dialte\+Img} ()
+\item 
+int \hyperlink{class_image_processor_1_1_dilate_a52a32329eb187040162c980d72544828}{get\+Dilation\+Size} () const
+\begin{DoxyCompactList}\small\item\em returns the dilation Size \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_image_processor_1_1_dilate_afda6caab7887fecf7e480e8a4ca51773}\label{class_image_processor_1_1_dilate_afda6caab7887fecf7e480e8a4ca51773}} 
+cv\+::\+Morph\+Shapes {\bfseries get\+Shap} () const
+\item 
+virtual Q\+Variant \hyperlink{class_image_processor_1_1_dilate_ac4af4d83e97990416f1ccc6b80fd140b}{process\+Image} () override
+\begin{DoxyCompactList}\small\item\em Pure Virtual Function representes the operation to be done on the Image to be processed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_image_processor_1_1_dilate_abf93b190cff3be8559e36f096a2b0db2}\label{class_image_processor_1_1_dilate_abf93b190cff3be8559e36f096a2b0db2}} 
+{\bfseries Dilate} (Q\+Object $\ast$parent=nullptr)
+\item 
+\mbox{\Hypertarget{class_image_processor_1_1_dilate_af999e128e89020d9acd1a07d8ae0e9a8}\label{class_image_processor_1_1_dilate_af999e128e89020d9acd1a07d8ae0e9a8}} 
+void {\bfseries dialte\+Img} ()
+\item 
+\mbox{\Hypertarget{class_image_processor_1_1_dilate_a5f3963a2b176da75fab8fb1a40f38e2e}\label{class_image_processor_1_1_dilate_a5f3963a2b176da75fab8fb1a40f38e2e}} 
+int {\bfseries get\+Dilation\+Size} () const
+\item 
+\mbox{\Hypertarget{class_image_processor_1_1_dilate_a8ead69e76186a999b2d91915399bcfa6}\label{class_image_processor_1_1_dilate_a8ead69e76186a999b2d91915399bcfa6}} 
+cv\+::\+Morph\+Shapes {\bfseries get\+Shap} () const
+\item 
+virtual Q\+Variant \hyperlink{class_image_processor_1_1_dilate_a47c84e673efe4a1280eede2ea9cb4ef9}{process\+Image} () override
+\begin{DoxyCompactList}\small\item\em Pure Virtual Function representes the operation to be done on the Image to be processed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+this Class is used to perform morphological dilate operation on image see \href{https://docs.opencv.org/trunk/d9/d61/tutorial_py_morphological_ops.html}{\tt Morphological Operation}. 
+
+\begin{DoxyNote}{Note}
+the image must be binary (black and white) and in grayscale.
+\end{DoxyNote}
+
+\begin{DoxyCode}
+ ImageProcessor::Dialte dial\{\textcolor{keyword}{this}\};
+dial.setImg(cv::imread(BINARY\_IMG\_PATH));
+dial.processImage();
+\textcolor{keyword}{auto} dst = dial.getDst();
+cv::imshow(\textcolor{stringliteral}{"window"}, dst);
+cv::waitKey(0);
+\end{DoxyCode}
+
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000003}{Todo}]add Other Morphological Operations like erode. \end{DoxyRefDesc}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_image_processor_1_1_dilate_a52a32329eb187040162c980d72544828}\label{class_image_processor_1_1_dilate_a52a32329eb187040162c980d72544828}} 
+\index{Image\+Processor\+::\+Dilate@{Image\+Processor\+::\+Dilate}!get\+Dilation\+Size@{get\+Dilation\+Size}}
+\index{get\+Dilation\+Size@{get\+Dilation\+Size}!Image\+Processor\+::\+Dilate@{Image\+Processor\+::\+Dilate}}
+\subsubsection{\texorpdfstring{get\+Dilation\+Size()}{getDilationSize()}}
+{\footnotesize\ttfamily int Dilate\+::get\+Dilation\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+returns the dilation Size 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_image_processor_1_1_dilate_a47c84e673efe4a1280eede2ea9cb4ef9}\label{class_image_processor_1_1_dilate_a47c84e673efe4a1280eede2ea9cb4ef9}} 
+\index{Image\+Processor\+::\+Dilate@{Image\+Processor\+::\+Dilate}!process\+Image@{process\+Image}}
+\index{process\+Image@{process\+Image}!Image\+Processor\+::\+Dilate@{Image\+Processor\+::\+Dilate}}
+\subsubsection{\texorpdfstring{process\+Image()}{processImage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual Q\+Variant Image\+Processor\+::\+Dilate\+::process\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Pure Virtual Function representes the operation to be done on the Image to be processed. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em cv\+::\+Exception.\+not} & garunteed to throw this exception \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyWarning}{Warning}
+not exception nor thread safe. 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+Q\+Variant Object which represents the output of the processing operation and it doesn\textquotesingle{}t have to be cv\+::\+Mat. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_image_processor_1_1_abstract_image_processor_ad033ae911918b0f6842b7b1d6cdd2b90}{Image\+Processor\+::\+Abstract\+Image\+Processor}.
+
+\mbox{\Hypertarget{class_image_processor_1_1_dilate_ac4af4d83e97990416f1ccc6b80fd140b}\label{class_image_processor_1_1_dilate_ac4af4d83e97990416f1ccc6b80fd140b}} 
+\index{Image\+Processor\+::\+Dilate@{Image\+Processor\+::\+Dilate}!process\+Image@{process\+Image}}
+\index{process\+Image@{process\+Image}!Image\+Processor\+::\+Dilate@{Image\+Processor\+::\+Dilate}}
+\subsubsection{\texorpdfstring{process\+Image()}{processImage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Q\+Variant Dilate\+::process\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Pure Virtual Function representes the operation to be done on the Image to be processed. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em cv\+::\+Exception.\+not} & garunteed to throw this exception \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyWarning}{Warning}
+not exception nor thread safe. 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+Q\+Variant Object which represents the output of the processing operation and it doesn\textquotesingle{}t have to be cv\+::\+Mat. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_image_processor_1_1_abstract_image_processor_ad033ae911918b0f6842b7b1d6cdd2b90}{Image\+Processor\+::\+Abstract\+Image\+Processor}.
+
+\mbox{\Hypertarget{class_image_processor_1_1_dilate_addfbd49b040fc54c9a8985c764f4a144}\label{class_image_processor_1_1_dilate_addfbd49b040fc54c9a8985c764f4a144}} 
+\index{Image\+Processor\+::\+Dilate@{Image\+Processor\+::\+Dilate}!set\+Dilation\+Size@{set\+Dilation\+Size}}
+\index{set\+Dilation\+Size@{set\+Dilation\+Size}!Image\+Processor\+::\+Dilate@{Image\+Processor\+::\+Dilate}}
+\subsubsection{\texorpdfstring{set\+Dilation\+Size}{setDilationSize}}
+{\footnotesize\ttfamily void Dilate\+::set\+Dilation\+Size (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+sets the Dilation Size of the Morphological Operation 
+
+\mbox{\Hypertarget{class_image_processor_1_1_dilate_a675b54d7fa85c5bce578a625a1f8ec38}\label{class_image_processor_1_1_dilate_a675b54d7fa85c5bce578a625a1f8ec38}} 
+\index{Image\+Processor\+::\+Dilate@{Image\+Processor\+::\+Dilate}!set\+Shap@{set\+Shap}}
+\index{set\+Shap@{set\+Shap}!Image\+Processor\+::\+Dilate@{Image\+Processor\+::\+Dilate}}
+\subsubsection{\texorpdfstring{set\+Shap}{setShap}}
+{\footnotesize\ttfamily void Dilate\+::set\+Shap (\begin{DoxyParamCaption}\item[{const cv\+::\+Morph\+Shapes \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+sets The Shape of the Dialtion pixels 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enum} & of cv\+::\+Morph\+Shapes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_image_processor_1_1_dilate}{Image\+Processor\+::\+Dilate}. 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Object\+Detection/\+Circle\+Detector/\+Image\+Processors/\+Image\+Processor/dilate.\+h\item 
+src/\+Object\+Detection/\+Circle\+Detector/\+Image\+Processors/\+Image\+Processor/dilate.\+cpp\end{DoxyCompactItemize}

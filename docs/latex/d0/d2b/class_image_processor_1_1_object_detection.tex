@@ -1,0 +1,150 @@
+\hypertarget{class_image_processor_1_1_object_detection}{}\section{Image\+Processor\+:\+:Object\+Detection Class Reference}
+\label{class_image_processor_1_1_object_detection}\index{Image\+Processor\+::\+Object\+Detection@{Image\+Processor\+::\+Object\+Detection}}
+
+
+Inheritance diagram for Image\+Processor\+:\+:Object\+Detection\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{da/d04/class_image_processor_1_1_object_detection__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Image\+Processor\+:\+:Object\+Detection\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d8/daa/class_image_processor_1_1_object_detection__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries \+\_\+\+Object\+Detection\+Impl}
+\end{DoxyCompactItemize}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_image_processor_1_1_object_detection_afb439c3f4c9bb2e084674ce34e965430}\label{class_image_processor_1_1_object_detection_afb439c3f4c9bb2e084674ce34e965430}} 
+void {\bfseries set\+Cir\+Detector} (\hyperlink{class_image_processor_1_1_detect_circle}{Detect\+Circle} $\ast$cir\+Detector)
+\item 
+\mbox{\Hypertarget{class_image_processor_1_1_object_detection_a727fcf4d318c9a3ccb63348b957c1e94}\label{class_image_processor_1_1_object_detection_a727fcf4d318c9a3ccb63348b957c1e94}} 
+void {\bfseries set\+Diler} (\hyperlink{class_image_processor_1_1_dilate}{Dilate} $\ast$diler)
+\item 
+\mbox{\Hypertarget{class_image_processor_1_1_object_detection_abb46bcf3c33130babf9508cb34b08bdf}\label{class_image_processor_1_1_object_detection_abb46bcf3c33130babf9508cb34b08bdf}} 
+void {\bfseries set\+Col\+Detector} (\hyperlink{class_image_processor_1_1_detect_color}{Detect\+Color} $\ast$col\+Detector)
+\item 
+\mbox{\Hypertarget{class_image_processor_1_1_object_detection_a4989f9da33a3a2a1f5530754e88f1b39}\label{class_image_processor_1_1_object_detection_a4989f9da33a3a2a1f5530754e88f1b39}} 
+void {\bfseries set\+Cir\+Detector} (\hyperlink{class_image_processor_1_1_detect_circle}{Detect\+Circle} $\ast$cir\+Detector)
+\item 
+\mbox{\Hypertarget{class_image_processor_1_1_object_detection_aa93f6201bb261ee5f1354cb352d7cfb9}\label{class_image_processor_1_1_object_detection_aa93f6201bb261ee5f1354cb352d7cfb9}} 
+void {\bfseries set\+Diler} (\hyperlink{class_image_processor_1_1_dilate}{Dilate} $\ast$diler)
+\item 
+\mbox{\Hypertarget{class_image_processor_1_1_object_detection_a6824414dd70b579edfd0beced8ee58b1}\label{class_image_processor_1_1_object_detection_a6824414dd70b579edfd0beced8ee58b1}} 
+void {\bfseries set\+Col\+Detector} (\hyperlink{class_image_processor_1_1_detect_color}{Detect\+Color} $\ast$col\+Detector)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_image_processor_1_1_object_detection_ab80e0235c8882a62f21faea4796b325f}\label{class_image_processor_1_1_object_detection_ab80e0235c8882a62f21faea4796b325f}} 
+{\bfseries Object\+Detection} (Q\+Object $\ast$parent=nullptr)
+\item 
+\mbox{\Hypertarget{class_image_processor_1_1_object_detection_a2b5e3886ae9770e412cc4d21dfe031dd}\label{class_image_processor_1_1_object_detection_a2b5e3886ae9770e412cc4d21dfe031dd}} 
+\hyperlink{class_image_processor_1_1_dilate}{Dilate} $\ast$ {\bfseries get\+Diler} () const
+\item 
+\mbox{\Hypertarget{class_image_processor_1_1_object_detection_a65da5b494041b0da792dd01a90bcf065}\label{class_image_processor_1_1_object_detection_a65da5b494041b0da792dd01a90bcf065}} 
+\hyperlink{class_image_processor_1_1_detect_color}{Detect\+Color} $\ast$ {\bfseries get\+Col\+Detector} () const
+\item 
+\mbox{\Hypertarget{class_image_processor_1_1_object_detection_a8a9535796772b425c44fd5a318adbe5f}\label{class_image_processor_1_1_object_detection_a8a9535796772b425c44fd5a318adbe5f}} 
+\hyperlink{class_image_processor_1_1_detect_circle}{Detect\+Circle} $\ast$ {\bfseries get\+Cir\+Detector} () const
+\item 
+\mbox{\Hypertarget{class_image_processor_1_1_object_detection_aa0f939d2dcf5ec755be433db03fafda6}\label{class_image_processor_1_1_object_detection_aa0f939d2dcf5ec755be433db03fafda6}} 
+std\+::vector$<$ cv\+::\+Vec3f $>$ {\bfseries get\+Circles} ()
+\item 
+virtual Q\+Variant \hyperlink{class_image_processor_1_1_object_detection_ac5561650d95eac1672e2d049ed36201d}{process\+Image} () override
+\begin{DoxyCompactList}\small\item\em Pure Virtual Function representes the operation to be done on the Image to be processed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_image_processor_1_1_object_detection_ad1197739e0daec4c336f17b280e8eb9b}\label{class_image_processor_1_1_object_detection_ad1197739e0daec4c336f17b280e8eb9b}} 
+{\bfseries Object\+Detection} (Q\+Object $\ast$parent=nullptr)
+\item 
+\mbox{\Hypertarget{class_image_processor_1_1_object_detection_a3b7e2ae3fe985fddad4198046823e13f}\label{class_image_processor_1_1_object_detection_a3b7e2ae3fe985fddad4198046823e13f}} 
+\hyperlink{class_image_processor_1_1_dilate}{Dilate} $\ast$ {\bfseries get\+Diler} () const
+\item 
+\mbox{\Hypertarget{class_image_processor_1_1_object_detection_a2ac4cebc016409d1dfc26b6109669735}\label{class_image_processor_1_1_object_detection_a2ac4cebc016409d1dfc26b6109669735}} 
+\hyperlink{class_image_processor_1_1_detect_color}{Detect\+Color} $\ast$ {\bfseries get\+Col\+Detector} () const
+\item 
+\mbox{\Hypertarget{class_image_processor_1_1_object_detection_a469f3df59addb87b1371c37f81a28a16}\label{class_image_processor_1_1_object_detection_a469f3df59addb87b1371c37f81a28a16}} 
+\hyperlink{class_image_processor_1_1_detect_circle}{Detect\+Circle} $\ast$ {\bfseries get\+Cir\+Detector} () const
+\item 
+\mbox{\Hypertarget{class_image_processor_1_1_object_detection_ae84bd5ac8ccbf2e62b400dd2dbdb2469}\label{class_image_processor_1_1_object_detection_ae84bd5ac8ccbf2e62b400dd2dbdb2469}} 
+std\+::vector$<$ cv\+::\+Vec3f $>$ {\bfseries get\+Circles} ()
+\item 
+virtual Q\+Variant \hyperlink{class_image_processor_1_1_object_detection_ad8ff5b55d6da63f30dc397082f97370c}{process\+Image} () override
+\begin{DoxyCompactList}\small\item\em Pure Virtual Function representes the operation to be done on the Image to be processed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_image_processor_1_1_object_detection_ac5561650d95eac1672e2d049ed36201d}\label{class_image_processor_1_1_object_detection_ac5561650d95eac1672e2d049ed36201d}} 
+\index{Image\+Processor\+::\+Object\+Detection@{Image\+Processor\+::\+Object\+Detection}!process\+Image@{process\+Image}}
+\index{process\+Image@{process\+Image}!Image\+Processor\+::\+Object\+Detection@{Image\+Processor\+::\+Object\+Detection}}
+\subsubsection{\texorpdfstring{process\+Image()}{processImage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Q\+Variant Object\+Detection\+::process\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Pure Virtual Function representes the operation to be done on the Image to be processed. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em cv\+::\+Exception.\+not} & garunteed to throw this exception \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyWarning}{Warning}
+not exception nor thread safe. 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+Q\+Variant Object which represents the output of the processing operation and it doesn\textquotesingle{}t have to be cv\+::\+Mat. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_image_processor_1_1_abstract_image_processor_ad033ae911918b0f6842b7b1d6cdd2b90}{Image\+Processor\+::\+Abstract\+Image\+Processor}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d2b/class_image_processor_1_1_object_detection_ac5561650d95eac1672e2d049ed36201d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_image_processor_1_1_object_detection_ad8ff5b55d6da63f30dc397082f97370c}\label{class_image_processor_1_1_object_detection_ad8ff5b55d6da63f30dc397082f97370c}} 
+\index{Image\+Processor\+::\+Object\+Detection@{Image\+Processor\+::\+Object\+Detection}!process\+Image@{process\+Image}}
+\index{process\+Image@{process\+Image}!Image\+Processor\+::\+Object\+Detection@{Image\+Processor\+::\+Object\+Detection}}
+\subsubsection{\texorpdfstring{process\+Image()}{processImage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual Q\+Variant Image\+Processor\+::\+Object\+Detection\+::process\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Pure Virtual Function representes the operation to be done on the Image to be processed. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em cv\+::\+Exception.\+not} & garunteed to throw this exception \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyWarning}{Warning}
+not exception nor thread safe. 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+Q\+Variant Object which represents the output of the processing operation and it doesn\textquotesingle{}t have to be cv\+::\+Mat. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_image_processor_1_1_abstract_image_processor_ad033ae911918b0f6842b7b1d6cdd2b90}{Image\+Processor\+::\+Abstract\+Image\+Processor}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Object\+Detection/\+Circle\+Detector/\+Image\+Processors/\+Image\+Processor/objectdetection.\+h\item 
+src/\+Object\+Detection/\+Circle\+Detector/\+Image\+Processors/\+Image\+Processor/objectdetection.\+cpp\end{DoxyCompactItemize}
