@@ -1,0 +1,4 @@
+<map id="Devices::SerialHandler" name="Devices::SerialHandler">
+<area shape="rect" id="node2" href="$d3/d05/class_devices_1_1_abstract_device_writer.html" title="{Devices::AbstractDeviceWriter\n||+ writeToDevice()\l+ openDevice()\l+ closeDevice()\l+ onNotified()\l# AbstractDeviceWriter()\l}" alt="" coords="5,329,203,465"/>
+<area shape="rect" id="node3" href="$d0/d5d/class_devices_1_1_observer.html" title="{Devices::Observer\n||+ ~Observer()\l+ Observer()\l+ observe()\l+ stopObserving()\l+ onNotified()\l# Observer()\l}" alt="" coords="41,131,167,281"/>
+</map>

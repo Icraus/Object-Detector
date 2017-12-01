@@ -25,7 +25,6 @@ HEADERS += \
 FORMS += \
         View/mainwindow.ui
 
-include(../../OPENCVLinking.pro)
 
 #message($(IMG_PROC))
 android{
@@ -36,20 +35,16 @@ android{
     ANDROID_PACKAGE_SOURCE_DIR=$$_PRO_FILE_PWD_/android
 
 }
-INCLUDEPATH += $(IMG_PROC)/headers
-INCLUDEPATH += $(IMG_PROC)/headers/imgproc
-INCLUDEPATH += $(IMG_PROC)/headers/utils
+INCLUDEPATH += $$_PRO_FILE_PWD_\..\..\include\ImageProcessors
+INCLUDEPATH += $$_PRO_FILE_PWD_\..\..\include\utils
 !android{
-
-LIBS += -L$(IMG_PROC)/CircleDetector/ImageProcessors/debug \
-    -lImageProcessorsStatic
-
-
-
-LIBS += -L$(IMG_PROC)/Utilities/Utils/debug \
+LIBS += -L$$_PRO_FILE_PWD_\..\..\libs  \
+    -lImageProcessors \
     -lUtils
 }
+DESTDIR += $$_PRO_FILE_PWD_\..\..\bin
 
 contains(ANDROID_TARGET_ARCH,armeabi-v7a) {
     ANDROID_EXTRA_LIBS = $$PWD/android/libopencv_java3.so
 }
+include(../../OPENCVLinking.pro)

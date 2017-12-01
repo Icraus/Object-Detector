@@ -18,7 +18,10 @@ Dilate::Dilate(QObject *parent) : AbstractImageProcessor(parent),
 {
 
 }
-
+/*!
+ * \brief returns the dilation Size
+ * \return
+ */
 int Dilate::getDilationSize() const
 {
     return _pimpl->getDilationSize();
@@ -28,6 +31,9 @@ Dilate::~Dilate()
 {
 
 }
+/*! \brief sets the Dilation Size of the Morphological Operation
+ *
+ */
 
 void Dilate::setDilationSize(int value)
 {
@@ -38,7 +44,12 @@ cv::MorphShapes Dilate::getShap() const
 {
     return _pimpl->getShap();
 }
-
+/*!
+ * \brief sets The Shape of the Dialtion pixels
+ *
+ * \param enum of cv::MorphShapes.
+ * \sa ImageProcessor::Dilate.
+ */
 void Dilate::setShap(const cv::MorphShapes &value)
 {
     _pimpl->setShap(value);
@@ -95,3 +106,20 @@ QVariant Dilate::_DilateImpl::processImage()
     dilateImg();
     return QVariant();
 }
+
+/*! \class ImageProcessor::Dilate
+ *
+ * \brief this Class is used to perform morphological dilate operation on image see <a href="https://docs.opencv.org/trunk/d9/d61/tutorial_py_morphological_ops.html">Morphological Operation</a>.
+ * \note the image must be binary (black and white) and in grayscale.
+ *
+ * \code
+ *  ImageProcessor::Dialte dial{this};
+ * dial.setImg(cv::imread(BINARY_IMG_PATH));
+ * dial.processImage();
+ * auto dst = dial.getDst();
+ * cv::imshow("window", dst);
+ * cv::waitKey(0);
+ * \endcode
+ *
+ * \todo add Other Morphological Operations like erode.
+ */

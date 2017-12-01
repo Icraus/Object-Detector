@@ -1,0 +1,229 @@
+\hypertarget{class_image_processor_1_1_abstract_image_processor}{}\section{Image\+Processor\+:\+:Abstract\+Image\+Processor Class Reference}
+\label{class_image_processor_1_1_abstract_image_processor}\index{Image\+Processor\+::\+Abstract\+Image\+Processor@{Image\+Processor\+::\+Abstract\+Image\+Processor}}
+
+
+The \hyperlink{class_image_processor_1_1_abstract_image_processor}{Image\+Processor\+::\+Abstract\+Image\+Processor} is an Abstract Base Class For All Image Processor Classes.  
+
+
+
+
+Inheritance diagram for Image\+Processor\+:\+:Abstract\+Image\+Processor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d49/class_image_processor_1_1_abstract_image_processor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Image\+Processor\+:\+:Abstract\+Image\+Processor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{d2/d0a/class_image_processor_1_1_abstract_image_processor__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries \+\_\+\+Abstract\+Image\+Processor\+Impl}
+\end{DoxyCompactItemize}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_image_processor_1_1_abstract_image_processor_a8d9dcbea1b426f4accdd8fcc650eb6ab}{set\+Dst} (const cv\+::\+Mat \&dst)
+\begin{DoxyCompactList}\small\item\em sets The output of the operation \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_image_processor_1_1_abstract_image_processor_a08c1e75c34cb5724e8b3ed4e55d90fb9}\label{class_image_processor_1_1_abstract_image_processor_a08c1e75c34cb5724e8b3ed4e55d90fb9}} 
+virtual void {\bfseries set\+Img} (const cv\+::\+Mat \&img)
+\item 
+\mbox{\Hypertarget{class_image_processor_1_1_abstract_image_processor_ac3cb6442277dc17f1cf2f2215c2cdab2}\label{class_image_processor_1_1_abstract_image_processor_ac3cb6442277dc17f1cf2f2215c2cdab2}} 
+virtual void {\bfseries set\+Dst} (const cv\+::\+Mat \&dst)
+\item 
+\mbox{\Hypertarget{class_image_processor_1_1_abstract_image_processor_a240c3eec8500e5d2432b27a7b68b55b2}\label{class_image_processor_1_1_abstract_image_processor_a240c3eec8500e5d2432b27a7b68b55b2}} 
+virtual void {\bfseries set\+Img} (const cv\+::\+Mat \&img)
+\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_image_processor_1_1_abstract_image_processor_a5a252ccaca15ae5609bf490dff410a44}\label{class_image_processor_1_1_abstract_image_processor_a5a252ccaca15ae5609bf490dff410a44}} 
+void {\bfseries image\+Changed} (const cv\+::\+Mat \&img)
+\item 
+\mbox{\Hypertarget{class_image_processor_1_1_abstract_image_processor_a98d198ad26991ee5fa200d8a1a740448}\label{class_image_processor_1_1_abstract_image_processor_a98d198ad26991ee5fa200d8a1a740448}} 
+void {\bfseries dst\+Changed} (const cv\+::\+Mat \&img)
+\item 
+\mbox{\Hypertarget{class_image_processor_1_1_abstract_image_processor_a5a252ccaca15ae5609bf490dff410a44}\label{class_image_processor_1_1_abstract_image_processor_a5a252ccaca15ae5609bf490dff410a44}} 
+void {\bfseries image\+Changed} (const cv\+::\+Mat \&img)
+\item 
+\mbox{\Hypertarget{class_image_processor_1_1_abstract_image_processor_a98d198ad26991ee5fa200d8a1a740448}\label{class_image_processor_1_1_abstract_image_processor_a98d198ad26991ee5fa200d8a1a740448}} 
+void {\bfseries dst\+Changed} (const cv\+::\+Mat \&img)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+cv\+::\+Mat \hyperlink{class_image_processor_1_1_abstract_image_processor_a904d1619b2c6be2c5382469325ca43e3}{get\+Img} () const
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_image_processor_1_1_abstract_image_processor_a904d1619b2c6be2c5382469325ca43e3}{Abstract\+Image\+Processor\+::get\+Img}. \end{DoxyCompactList}\item 
+cv\+::\+Mat \hyperlink{class_image_processor_1_1_abstract_image_processor_acbf98498ebece7b9f339222097a3429a}{get\+Dst} () const
+\begin{DoxyCompactList}\small\item\em returns A cv\+::\+Mat Object which represents the output of the image processing operation \end{DoxyCompactList}\item 
+virtual Q\+Variant \hyperlink{class_image_processor_1_1_abstract_image_processor_ad033ae911918b0f6842b7b1d6cdd2b90}{process\+Image} ()=0
+\begin{DoxyCompactList}\small\item\em Pure Virtual Function representes the operation to be done on the Image to be processed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_image_processor_1_1_abstract_image_processor_a767ac703d0d95f54ac3cfc1fe223f6b1}\label{class_image_processor_1_1_abstract_image_processor_a767ac703d0d95f54ac3cfc1fe223f6b1}} 
+cv\+::\+Mat {\bfseries get\+Img} () const
+\item 
+\mbox{\Hypertarget{class_image_processor_1_1_abstract_image_processor_aca36f6820247320a27d5ba8ee923a57e}\label{class_image_processor_1_1_abstract_image_processor_aca36f6820247320a27d5ba8ee923a57e}} 
+cv\+::\+Mat {\bfseries get\+Dst} () const
+\item 
+\mbox{\Hypertarget{class_image_processor_1_1_abstract_image_processor_aefc5e0bf8333b94feca18d2b6458d3ab}\label{class_image_processor_1_1_abstract_image_processor_aefc5e0bf8333b94feca18d2b6458d3ab}} 
+virtual Q\+Variant {\bfseries process\+Image} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_image_processor_1_1_abstract_image_processor_a5d89a80ba5924d41809a877e4128039a}{Abstract\+Image\+Processor} (Q\+Object $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em accpets A pointer To the Parent Class For The Qt Meta-\/object Model See \href{http://doc.qt.io/qt-5/metaobjects.html}{\tt Qt Meta-\/\+Object} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_image_processor_1_1_abstract_image_processor_afed21785fad3fc501ba80714c5f10c0b}\label{class_image_processor_1_1_abstract_image_processor_afed21785fad3fc501ba80714c5f10c0b}} 
+{\bfseries Abstract\+Image\+Processor} (Q\+Object $\ast$parent=nullptr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_image_processor_1_1_abstract_image_processor}{Image\+Processor\+::\+Abstract\+Image\+Processor} is an Abstract Base Class For All Image Processor Classes. 
+
+this Class Provides A Common Data Structure For All Image Processor Classes That Inherits From It The class Provides cv\+::\+Mat Img Variable Which is used as The Soruce Image and cv\+::\+Mat dst Varaible Which is the Destnation cv\+::\+Mat Object. \begin{DoxyNote}{Note}
+using get\+Dst and get\+Img is using deep copy of image to avoid invalid access of member objects.
+\end{DoxyNote}
+
+\begin{DoxyCode}
+\textcolor{keyword}{using namespace }\hyperlink{namespace_image_processor}{ImageProcessor};
+std::unique\_ptr<ImageProcessor::AbstractImageProcessor> imgproc = 
+      std::make\_unique<ImageProcessor::DetectColor>(\textcolor{keyword}{this});
+imgproc->setImg(cv::imread(IMG\_PATH));
+connect(imgproc.get(), &AbstractImageProcessor::dstChanged,[=](\textcolor{keyword}{const} \textcolor{keyword}{auto}& img)\{qDebug() << \textcolor{stringliteral}{"Image Changed"}
+      ;\});
+imgproc->processImage();
+\textcolor{keyword}{auto} img = imgproc->getDst(); \textcolor{comment}{//returns cv::Mat and prints "Image Changed"}
+\end{DoxyCode}
+ \begin{DoxySeeAlso}{See also}
+\hyperlink{namespace_image_processor}{Image\+Processor} 
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]add cv\+::\+Mat cache(may be using flyweight pattern) To avoid heavy copy of cv\+::\+Mat obejcts. \end{DoxyRefDesc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_image_processor_1_1_abstract_image_processor_a5d89a80ba5924d41809a877e4128039a}\label{class_image_processor_1_1_abstract_image_processor_a5d89a80ba5924d41809a877e4128039a}} 
+\index{Image\+Processor\+::\+Abstract\+Image\+Processor@{Image\+Processor\+::\+Abstract\+Image\+Processor}!Abstract\+Image\+Processor@{Abstract\+Image\+Processor}}
+\index{Abstract\+Image\+Processor@{Abstract\+Image\+Processor}!Image\+Processor\+::\+Abstract\+Image\+Processor@{Image\+Processor\+::\+Abstract\+Image\+Processor}}
+\subsubsection{\texorpdfstring{Abstract\+Image\+Processor()}{AbstractImageProcessor()}}
+{\footnotesize\ttfamily Abstract\+Image\+Processor\+::\+Abstract\+Image\+Processor (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+accpets A pointer To the Parent Class For The Qt Meta-\/object Model See \href{http://doc.qt.io/qt-5/metaobjects.html}{\tt Qt Meta-\/\+Object} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & A Q\+Object Object as a parent \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d61/class_image_processor_1_1_abstract_image_processor_a5d89a80ba5924d41809a877e4128039a_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_image_processor_1_1_abstract_image_processor_acbf98498ebece7b9f339222097a3429a}\label{class_image_processor_1_1_abstract_image_processor_acbf98498ebece7b9f339222097a3429a}} 
+\index{Image\+Processor\+::\+Abstract\+Image\+Processor@{Image\+Processor\+::\+Abstract\+Image\+Processor}!get\+Dst@{get\+Dst}}
+\index{get\+Dst@{get\+Dst}!Image\+Processor\+::\+Abstract\+Image\+Processor@{Image\+Processor\+::\+Abstract\+Image\+Processor}}
+\subsubsection{\texorpdfstring{get\+Dst()}{getDst()}}
+{\footnotesize\ttfamily cv\+::\+Mat Abstract\+Image\+Processor\+::get\+Dst (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+returns A cv\+::\+Mat Object which represents the output of the image processing operation 
+
+\begin{DoxyReturn}{Returns}
+cv\+::\+Mat 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d61/class_image_processor_1_1_abstract_image_processor_acbf98498ebece7b9f339222097a3429a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_image_processor_1_1_abstract_image_processor_a904d1619b2c6be2c5382469325ca43e3}\label{class_image_processor_1_1_abstract_image_processor_a904d1619b2c6be2c5382469325ca43e3}} 
+\index{Image\+Processor\+::\+Abstract\+Image\+Processor@{Image\+Processor\+::\+Abstract\+Image\+Processor}!get\+Img@{get\+Img}}
+\index{get\+Img@{get\+Img}!Image\+Processor\+::\+Abstract\+Image\+Processor@{Image\+Processor\+::\+Abstract\+Image\+Processor}}
+\subsubsection{\texorpdfstring{get\+Img()}{getImg()}}
+{\footnotesize\ttfamily cv\+::\+Mat Abstract\+Image\+Processor\+::get\+Img (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\hyperlink{class_image_processor_1_1_abstract_image_processor_a904d1619b2c6be2c5382469325ca43e3}{Abstract\+Image\+Processor\+::get\+Img}. 
+
+\begin{DoxyReturn}{Returns}
+cv\+::\+Matreturns A copy of The Source Image uses cv\+::\+Mat\+::clone(). {\bfseries example\+:} 
+\begin{DoxyCode}
+cv::Mat img = cv::imread(IMG\_PATH);
+imgproc.setImg(img);
+cv::Mat img2 = imgproc.getImg(); \textcolor{comment}{//uses Deep Copy like img2 = img.clone();}
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d61/class_image_processor_1_1_abstract_image_processor_a904d1619b2c6be2c5382469325ca43e3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_image_processor_1_1_abstract_image_processor_ad033ae911918b0f6842b7b1d6cdd2b90}\label{class_image_processor_1_1_abstract_image_processor_ad033ae911918b0f6842b7b1d6cdd2b90}} 
+\index{Image\+Processor\+::\+Abstract\+Image\+Processor@{Image\+Processor\+::\+Abstract\+Image\+Processor}!process\+Image@{process\+Image}}
+\index{process\+Image@{process\+Image}!Image\+Processor\+::\+Abstract\+Image\+Processor@{Image\+Processor\+::\+Abstract\+Image\+Processor}}
+\subsubsection{\texorpdfstring{process\+Image()}{processImage()}}
+{\footnotesize\ttfamily Image\+Processor\+::\+Abstract\+Image\+Processor\+::process\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure Virtual Function representes the operation to be done on the Image to be processed. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em cv\+::\+Exception.\+not} & garunteed to throw this exception \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyWarning}{Warning}
+not exception nor thread safe. 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+Q\+Variant Object which represents the output of the processing operation and it doesn\textquotesingle{}t have to be cv\+::\+Mat. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_image_processor_1_1_detect_circle_ae0c7b4759827b218a03b16567233b4d5}{Image\+Processor\+::\+Detect\+Circle}, \hyperlink{class_image_processor_1_1_detect_circle_ae59a596ca1e992a8d8f859b5f79239f5}{Image\+Processor\+::\+Detect\+Circle}, \hyperlink{class_image_processor_1_1_object_detection_ac5561650d95eac1672e2d049ed36201d}{Image\+Processor\+::\+Object\+Detection}, \hyperlink{class_image_processor_1_1_object_detection_ad8ff5b55d6da63f30dc397082f97370c}{Image\+Processor\+::\+Object\+Detection}, \hyperlink{class_image_processor_1_1_dilate_ac4af4d83e97990416f1ccc6b80fd140b}{Image\+Processor\+::\+Dilate}, \hyperlink{class_image_processor_1_1_dilate_a47c84e673efe4a1280eede2ea9cb4ef9}{Image\+Processor\+::\+Dilate}, \hyperlink{class_image_processor_1_1_detect_color_afb14622f8e1390f1cf887cc8bf1da568}{Image\+Processor\+::\+Detect\+Color}, and \hyperlink{class_image_processor_1_1_detect_color_a7dc9d23817afafa44a9c022dff64b4a5}{Image\+Processor\+::\+Detect\+Color}.
+
+\mbox{\Hypertarget{class_image_processor_1_1_abstract_image_processor_a8d9dcbea1b426f4accdd8fcc650eb6ab}\label{class_image_processor_1_1_abstract_image_processor_a8d9dcbea1b426f4accdd8fcc650eb6ab}} 
+\index{Image\+Processor\+::\+Abstract\+Image\+Processor@{Image\+Processor\+::\+Abstract\+Image\+Processor}!set\+Dst@{set\+Dst}}
+\index{set\+Dst@{set\+Dst}!Image\+Processor\+::\+Abstract\+Image\+Processor@{Image\+Processor\+::\+Abstract\+Image\+Processor}}
+\subsubsection{\texorpdfstring{set\+Dst}{setDst}}
+{\footnotesize\ttfamily void Abstract\+Image\+Processor\+::set\+Dst (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{dst }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}
+
+
+
+sets The output of the operation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Object\+Detection/\+Circle\+Detector/\+Image\+Processors/\+Image\+Processor/abstractimageprocessor.\+h\item 
+src/\+Object\+Detection/\+Circle\+Detector/\+Image\+Processors/\+Image\+Processor/abstractimageprocessor.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="Devices::AbstractDeviceWriter" name="Devices::AbstractDeviceWriter">
+<area shape="rect" id="node4" href="$d1/db9/class_devices_1_1_bluetooth_handler.html" title="{Devices::BluetoothHandler\n||+ BluetoothHandler()\l}" alt="" coords="5,557,180,635"/>
+<area shape="rect" id="node5" href="$d8/d12/class_devices_1_1_serial_handler.html" title="{Devices::SerialHandler\n||+ SerialHandler()\l+ ~SerialHandler()\l+ getPort()\l+ writeToDevice()\l+ closeDevice()\l+ openDevice()\l+ setPort()\l}" alt="" coords="205,513,357,679"/>
+<area shape="rect" id="node2" href="$d0/d5d/class_devices_1_1_observer.html" title="{Devices::Observer\n||+ ~Observer()\l+ Observer()\l+ observe()\l+ stopObserving()\l+ onNotified()\l# Observer()\l}" alt="" coords="123,131,249,281"/>
+</map>

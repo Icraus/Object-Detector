@@ -74,12 +74,12 @@ ObjectDetection::_ObjectDetectionImpl::_ObjectDetectionImpl(ObjectDetection * co
     setDiler(new Dilate);
 }
 
-Dilate *ObjectDetection::_ObjectDetectionImpl::_ObjectDetectionImpl::getDiler() const
+Dilate *ObjectDetection::_ObjectDetectionImpl::getDiler() const
 {
     return _diler;
 }
 
-void ObjectDetection::_ObjectDetectionImpl::_ObjectDetectionImpl::setDiler(Dilate *diler)
+void ObjectDetection::_ObjectDetectionImpl::setDiler(Dilate *diler)
 {
     _diler = diler;
     _diler->setParent(_ptr);

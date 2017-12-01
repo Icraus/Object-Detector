@@ -13,7 +13,6 @@ CONFIG += staticlib
 QT  += core
 INCLUDEPATH += $$(OPENCV_INCLUDE)
 DEFINES += QT_DEPRECATED_WARNINGS
-include(../../OPENCVLinking.pro)
 
 SOURCES += \
     Utilities/utils.cpp
@@ -25,3 +24,5 @@ unix {
     target.path = /usr/lib
     INSTALLS += target
 }
+include(../../INSTALL_ALL.pri)
+include(../../OPENCVLinking.pro)

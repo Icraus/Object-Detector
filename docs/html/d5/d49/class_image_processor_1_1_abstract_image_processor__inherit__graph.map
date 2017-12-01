@@ -1,0 +1,6 @@
+<map id="ImageProcessor::AbstractImageProcessor" name="ImageProcessor::AbstractImageProcessor">
+<area shape="rect" id="node3" href="$d6/d8e/class_image_processor_1_1_detect_circle.html" title="this class is used To Detect circles in an image " alt="" coords="5,461,200,817"/>
+<area shape="rect" id="node4" href="$dc/d23/class_image_processor_1_1_detect_color.html" title="this class is used to Detect Color given it&#39;s range(min, max) of hsv colors. " alt="" coords="224,491,416,788"/>
+<area shape="rect" id="node5" href="$de/daf/class_image_processor_1_1_dilate.html" title="this Class is used to perform morphological dilate operation on image see Morphological Operation..." alt="" coords="440,491,597,788"/>
+<area shape="rect" id="node6" href="$d0/d2b/class_image_processor_1_1_object_detection.html" title="{ImageProcessor::ObjectDetection\n||+ ObjectDetection()\l+ getDiler()\l+ getColDetector()\l+ getCirDetector()\l+ getCircles()\l+ ~ObjectDetection()\l+ processImage()\l+ ObjectDetection()\l+ getDiler()\l+ getColDetector()\l+ getCirDetector()\l+ getCircles()\l+ ~ObjectDetection()\l+ processImage()\l+ setCirDetector()\l+ setDiler()\l+ setColDetector()\l+ setCirDetector()\l+ setDiler()\l+ setColDetector()\l}" alt="" coords="622,461,839,817"/>
+</map>
