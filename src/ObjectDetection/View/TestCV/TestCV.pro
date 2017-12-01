@@ -7,8 +7,9 @@ include(../../OPENCVLinking.pro)
 
 SOURCES += main.cpp
 
-win32:CONFIG(release, debug|release): LIBS += -L$$PWD/libs/release/ -lImageProcessorsStatic
-else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/libs/debug/ -lImageProcessorsStatic
+INCLUDEPATH += $$_PRO_FILE_PWD_\..\..\include\ImageProcessors
+INCLUDEPATH += $$_PRO_FILE_PWD_\..\..\include\utils
 
-INCLUDEPATH += $$PWD/libs/includes
-DEPENDPATH += $$PWD/libs/includes
+LIBS += -L$$_PRO_FILE_PWD_\..\..\libs  \
+    -lImageProcessors \
+    -lUtils

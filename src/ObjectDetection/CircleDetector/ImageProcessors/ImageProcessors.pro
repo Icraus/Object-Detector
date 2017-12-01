@@ -6,10 +6,9 @@
 
 QT       -= gui
 
-TARGET = ImageProcessorsStatic
+TARGET = ImageProcessors
 TEMPLATE = lib
 CONFIG += c++14
-
 
 DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
@@ -27,12 +26,13 @@ HEADERS += \
     ImageProcessor/objectdetection.h \
     headers.h
 CONFIG(!staticlib){
-    HEADERS += imageprocessors_global.h
     DEFINES += IMAGEPROCESSORS_LIBRARY
+    HEADERS += imageprocessors_global.h
 }
 unix {
     target.path = /usr/lib
     INSTALLS += target
 }
 
+include(../../INSTALL_ALL.pri)
 include(../../OPENCVLinking.pro)

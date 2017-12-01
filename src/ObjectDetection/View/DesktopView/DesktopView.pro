@@ -36,18 +36,20 @@ android{
     ANDROID_PACKAGE_SOURCE_DIR=$$_PRO_FILE_PWD_/android
 
 }
-INCLUDEPATH += $(IMG_PROC)/headers
-INCLUDEPATH += $(IMG_PROC)/headers/imgproc
-INCLUDEPATH += $(IMG_PROC)/headers/utils
+INCLUDEPATH += $$_PRO_FILE_PWD_\..\..\include\ImageProcessors
+#INCLUDEPATH += $(IMG_PROC)/headers/imgproc
+INCLUDEPATH += $$_PRO_FILE_PWD_\..\..\include\utils
 !android{
 
-LIBS += -L$(IMG_PROC)/CircleDetector/ImageProcessors/debug \
-    -lImageProcessorsStatic
+#LIBS += -L$(IMG_PROC)/CircleDetector/ImageProcessors/debug \
+#    -lImageProcessors
 
-
-
-LIBS += -L$(IMG_PROC)/Utilities/Utils/debug \
+LIBS += -L$$_PRO_FILE_PWD_\..\..\libs  \
+    -lImageProcessors \
     -lUtils
+#message("$$_PRO_FILE_PWD_\..\..\libs")
+
+#LIBS += -L$(IMG_PROC)/Utilities/Utils/debug \
 }
 
 contains(ANDROID_TARGET_ARCH,armeabi-v7a) {

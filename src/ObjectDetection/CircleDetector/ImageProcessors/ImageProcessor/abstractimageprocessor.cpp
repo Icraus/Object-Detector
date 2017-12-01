@@ -9,7 +9,6 @@ public:
     cv::Mat getImg() const;
     cv::Mat getDst() const;
 
-
 public slots:
     virtual void setImg(const cv::Mat &img);
     virtual void setDst(const cv::Mat &dst);
@@ -31,8 +30,6 @@ AbstractImageProcessor::AbstractImageProcessor(QObject *parent) : QObject(parent
  */
 cv::Mat AbstractImageProcessor::getDst()const
 {
-    std::cout << "From copy" << std::endl;
-
     return _pimpl->getDst();
 }
 
