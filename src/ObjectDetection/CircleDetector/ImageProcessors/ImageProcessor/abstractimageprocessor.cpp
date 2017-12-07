@@ -8,6 +8,7 @@ class AbstractImageProcessor::_AbstractImageProcessorImpl{
 public:
     cv::Mat getImg() const;
     cv::Mat getDst() const;
+protected:
 
 public slots:
     virtual void setImg(const cv::Mat &img);
@@ -24,6 +25,8 @@ AbstractImageProcessor::AbstractImageProcessor(QObject *parent) : QObject(parent
 {
 
 }
+
+
 /*!
  * \brief returns A cv::Mat Object which represents the output of the image processing operation
  * \return cv::Mat
@@ -81,6 +84,7 @@ cv::Mat AbstractImageProcessor::_AbstractImageProcessorImpl::getDst()const
 {
     return _dst.clone();
 }
+
 
 
 void AbstractImageProcessor::_AbstractImageProcessorImpl::setImg(const cv::Mat &img)

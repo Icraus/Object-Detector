@@ -1,5 +1,6 @@
 INSTALL_HEADER = $$HEADERS
 INSTALL_PREFIX = $$TARGET
+
 for(VARS, INSTALL_HEADER){
     VARS_FILE  = "$$_PRO_FILE_PWD_\\$$VARS"
     VARS ~= s,/,\\,g
@@ -12,4 +13,5 @@ for(VARS, INSTALL_HEADER){
 }
 
 
-DESTDIR += $$_PRO_FILE_PWD_\..\..\libs
+DESTDIR += "$$_PRO_FILE_PWD_\..\..\libs\\$$[QMAKE_SPEC]"
+DLLDESTDIR += "$$_PRO_FILE_PWD_\..\..\bin\\$$[QMAKE_SPEC]"

@@ -29,7 +29,7 @@ FORMS += \
 #message($(IMG_PROC))
 android{
     LIBS += -L$(IMG_PROC)\Android\CircleDetector\ImageProcessors  \
-        -lImageProcessorsStatic
+        -lImageProcessors
     LIBS += -L$(IMG_PROC)\Android\Utilities\Utils  \
         -lUtils
     ANDROID_PACKAGE_SOURCE_DIR=$$_PRO_FILE_PWD_/android
@@ -38,11 +38,11 @@ android{
 INCLUDEPATH += $$_PRO_FILE_PWD_\..\..\include\ImageProcessors
 INCLUDEPATH += $$_PRO_FILE_PWD_\..\..\include\utils
 !android{
-LIBS += -L$$_PRO_FILE_PWD_\..\..\libs  \
+LIBS += -L$$_PRO_FILE_PWD_\..\..\libs\\$$[QMAKE_SPEC]  \
     -lImageProcessors \
     -lUtils
 }
-DESTDIR += $$_PRO_FILE_PWD_\..\..\bin
+DESTDIR += $$_PRO_FILE_PWD_\..\..\bin\\$$[QMAKE_SPEC]
 
 contains(ANDROID_TARGET_ARCH,armeabi-v7a) {
     ANDROID_EXTRA_LIBS = $$PWD/android/libopencv_java3.so

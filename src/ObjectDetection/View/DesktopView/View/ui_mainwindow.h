@@ -24,6 +24,7 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
 #include <QtWidgets/QSlider>
+#include <QtWidgets/QSpinBox>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QVBoxLayout>
@@ -72,6 +73,7 @@ public:
     QRadioButton *radioButton_3;
     QRadioButton *radioButton_4;
     QSlider *dilSlider;
+    QSpinBox *spinBox;
     QVBoxLayout *verticalLayout_3;
     QListView *listView;
     QPushButton *pushButton_4;
@@ -298,6 +300,11 @@ public:
         dilSlider->setOrientation(Qt::Horizontal);
 
         verticalLayout->addWidget(dilSlider);
+
+        spinBox = new QSpinBox(groupBox);
+        spinBox->setObjectName(QStringLiteral("spinBox"));
+
+        verticalLayout->addWidget(spinBox);
 
 
         gridLayout_2->addWidget(groupBox, 0, 0, 1, 1);

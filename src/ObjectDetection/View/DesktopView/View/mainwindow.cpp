@@ -7,6 +7,7 @@
 #include <QSerialPortInfo>
 #include <QStringListModel>
 #include <math.h>
+#include <QDebug>
 using namespace Utilities;
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -76,6 +77,7 @@ void MainWindow::setXYR(int x, int y, int r)
     ui->xCenterLabel->setText(QString("x: ") + toString(x));
     ui->yLabelCenter->setText(QString("y: ") + toString(y));
     ui->radiusLabel->setText(QString("R: ") + toString(r));
+//    qDebug() << "From: " <<s.toLocal8Bit().data();
     if(!_port.isOpen() || !_port.isWritable())
         return;
     _port.write(s.toLocal8Bit().data());
@@ -92,4 +94,9 @@ void MainWindow::on_pushButton_4_clicked()
 void MainWindow::on_circleThicknessSlider_valueChanged(int value)
 {
     detector.setThickness(value);
+}
+
+void MainWindow::on_spinBox_valueChanged(int arg1)
+{
+    cap.open(arg1);
 }

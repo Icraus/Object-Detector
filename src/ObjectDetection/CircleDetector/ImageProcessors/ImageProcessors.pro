@@ -33,6 +33,5 @@ unix {
     target.path = /usr/lib
     INSTALLS += target
 }
-
 include(../../INSTALL_ALL.pri)
 include(../../OPENCVLinking.pro)

@@ -1,48 +1,49 @@
 QT  *= core
 win32{
     INCLUDEPATH += $$(OPENCV_INCLUDE)
-    win32-g++{
-#       LIBS += -L$$(OPENCV_MINGW_PATH)\lib \
-#         -llibopencv_core300.dll \
-#       -llibopencv_highgui300.dll \
-#       -llibopencv_imgcodecs300.dll \
-#       -llibopencv_imgproc300.dll \
-#       -llibopencv_calib3d300.dll \
-#       -llibopencv_features2d300.dll \
-#       -llibopencv_flann300.dll \
-#       -llibopencv_video300.dll \
-#       -llibopencv_videoio300.dll \
-#       -llibopencv_videostab300.dll \
-#       -llibopencv_superres300.dll \
-#       -llibopencv_stitching300.dll \
-#       -llibopencv_shape300.dll \
-#       -llibopencv_objdetect300.dll \
-#       -llibopencv_ml300.dll \
-#       -llibopencv_photo300.dll
 
-        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_core300.dll
-        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_highgui300.dll
-        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_imgcodecs300.dll
-        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_imgproc300.dll
-        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_calib3d300.dll
-        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_features2d300.dll
-        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_flann300.dll
-        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_video300.dll
-        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_videoio300.dll
-        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_videostab300.dll
-        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_superres300.dll
-        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_stitching300.dll
-        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_shape300.dll
-        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_objdetect300.dll
-        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_ml300.dll
-        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_photo300.dll
+    win32-g++{
+        LIBS += -L$$(OPENCV_MINGW_PATH)\lib \
+         -lopencv_core300 \
+       -lopencv_highgui300 \
+       -lopencv_imgcodecs300 \
+       -lopencv_imgproc300 \
+       -lopencv_calib3d300 \
+       -lopencv_features2d300 \
+       -lopencv_flann300 \
+       -lopencv_video300 \
+       -lopencv_videoio300 \
+       -lopencv_videostab300 \
+       -lopencv_superres300 \
+       -lopencv_stitching300 \
+       -lopencv_shape300 \
+       -lopencv_objdetect300 \
+       -lopencv_ml300 \
+       -lopencv_photo300
+
+#        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_core300.dll
+#        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_highgui300.dll
+#        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_imgcodecs300.dll
+#        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_imgproc300.dll
+#        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_calib3d300.dll
+#        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_features2d300.dll
+#        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_flann300.dll
+#        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_video300.dll
+#        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_videoio300.dll
+#        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_videostab300.dll
+#        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_superres300.dll
+#        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_stitching300.dll
+#        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_shape300.dll
+#        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_objdetect300.dll
+#        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_ml300.dll
+#        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_photo300.dll
 
 
 
 
 
     }
-    win32-msvc2013{
+    win32-msvc*{
         CONFIG(debug){
             LIBS += $$(OPENCV_MSVC_PATH)\lib\opencv_ts300d.lib
             LIBS += $$(OPENCV_MSVC_PATH)\lib\opencv_world300d.lib

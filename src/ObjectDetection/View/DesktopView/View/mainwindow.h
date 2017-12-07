@@ -39,6 +39,8 @@ private slots:
 
     void on_circleThicknessSlider_valueChanged(int value);
 
+    void on_spinBox_valueChanged(int arg1);
+
 private:
     ColorDetectorController detector;
     cv::VideoCapture cap;

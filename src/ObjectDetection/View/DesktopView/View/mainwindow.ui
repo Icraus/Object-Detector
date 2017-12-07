@@ -295,6 +295,9 @@
            </property>
           </widget>
          </item>
+         <item>
+          <widget class="QSpinBox" name="spinBox"/>
+         </item>
         </layout>
        </widget>
       </item>

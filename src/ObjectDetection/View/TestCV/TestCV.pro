@@ -10,7 +10,7 @@ SOURCES += main.cpp
 INCLUDEPATH += $$_PRO_FILE_PWD_\..\..\include\ImageProcessors
 INCLUDEPATH += $$_PRO_FILE_PWD_\..\..\include\utils
 
-LIBS += -L$$_PRO_FILE_PWD_\..\..\libs  \
+LIBS += -L$$_PRO_FILE_PWD_\..\..\libs\\$$[QMAKE_SPEC]  \
     -lImageProcessors \
     -lUtils
-DESTDIR += $$_PRO_FILE_PWD_\..\..\bin
+DESTDIR += $$_PRO_FILE_PWD_\..\..\bin\\$$[QMAKE_SPEC]

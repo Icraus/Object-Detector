@@ -9,6 +9,7 @@
 class ColorDetectorController : public QObject
 {
     Q_OBJECT
+//    Q_PROPERTY(int minColor READ getMinColor WRITE setMinColor NOTIFY minColorChanged)
 public:
     explicit ColorDetectorController(QObject *parent = nullptr);
     cv::Mat colored;
@@ -24,6 +25,7 @@ public:
     void setCircleColor(const cv::Scalar &value);
 
     int getThickness() const;
+    ImageProcessor::AbstractImageProcessor *getPro() const;
 
 public slots:
     void setParam1(int value);
@@ -31,7 +33,6 @@ public slots:
     void setMinDist(int value);
     void setThickness(int value);
 
-    ImageProcessor::AbstractImageProcessor *getPro() const;
     void setPro(ImageProcessor::AbstractImageProcessor *value);
 
 signals:
@@ -54,7 +55,7 @@ public slots:
     void setDilationSize(int value);
     void setMinColor(const cv::Scalar &value);
     void setMaxColor(const cv::Scalar &value);
-    QImage detectObject(const cv::Mat &t);
+    Q_INVOKABLE QImage detectObject(const cv::Mat &t);
 
 signals:
 
