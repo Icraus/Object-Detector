@@ -1,29 +1,7 @@
 #include "detectcircle.h"
+#include "impl/detectcircleimpl.h"
 using namespace ImageProcessor;
-class DetectCircle::_DetectCircleImpl {
-private:
-    int param1 = 70, param2 = 30, minDist = 75;
-    DetectCircle *const ptr;
-public:
-    _DetectCircleImpl(const _DetectCircleImpl&) = default;
-    _DetectCircleImpl(_DetectCircleImpl &&) = default;
-    _DetectCircleImpl(DetectCircle *const);
-    int getParam1() const;
-    int getParam2() const;
-    int getMinDist() const;
-    std::vector<cv::Vec3f> detectCircle()const;
-    QVariant processImage();
 
-public slots:
-    void setParam1(int value);
-    void setParam2(int value);
-    void setMinDist(int value);
-};
-/*!
- * \brief the minimum distance between two circles
- * \return integer of minimum distance
- * \sa ImageProcessor::DetectCircle::setMinDist
- */
 int DetectCircle::getMinDist() const
 {
     return _pimpl->getMinDist();
@@ -94,59 +72,6 @@ DetectCircle::~DetectCircle()
 
 }
 
-
-DetectCircle::_DetectCircleImpl::_DetectCircleImpl(DetectCircle *const _ptr):
-    ptr{_ptr}
-{
-
-}
-
-int DetectCircle::_DetectCircleImpl::getParam1() const
-{
-    return param1;
-}
-
-void DetectCircle::_DetectCircleImpl::setParam1(int value)
-{
-    param1 = value;
-}
-
-int DetectCircle::_DetectCircleImpl::getParam2() const
-{
-    return param2;
-}
-
-void DetectCircle::_DetectCircleImpl::setParam2(int value)
-{
-    param2 = value;
-}
-
-int DetectCircle::_DetectCircleImpl::getMinDist() const
-{
-    return minDist;
-}
-
-void DetectCircle::_DetectCircleImpl::setMinDist(int value)
-{
-    minDist = value;
-}
-
-std::vector<cv::Vec3f> DetectCircle::_DetectCircleImpl::detectCircle() const
-{
-    cv::Mat temp = ptr -> getImg();
-    std::vector<cv::Vec3f> circles;
-    if(temp.type() != CV_8UC1)
-        cv::cvtColor(temp, temp, cv::COLOR_BGR2GRAY);
-    cv::HoughCircles(temp, circles, cv::HOUGH_GRADIENT, 1, getMinDist(), getParam1(), getParam2());
-    return circles;
-}
-
-QVariant DetectCircle::_DetectCircleImpl::processImage()
-{
-    std::vector<cv::Vec3f> circles = detectCircle();
-    emit ptr->circlesDetected(circles);
-    return QVariant::fromValue<std::vector<cv::Vec3f>> (circles);
-}
 
 /*! \class ImageProcessor::DetectCircle
  *  \brief this class is used To Detect circles in an image

@@ -1,21 +1,7 @@
 #include "abstractimageprocessor.h"
+#include "impl/abstractimageprocessorimpl.h"
 #include <iostream>
 using namespace ImageProcessor;
-
-class AbstractImageProcessor::_AbstractImageProcessorImpl{
-    cv::Mat _img;
-    cv::Mat _dst;
-public:
-    cv::Mat getImg() const;
-    cv::Mat getDst() const;
-protected:
-
-public slots:
-    virtual void setImg(const cv::Mat &img);
-    virtual void setDst(const cv::Mat &dst);
-
-};
-
 /*!
  * \brief accpets A pointer To the Parent Class For The Qt Meta-object Model See <a href="http://doc.qt.io/qt-5/metaobjects.html">Qt Meta-Object</a>
  * \param parent A QObject Object as a parent
@@ -72,29 +58,6 @@ void AbstractImageProcessor::setImg(const cv::Mat &img)
     _pimpl->setImg(img);
     emit imageChanged(img);
 
-}
-
-
-cv::Mat AbstractImageProcessor::_AbstractImageProcessorImpl::getImg() const
-{
-    return _img.clone();
-}
-
-cv::Mat AbstractImageProcessor::_AbstractImageProcessorImpl::getDst()const
-{
-    return _dst.clone();
-}
-
-
-
-void AbstractImageProcessor::_AbstractImageProcessorImpl::setImg(const cv::Mat &img)
-{
-    _img = img;
-}
-
-void AbstractImageProcessor::_AbstractImageProcessorImpl::setDst(const cv::Mat &dst)
-{
-    _dst = dst;
 }
 
 

@@ -1,5 +1,8 @@
 INSTALL_HEADER = $$HEADERS
 INSTALL_PREFIX = $$TARGET
+TEMP = $$find(INSTALL_HEADER, ./impl.*)
+INSTALL_HEADER -= $$TEMP
+
 
 for(VARS, INSTALL_HEADER){
     VARS_FILE  = "$$_PRO_FILE_PWD_\\$$VARS"
@@ -8,8 +11,6 @@ for(VARS, INSTALL_HEADER){
     eval(header_$${VARS}.files += $$VARS_FILE)
     eval(header_$${VARS}.path += "$$_PRO_FILE_PWD_\..\..\include\\$$INSTALL_PREFIX\\$$DIR_VAR_NAME")
     eval(INSTALLS *= header_$${VARS})
-
-
 }
 CONFIG(release, debug | release){
 DESTDIR += "$$_PRO_FILE_PWD_\..\..\libs\release"
