@@ -11,7 +11,14 @@ for(VARS, INSTALL_HEADER){
 
 
 }
+CONFIG(release, debug | release){
+DESTDIR += "$$_PRO_FILE_PWD_\..\..\libs\release"
+DLLDESTDIR += "$$_PRO_FILE_PWD_\..\..\bin\release"
 
+}
+CONFIG(debug, debug | release){
 
 DESTDIR += "$$_PRO_FILE_PWD_\..\..\libs\\$$[QMAKE_SPEC]"
 DLLDESTDIR += "$$_PRO_FILE_PWD_\..\..\bin\\$$[QMAKE_SPEC]"
+
+}

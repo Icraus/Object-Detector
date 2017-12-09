@@ -5,7 +5,6 @@
 #-------------------------------------------------
 
 QT       -= gui
-
 TARGET = ImageProcessors
 TEMPLATE = lib
 CONFIG += c++14
@@ -16,7 +15,8 @@ SOURCES += \
     ImageProcessor/detectcircle.cpp \
     ImageProcessor/detectcolor.cpp \
     ImageProcessor/dilate.cpp \
-    ImageProcessor/objectdetection.cpp
+    ImageProcessor/objectdetection.cpp \
+    objectdetectorbuilder.cpp
 
 HEADERS += \
     ImageProcessor/abstractimageprocessor.h \
@@ -24,7 +24,8 @@ HEADERS += \
     ImageProcessor/detectcolor.h \
     ImageProcessor/dilate.h \
     ImageProcessor/objectdetection.h \
-    headers.h
+    headers.h \
+    objectdetectorbuilder.h
 CONFIG(!staticlib){
     DEFINES += IMAGEPROCESSORS_LIBRARY
     HEADERS += imageprocessors_global.h

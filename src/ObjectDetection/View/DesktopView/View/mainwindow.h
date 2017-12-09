@@ -41,6 +41,8 @@ private slots:
 
     void on_spinBox_valueChanged(int arg1);
 
+    void on_pushButton_5_clicked();
+
 private:
     ColorDetectorController detector;
     cv::VideoCapture cap;

@@ -55,17 +55,23 @@ public:
     QSlider *param1Slider;
     QSlider *param2Slider;
     QPushButton *pushButton_2;
-    QSlider *sMaxSlider;
-    QSlider *vMinSlider;
-    QSlider *hMaxSlider;
-    QSlider *hMinSlider;
     QSlider *circleThicknessSlider;
+    QSlider *vMinSlider;
+    QSlider *sMaxSlider;
+    QSlider *hMinSlider;
     QPushButton *pushButton;
-    QLabel *label_6;
+    QSlider *hMaxSlider;
     QLabel *label_4;
-    QLabel *label_5;
+    QLabel *label_6;
     QLabel *label_7;
+    QLabel *label_5;
     QLabel *label_8;
+    QSpinBox *spinBox_3;
+    QSpinBox *spinBox_4;
+    QSpinBox *spinBox_2;
+    QSpinBox *spinBox_5;
+    QSpinBox *spinBox_6;
+    QSpinBox *spinBox_7;
     QGroupBox *groupBox;
     QVBoxLayout *verticalLayout;
     QRadioButton *radioButton;
@@ -73,6 +79,7 @@ public:
     QRadioButton *radioButton_3;
     QRadioButton *radioButton_4;
     QSlider *dilSlider;
+    QPushButton *pushButton_5;
     QSpinBox *spinBox;
     QVBoxLayout *verticalLayout_3;
     QListView *listView;
@@ -116,21 +123,21 @@ public:
         pushButton_3 = new QPushButton(centralWidget);
         pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
 
-        gridLayout->addWidget(pushButton_3, 2, 3, 1, 1);
+        gridLayout->addWidget(pushButton_3, 2, 5, 1, 1);
 
         vMaxSlider = new QSlider(centralWidget);
         vMaxSlider->setObjectName(QStringLiteral("vMaxSlider"));
         vMaxSlider->setMaximum(255);
         vMaxSlider->setOrientation(Qt::Horizontal);
 
-        gridLayout->addWidget(vMaxSlider, 3, 2, 1, 1);
+        gridLayout->addWidget(vMaxSlider, 3, 4, 1, 1);
 
         sMinSlider = new QSlider(centralWidget);
         sMinSlider->setObjectName(QStringLiteral("sMinSlider"));
         sMinSlider->setMaximum(255);
         sMinSlider->setOrientation(Qt::Horizontal);
 
-        gridLayout->addWidget(sMinSlider, 2, 1, 1, 1);
+        gridLayout->addWidget(sMinSlider, 2, 2, 1, 1);
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setSpacing(6);
@@ -151,7 +158,7 @@ public:
         horizontalLayout->addWidget(xCenterLabel);
 
 
-        gridLayout->addLayout(horizontalLayout, 3, 3, 1, 1);
+        gridLayout->addLayout(horizontalLayout, 3, 5, 1, 1);
 
         groupBox_2 = new QGroupBox(centralWidget);
         groupBox_2->setObjectName(QStringLiteral("groupBox_2"));
@@ -181,66 +188,61 @@ public:
         verticalLayout_2->addWidget(param2Slider);
 
 
-        gridLayout->addWidget(groupBox_2, 4, 3, 1, 1);
+        gridLayout->addWidget(groupBox_2, 4, 5, 1, 1);
 
         pushButton_2 = new QPushButton(centralWidget);
         pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
 
-        gridLayout->addWidget(pushButton_2, 4, 2, 1, 1);
+        gridLayout->addWidget(pushButton_2, 4, 4, 1, 1);
 
-        sMaxSlider = new QSlider(centralWidget);
-        sMaxSlider->setObjectName(QStringLiteral("sMaxSlider"));
-        sMaxSlider->setMaximum(255);
-        sMaxSlider->setOrientation(Qt::Horizontal);
+        circleThicknessSlider = new QSlider(centralWidget);
+        circleThicknessSlider->setObjectName(QStringLiteral("circleThicknessSlider"));
+        circleThicknessSlider->setOrientation(Qt::Horizontal);
 
-        gridLayout->addWidget(sMaxSlider, 2, 2, 1, 1);
+        gridLayout->addWidget(circleThicknessSlider, 1, 5, 1, 1);
 
         vMinSlider = new QSlider(centralWidget);
         vMinSlider->setObjectName(QStringLiteral("vMinSlider"));
         vMinSlider->setMaximum(255);
         vMinSlider->setOrientation(Qt::Horizontal);
 
-        gridLayout->addWidget(vMinSlider, 3, 1, 1, 1);
+        gridLayout->addWidget(vMinSlider, 3, 2, 1, 1);
 
-        hMaxSlider = new QSlider(centralWidget);
-        hMaxSlider->setObjectName(QStringLiteral("hMaxSlider"));
-        hMaxSlider->setMaximum(180);
-        hMaxSlider->setOrientation(Qt::Horizontal);
+        sMaxSlider = new QSlider(centralWidget);
+        sMaxSlider->setObjectName(QStringLiteral("sMaxSlider"));
+        sMaxSlider->setMaximum(255);
+        sMaxSlider->setOrientation(Qt::Horizontal);
 
-        gridLayout->addWidget(hMaxSlider, 1, 2, 1, 1);
+        gridLayout->addWidget(sMaxSlider, 2, 4, 1, 1);
 
         hMinSlider = new QSlider(centralWidget);
         hMinSlider->setObjectName(QStringLiteral("hMinSlider"));
         hMinSlider->setMaximum(180);
         hMinSlider->setOrientation(Qt::Horizontal);
 
-        gridLayout->addWidget(hMinSlider, 1, 1, 1, 1);
-
-        circleThicknessSlider = new QSlider(centralWidget);
-        circleThicknessSlider->setObjectName(QStringLiteral("circleThicknessSlider"));
-        circleThicknessSlider->setOrientation(Qt::Horizontal);
-
-        gridLayout->addWidget(circleThicknessSlider, 1, 3, 1, 1);
+        gridLayout->addWidget(hMinSlider, 1, 2, 1, 1);
 
         pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
 
-        gridLayout->addWidget(pushButton, 4, 1, 1, 1);
+        gridLayout->addWidget(pushButton, 4, 2, 1, 1);
 
-        label_6 = new QLabel(centralWidget);
-        label_6->setObjectName(QStringLiteral("label_6"));
+        hMaxSlider = new QSlider(centralWidget);
+        hMaxSlider->setObjectName(QStringLiteral("hMaxSlider"));
+        hMaxSlider->setMaximum(180);
+        hMaxSlider->setOrientation(Qt::Horizontal);
 
-        gridLayout->addWidget(label_6, 3, 0, 1, 1);
+        gridLayout->addWidget(hMaxSlider, 1, 4, 1, 1);
 
         label_4 = new QLabel(centralWidget);
         label_4->setObjectName(QStringLiteral("label_4"));
 
         gridLayout->addWidget(label_4, 1, 0, 1, 1);
 
-        label_5 = new QLabel(centralWidget);
-        label_5->setObjectName(QStringLiteral("label_5"));
+        label_6 = new QLabel(centralWidget);
+        label_6->setObjectName(QStringLiteral("label_6"));
 
-        gridLayout->addWidget(label_5, 2, 0, 1, 1);
+        gridLayout->addWidget(label_6, 3, 0, 1, 1);
 
         label_7 = new QLabel(centralWidget);
         label_7->setObjectName(QStringLiteral("label_7"));
@@ -251,7 +253,12 @@ public:
         label_7->setSizePolicy(sizePolicy);
         label_7->setAlignment(Qt::AlignCenter);
 
-        gridLayout->addWidget(label_7, 0, 1, 1, 1);
+        gridLayout->addWidget(label_7, 0, 2, 1, 1);
+
+        label_5 = new QLabel(centralWidget);
+        label_5->setObjectName(QStringLiteral("label_5"));
+
+        gridLayout->addWidget(label_5, 2, 0, 1, 1);
 
         label_8 = new QLabel(centralWidget);
         label_8->setObjectName(QStringLiteral("label_8"));
@@ -259,7 +266,37 @@ public:
         label_8->setSizePolicy(sizePolicy);
         label_8->setAlignment(Qt::AlignCenter);
 
-        gridLayout->addWidget(label_8, 0, 2, 1, 1);
+        gridLayout->addWidget(label_8, 0, 4, 1, 1);
+
+        spinBox_3 = new QSpinBox(centralWidget);
+        spinBox_3->setObjectName(QStringLiteral("spinBox_3"));
+
+        gridLayout->addWidget(spinBox_3, 2, 1, 1, 1);
+
+        spinBox_4 = new QSpinBox(centralWidget);
+        spinBox_4->setObjectName(QStringLiteral("spinBox_4"));
+
+        gridLayout->addWidget(spinBox_4, 3, 1, 1, 1);
+
+        spinBox_2 = new QSpinBox(centralWidget);
+        spinBox_2->setObjectName(QStringLiteral("spinBox_2"));
+
+        gridLayout->addWidget(spinBox_2, 1, 1, 1, 1);
+
+        spinBox_5 = new QSpinBox(centralWidget);
+        spinBox_5->setObjectName(QStringLiteral("spinBox_5"));
+
+        gridLayout->addWidget(spinBox_5, 1, 3, 1, 1);
+
+        spinBox_6 = new QSpinBox(centralWidget);
+        spinBox_6->setObjectName(QStringLiteral("spinBox_6"));
+
+        gridLayout->addWidget(spinBox_6, 2, 3, 1, 1);
+
+        spinBox_7 = new QSpinBox(centralWidget);
+        spinBox_7->setObjectName(QStringLiteral("spinBox_7"));
+
+        gridLayout->addWidget(spinBox_7, 3, 3, 1, 1);
 
 
         gridLayout_2->addLayout(gridLayout, 0, 1, 1, 1);
@@ -301,6 +338,11 @@ public:
 
         verticalLayout->addWidget(dilSlider);
 
+        pushButton_5 = new QPushButton(groupBox);
+        pushButton_5->setObjectName(QStringLiteral("pushButton_5"));
+
+        verticalLayout->addWidget(pushButton_5);
+
         spinBox = new QSpinBox(groupBox);
         spinBox->setObjectName(QStringLiteral("spinBox"));
 
@@ -341,6 +383,18 @@ public:
         MainWindow->setStatusBar(statusBar);
 
         retranslateUi(MainWindow);
+        QObject::connect(hMaxSlider, SIGNAL(valueChanged(int)), spinBox_5, SLOT(setValue(int)));
+        QObject::connect(sMaxSlider, SIGNAL(valueChanged(int)), spinBox_6, SLOT(setValue(int)));
+        QObject::connect(vMaxSlider, SIGNAL(valueChanged(int)), spinBox_7, SLOT(setValue(int)));
+        QObject::connect(hMinSlider, SIGNAL(valueChanged(int)), spinBox_2, SLOT(setValue(int)));
+        QObject::connect(sMinSlider, SIGNAL(valueChanged(int)), spinBox_3, SLOT(setValue(int)));
+        QObject::connect(vMinSlider, SIGNAL(valueChanged(int)), spinBox_4, SLOT(setValue(int)));
+        QObject::connect(spinBox_2, SIGNAL(valueChanged(int)), hMinSlider, SLOT(setValue(int)));
+        QObject::connect(spinBox_3, SIGNAL(valueChanged(int)), sMinSlider, SLOT(setValue(int)));
+        QObject::connect(spinBox_4, SIGNAL(valueChanged(int)), vMinSlider, SLOT(setValue(int)));
+        QObject::connect(spinBox_5, SIGNAL(valueChanged(int)), hMaxSlider, SLOT(setValue(int)));
+        QObject::connect(spinBox_6, SIGNAL(valueChanged(int)), sMaxSlider, SLOT(setValue(int)));
+        QObject::connect(spinBox_7, SIGNAL(valueChanged(int)), vMaxSlider, SLOT(setValue(int)));
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
@@ -358,16 +412,17 @@ public:
         groupBox_2->setTitle(QApplication::translate("MainWindow", "Circles", Q_NULLPTR));
         pushButton_2->setText(QApplication::translate("MainWindow", "Max Color", Q_NULLPTR));
         pushButton->setText(QApplication::translate("MainWindow", "Min Color", Q_NULLPTR));
-        label_6->setText(QApplication::translate("MainWindow", "V", Q_NULLPTR));
         label_4->setText(QApplication::translate("MainWindow", "H", Q_NULLPTR));
-        label_5->setText(QApplication::translate("MainWindow", "S", Q_NULLPTR));
+        label_6->setText(QApplication::translate("MainWindow", "V", Q_NULLPTR));
         label_7->setText(QApplication::translate("MainWindow", "Min", Q_NULLPTR));
+        label_5->setText(QApplication::translate("MainWindow", "S", Q_NULLPTR));
         label_8->setText(QApplication::translate("MainWindow", "Max", Q_NULLPTR));
         groupBox->setTitle(QApplication::translate("MainWindow", "Elide", Q_NULLPTR));
         radioButton->setText(QApplication::translate("MainWindow", "RadioButton", Q_NULLPTR));
         radioButton_2->setText(QApplication::translate("MainWindow", "RadioButton", Q_NULLPTR));
         radioButton_3->setText(QApplication::translate("MainWindow", "RadioButton", Q_NULLPTR));
         radioButton_4->setText(QApplication::translate("MainWindow", "RadioButton", Q_NULLPTR));
+        pushButton_5->setText(QApplication::translate("MainWindow", "add More Dilate", Q_NULLPTR));
         pushButton_4->setText(QApplication::translate("MainWindow", "Set Port", Q_NULLPTR));
     } // retranslateUi
 

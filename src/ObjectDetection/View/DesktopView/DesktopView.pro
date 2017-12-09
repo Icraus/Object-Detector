@@ -38,12 +38,20 @@ android{
 INCLUDEPATH += $$_PRO_FILE_PWD_\..\..\include\ImageProcessors
 INCLUDEPATH += $$_PRO_FILE_PWD_\..\..\include\utils
 !android{
-LIBS += -L$$_PRO_FILE_PWD_\..\..\libs\\$$[QMAKE_SPEC]  \
-    -lImageProcessors \
-    -lUtils
-}
-DESTDIR += $$_PRO_FILE_PWD_\..\..\bin\\$$[QMAKE_SPEC]
+    CONFIG(debug, debug | release){
+        LIBS += -L$$_PRO_FILE_PWD_\..\..\libs\\$$[QMAKE_SPEC]  \
+            -lImageProcessors \
+            -lUtils
+        DESTDIR += $$_PRO_FILE_PWD_\..\..\bin\\$$[QMAKE_SPEC]
+    }
 
+    CONFIG(release, debug | release){
+        LIBS += -L$$_PRO_FILE_PWD_\..\..\libs\release  \
+            -lImageProcessors \
+            -lUtils
+        DESTDIR += $$_PRO_FILE_PWD_\..\..\bin\release
+        }
+}
 contains(ANDROID_TARGET_ARCH,armeabi-v7a) {
     ANDROID_EXTRA_LIBS = $$PWD/android/libopencv_java3.so
 }

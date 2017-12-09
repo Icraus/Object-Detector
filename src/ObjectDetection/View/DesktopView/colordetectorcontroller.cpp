@@ -36,6 +36,13 @@ void ColorDetectorController::setPro(ImageProcessor::AbstractImageProcessor *val
     pro = value;
 }
 
+void ColorDetectorController::addFilter()
+{
+    auto processor = qobject_cast<ObjectDetection*>(getPro());
+    Dilate *dil = new Dilate(this);
+    processor->addFilter(dil);
+}
+
 int ColorDetectorController::getThickness() const
 {
     return thickness;

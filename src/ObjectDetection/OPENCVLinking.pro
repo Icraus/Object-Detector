@@ -1,47 +1,39 @@
 QT  *= core
 win32{
-    INCLUDEPATH += $$(OPENCV_INCLUDE)
 
     win32-g++{
+#        CONFIG(debug, debug | release){
+        INCLUDEPATH += $$(OPENCV_INCLUDE)
         LIBS += -L$$(OPENCV_MINGW_PATH)\lib \
-         -lopencv_core300 \
-       -lopencv_highgui300 \
-       -lopencv_imgcodecs300 \
-       -lopencv_imgproc300 \
-       -lopencv_calib3d300 \
-       -lopencv_features2d300 \
-       -lopencv_flann300 \
-       -lopencv_video300 \
-       -lopencv_videoio300 \
-       -lopencv_videostab300 \
-       -lopencv_superres300 \
-       -lopencv_stitching300 \
-       -lopencv_shape300 \
-       -lopencv_objdetect300 \
-       -lopencv_ml300 \
-       -lopencv_photo300
-
-#        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_core300.dll
-#        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_highgui300.dll
-#        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_imgcodecs300.dll
-#        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_imgproc300.dll
-#        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_calib3d300.dll
-#        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_features2d300.dll
-#        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_flann300.dll
-#        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_video300.dll
-#        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_videoio300.dll
-#        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_videostab300.dll
-#        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_superres300.dll
-#        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_stitching300.dll
-#        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_shape300.dll
-#        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_objdetect300.dll
-#        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_ml300.dll
-#        LIBS += $$(OPENCV_MINGW_PATH)\bin\libopencv_photo300.dll
-
-
-
-
-
+         -lopencv_core300.dll \
+       -lopencv_highgui300.dll \
+       -lopencv_imgcodecs300.dll \
+       -lopencv_imgproc300.dll \
+       -lopencv_calib3d300.dll \
+       -lopencv_features2d300.dll \
+       -lopencv_flann300.dll \
+       -lopencv_video300.dll \
+       -lopencv_videoio300.dll \
+       -lopencv_videostab300.dll \
+       -lopencv_superres300.dll \
+       -lopencv_stitching300.dll \
+       -lopencv_shape300.dll \
+       -lopencv_objdetect300.dll \
+       -lopencv_ml300.dll \
+       -lopencv_photo300.dll
+#}
+#    CONFIG(release, debug | release){
+#        INCLUDEPATH += F:\Programs\DeskTop\QTST\install\include
+#    LIBS += -LF:\Programs\DeskTop\QTST\install\x86\mingw\staticlib \
+#        -lopencv_ts300 \
+#        -lopencv_world300 \
+#        -lIlmImf \
+#        -llibjasper \
+#        -llibjpeg \
+#        -llibpng \
+#        -llibtiff \
+#        -lzlib
+#}
     }
     win32-msvc*{
         CONFIG(debug){

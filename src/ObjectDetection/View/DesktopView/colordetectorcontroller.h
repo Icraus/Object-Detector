@@ -52,6 +52,7 @@ private:
     int param1, param2, minDist, dilationSize;
     ImageProcessor::AbstractImageProcessor *pro;
 public slots:
+    void addFilter();
     void setDilationSize(int value);
     void setMinColor(const cv::Scalar &value);
     void setMaxColor(const cv::Scalar &value);

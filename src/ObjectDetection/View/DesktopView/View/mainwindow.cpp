@@ -80,11 +80,15 @@ void MainWindow::setXYR(int x, int y, int r)
 //    qDebug() << "From: " <<s.toLocal8Bit().data();
     if(!_port.isOpen() || !_port.isWritable())
         return;
-    _port.write(s.toLocal8Bit().data());
+    const char *lcl = s.toLocal8Bit().data();
+    _port.write(lcl);
+    qDebug() << lcl;
 }
 
 void MainWindow::on_pushButton_4_clicked()
 {
+    if(_port.isOpen())
+        _port.close();
     QString le = ui->listView->currentIndex().data().toString();
     _port.setPortName(le);
     _port.open(QIODevice::WriteOnly);
@@ -99,4 +103,9 @@ void MainWindow::on_circleThicknessSlider_valueChanged(int value)
 void MainWindow::on_spinBox_valueChanged(int arg1)
 {
     cap.open(arg1);
+}
+
+void MainWindow::on_pushButton_5_clicked()
+{
+    detector.addFilter();
 }

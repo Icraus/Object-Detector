@@ -28,13 +28,20 @@ public:
     DetectColor *getColDetector() const;
     DetectCircle *getCirDetector() const;
     std::vector<cv::Vec3f> getCircles();
+    QVariant getResults() const;
 
     virtual ~ObjectDetection();
 public slots:
     void setCirDetector(DetectCircle *cirDetector);
     void setDiler(Dilate *diler);
     void setColDetector(DetectColor *colDetector);
+    void addFilter(AbstractImageProcessor *proc);
+    //TODO void removeFilter(AbstractImageProcessor *proc);
+    std::vector<AbstractImageProcessor *> getFilters() const;
+    void setFilters(const std::vector<AbstractImageProcessor *> &value);
 
+protected:
+    void setResults(QVariant res);
     // ImageProcessor::AbstractImageProcessor interface
 public:
     virtual QVariant processImage() override;

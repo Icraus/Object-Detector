@@ -110,8 +110,8 @@ QVariant DetectColor::_DetectColorImpl::processImage()
 void DetectColor::_DetectColorImpl::detectColor()
 {
     cv::Mat temp;
-    cv::cvtColor(_ptr->getImg(), temp, cv::COLOR_BGR2HSV);
-    cv::GaussianBlur(temp, temp, cv::Size(11, 11), 5);
+    cv::GaussianBlur(_ptr->getImg(), temp, cv::Size(11, 11), 0);
+    cv::cvtColor(temp, temp, cv::COLOR_BGR2HSV);
     cv::inRange(temp, getMinColor(), getMaxColor(), temp);
     _ptr->setDst(temp);
 }
