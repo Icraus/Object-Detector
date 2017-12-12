@@ -3,7 +3,6 @@
 # Project created by QtCreator 2017-10-17T01:03:07
 #
 #-------------------------------------------------
-
 QT       += gui
 
 TARGET = Utils

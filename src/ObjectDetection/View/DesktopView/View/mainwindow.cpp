@@ -14,15 +14,13 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    cap.open(0);
+//    cap.open(0);
     connect(&detector, SIGNAL(xyrChanged(int,int,int)), this, SLOT(setXYR(int, int, int)));
-    timer.setInterval(30);
-    connect(&timer, SIGNAL(timeout()), this,  SLOT(getFrame()));
     connect(ui->param1Slider, SIGNAL(sliderMoved(int)), &detector,SLOT(setParam1(int)));
     connect(ui->param2Slider, SIGNAL(sliderMoved(int)), &detector,SLOT(setParam2(int)));
     connect(ui->minDistSlider, SIGNAL(sliderMoved(int)), &detector,SLOT(setMinDist(int)));
     connect(ui->dilSlider, SIGNAL(sliderMoved(int)), &detector,SLOT(setDilationSize(int)));
-
+    connect(ui->cVVideoCapture, SIGNAL(frameCaptured(cv::Mat)), this, SLOT(getFrame(cv::Mat)));
     QList<QSerialPortInfo> ports = QSerialPortInfo::availablePorts();
     for(auto i : ports)
     {
@@ -30,17 +28,15 @@ MainWindow::MainWindow(QWidget *parent) :
     }
     model.setStringList(ls);
     ui->listView->setModel(&model);
-    timer.start();
-
+//    connect(ui->cVVideoCapture, SIGNAL(started()), &timer, SLOT(start()));
 }
-void MainWindow::getFrame(){
-    if(cap.isOpened()){
-        cap >> t;
-        ui->label->setPixmap(QPixmap::fromImage(detector.detectObject(t)));
-        ui->label_2->setPixmap(QPixmap::fromImage(Utils::toImage(detector.colored)));
-        ui->label_3->setPixmap(QPixmap::fromImage(Utils::toImage(detector.dialted)));
+void MainWindow::getFrame(cv::Mat frame){
 
-    }
+    QImage img = detector.detectObject(frame);
+    ui->label_2->setPixmap(QPixmap::fromImage(img));
+
+    ui->label_3->setPixmap(QPixmap::fromImage(Utils::toImage(detector.dialted)));
+
 }
 QString MainWindow::toString(int x){
     return QString("%1").arg(x);
@@ -48,7 +44,7 @@ QString MainWindow::toString(int x){
 
 MainWindow::~MainWindow()
 {
-    cap.release();
+//    cap.release();
     delete ui;
 }
 
@@ -102,7 +98,7 @@ void MainWindow::on_circleThicknessSlider_valueChanged(int value)
 
 void MainWindow::on_spinBox_valueChanged(int arg1)
 {
-    cap.open(arg1);
+//    cap.open(arg1);
 }
 
 void MainWindow::on_pushButton_5_clicked()

@@ -2,7 +2,7 @@
 #define UTILS_H
 
 #include <QObject>
-#include <headers.h>
+#include "headers.h"
 #include <QColor>
 #include <QImage>
 namespace Utilities {

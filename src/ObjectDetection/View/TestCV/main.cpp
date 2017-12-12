@@ -1,12 +1,31 @@
-#include <iostream>
-#include "ImageProcessor/detectcolor.h"
-#include "ImageProcessor/detectcircle.h"
-
+#include "opencv2/imgproc.hpp"
+#include "opencv2/highgui.hpp"
+using namespace cv;
 using namespace std;
-using namespace ImageProcessor;
-int main()
+int main( int argc, char** argv )
 {
-    cv::Mat m = cv::imread("E:\\1.png");
-    cv::imshow("a", m);
-    cv::waitKey(0);
+    Mat src;
+    // the first command-line parameter must be a filename of the binary
+    // (black-n-white) image
+    if( argc != 2 || !(src=imread(argv[1], 0)).data)
+        return -1;
+    Mat dst = Mat::zeros(src.rows, src.cols, CV_8UC3);
+    src = src > 1;
+    namedWindow( "Source", 1 );
+    imshow( "Source", src );
+    vector<vector<Point> > contours;
+    vector<Vec4i> hierarchy;
+    findContours( src, contours, hierarchy,
+        RETR_CCOMP, CHAIN_APPROX_SIMPLE );
+    // iterate through all the top-level contours,
+    // draw each connected component with its own random color
+    int idx = 0;
+    for( ; idx >= 0; idx = hierarchy[idx][0] )
+    {
+        Scalar color( rand()&255, rand()&255, rand()&255 );
+        drawContours( dst, contours, idx, color, FILLED, 8, hierarchy );
+    }
+    namedWindow( "Components", 1 );
+    imshow( "Components", dst );
+    waitKey(0);
 }

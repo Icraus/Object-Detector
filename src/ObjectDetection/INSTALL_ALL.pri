@@ -9,17 +9,18 @@ for(VARS, INSTALL_HEADER){
     VARS ~= s,/,\\,g
     DIR_VAR_NAME = $$dirname(VARS)
     eval(header_$${VARS}.files += $$VARS_FILE)
-    eval(header_$${VARS}.path += "$$_PRO_FILE_PWD_\..\..\include\\$$INSTALL_PREFIX\\$$DIR_VAR_NAME")
+    eval(header_$${VARS}.path += "$$PWD\include\\$$INSTALL_PREFIX\\$$DIR_VAR_NAME")
     eval(INSTALLS *= header_$${VARS})
 }
 CONFIG(release, debug | release){
-DESTDIR += "$$_PRO_FILE_PWD_\..\..\libs\release"
-DLLDESTDIR += "$$_PRO_FILE_PWD_\..\..\bin\release"
+DESTDIR += "$$PWD\libs\release"
+DLLDESTDIR += "$$PWD\bin\release"
 
 }
 CONFIG(debug, debug | release){
 
-DESTDIR += "$$_PRO_FILE_PWD_\..\..\libs\\$$[QMAKE_SPEC]"
-DLLDESTDIR += "$$_PRO_FILE_PWD_\..\..\bin\\$$[QMAKE_SPEC]"
+DESTDIR += "$$PWD\libs\\$$[QMAKE_SPEC]"
+DLLDESTDIR += "$$PWD\bin\\$$[QMAKE_SPEC]"
 
 }
+#message($$PWD)

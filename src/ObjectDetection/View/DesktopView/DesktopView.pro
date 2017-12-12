@@ -37,6 +37,8 @@ android{
 }
 INCLUDEPATH += $$_PRO_FILE_PWD_\..\..\include\ImageProcessors
 INCLUDEPATH += $$_PRO_FILE_PWD_\..\..\include\utils
+INCLUDEPATH += $$_PRO_FILE_PWD_\..\..\include\CVVideoCaptureLib
+
 !android{
     CONFIG(debug, debug | release){
         LIBS += -L$$_PRO_FILE_PWD_\..\..\libs\\$$[QMAKE_SPEC]  \
@@ -48,7 +50,8 @@ INCLUDEPATH += $$_PRO_FILE_PWD_\..\..\include\utils
     CONFIG(release, debug | release){
         LIBS += -L$$_PRO_FILE_PWD_\..\..\libs\release  \
             -lImageProcessors \
-            -lUtils
+            -lUtils \
+            -lCVVideoCaptureLib
         DESTDIR += $$_PRO_FILE_PWD_\..\..\bin\release
         }
 }
