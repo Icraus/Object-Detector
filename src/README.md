@@ -3,33 +3,43 @@
 <pre>
 <xmp>
 
-+---bin						// Executable Path
-+---CircleDetector          // Image Processing Library
++---bin
+¦   +---release
+¦   +---win32-g++
++---CircleDetector
 ¦   +---ImageProcessors
 ¦   ¦   +---ImageProcessor
+¦   ¦       +---impl
 ¦   +---Tests
 ¦       +---DetectColorTest
 ¦       +---ImageProcessorTest
-+---DevicesInterfaces      // TODO Add  Device Interface
++---DevicesInterfaces
 ¦   +---DeviceHandler
 ¦   ¦   +---Bluetooth
 ¦   ¦   +---Serial
 ¦   +---Tests
 ¦       +---TestObserverSubject
-+---include					// Include Path
++---include
+¦   +---CVVideoCaptureLib
 ¦   +---ImageProcessors
 ¦   ¦   +---ImageProcessor
 ¦   +---Utils
 ¦       +---Utilities
-+---libs				//Library Path
-+---Utilities			// Utility Library
++---libs
+¦   +---debug
+¦   +---release
+¦   +---win32-g++
++---Utilities
+¦   +---Plugins
+¦   ¦   +---CVVideoCapture
+¦   ¦   +---CVVideoCaptureLib
 ¦   +---Utils
 ¦       +---Utilities
-+---View				// View GUI Path
++---View
     +---Androiod_IOS_View
     +---DesktopView
     ¦   +---android
     ¦   +---View
-    +---TestCV 		//Light Weight Test GUI
-</xmp>	
+    +---TestC
+	</xmp>	
 </pre>	

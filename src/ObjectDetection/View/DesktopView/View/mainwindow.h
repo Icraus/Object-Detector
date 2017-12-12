@@ -26,7 +26,7 @@ public:
     QString toString(int x);
 
 public slots:
-    void getFrame();
+    void getFrame(cv::Mat frame);
 
 private slots:
     void on_pushButton_3_clicked();
@@ -45,7 +45,7 @@ private slots:
 
 private:
     ColorDetectorController detector;
-    cv::VideoCapture cap;
+//    cv::VideoCapture cap;
     cv::Mat t;
     QStringListModel model;
     QStringList ls;

@@ -29,6 +29,7 @@
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
+#include "cvvideocapture.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -39,7 +40,6 @@ public:
     QGridLayout *gridLayout_3;
     QLabel *label_3;
     QLabel *label_2;
-    QLabel *label;
     QGridLayout *gridLayout_2;
     QGridLayout *gridLayout;
     QPushButton *pushButton_3;
@@ -84,6 +84,7 @@ public:
     QVBoxLayout *verticalLayout_3;
     QListView *listView;
     QPushButton *pushButton_4;
+    CVVideoCapture *cVVideoCapture;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -92,7 +93,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(622, 471);
+        MainWindow->resize(631, 471);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         gridLayout_3 = new QGridLayout(centralWidget);
@@ -108,11 +109,6 @@ public:
         label_2->setObjectName(QStringLiteral("label_2"));
 
         gridLayout_3->addWidget(label_2, 0, 1, 1, 1);
-
-        label = new QLabel(centralWidget);
-        label->setObjectName(QStringLiteral("label"));
-
-        gridLayout_3->addWidget(label, 0, 2, 1, 1);
 
         gridLayout_2 = new QGridLayout();
         gridLayout_2->setSpacing(6);
@@ -370,10 +366,15 @@ public:
 
         gridLayout_3->addLayout(verticalLayout_3, 1, 2, 1, 1);
 
+        cVVideoCapture = new CVVideoCapture(centralWidget);
+        cVVideoCapture->setObjectName(QStringLiteral("cVVideoCapture"));
+
+        gridLayout_3->addWidget(cVVideoCapture, 0, 2, 1, 1);
+
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 622, 21));
+        menuBar->setGeometry(QRect(0, 0, 631, 21));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -404,7 +405,6 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
         label_3->setText(QApplication::translate("MainWindow", "TextLabel", Q_NULLPTR));
         label_2->setText(QApplication::translate("MainWindow", "TextLabel", Q_NULLPTR));
-        label->setText(QApplication::translate("MainWindow", "TextLabel", Q_NULLPTR));
         pushButton_3->setText(QApplication::translate("MainWindow", "Circle Color", Q_NULLPTR));
         radiusLabel->setText(QApplication::translate("MainWindow", "TextLabel", Q_NULLPTR));
         yLabelCenter->setText(QApplication::translate("MainWindow", "TextLabel", Q_NULLPTR));

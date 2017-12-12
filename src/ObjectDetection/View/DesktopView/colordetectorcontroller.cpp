@@ -116,6 +116,9 @@ QImage ColorDetectorController::detectObject(const cv::Mat &t)
         cv::circle(t, center, radius, circleColor, thickness, 8, 0 );
 
     }
+
+
+
     return Utilities::Utils::toImage(t);
 }
 

@@ -1,9 +1,9 @@
 QT  *= core
 win32{
 
+        INCLUDEPATH += $$(OPENCV_INCLUDE)
     win32-g++{
 #        CONFIG(debug, debug | release){
-        INCLUDEPATH += $$(OPENCV_INCLUDE)
         LIBS += -L$$(OPENCV_MINGW_PATH)\lib \
          -lopencv_core300.dll \
        -lopencv_highgui300.dll \

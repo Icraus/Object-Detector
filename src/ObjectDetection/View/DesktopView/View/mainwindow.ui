@@ -7,7 +7,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>622</width>
+    <width>631</width>
     <height>471</height>
    </rect>
   </property>
@@ -25,13 +25,6 @@
     </item>
     <item row="0" column="1">
      <widget class="QLabel" name="label_2">
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="2">
-     <widget class="QLabel" name="label">
       <property name="text">
        <string>TextLabel</string>
       </property>
@@ -342,6 +335,9 @@
       </item>
      </layout>
     </item>
+    <item row="0" column="2">
+     <widget class="CVVideoCapture" name="cVVideoCapture"/>
+    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -349,7 +345,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>622</width>
+     <width>631</width>
      <height>21</height>
     </rect>
    </property>
@@ -365,6 +361,13 @@
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>CVVideoCapture</class>
+   <extends>QWidget</extends>
+   <header>cvvideocapture.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections>
   <connection>
