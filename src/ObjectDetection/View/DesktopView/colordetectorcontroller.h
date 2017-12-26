@@ -25,7 +25,7 @@ public:
     void setCircleColor(const cv::Scalar &value);
 
     int getThickness() const;
-    ImageProcessor::AbstractImageProcessor *getPro() const;
+    AbstractImageProcessor *getPro() const;
 
 public slots:
     void setParam1(int value);
@@ -33,7 +33,7 @@ public slots:
     void setMinDist(int value);
     void setThickness(int value);
 
-    void setPro(ImageProcessor::AbstractImageProcessor *value);
+    void setPro(AbstractImageProcessor *value);
 
 signals:
     void dilationSizeChanged(int);
@@ -50,7 +50,7 @@ private:
     cv::Scalar minColor;
     cv::Scalar maxColor;
     int param1, param2, minDist, dilationSize;
-    ImageProcessor::AbstractImageProcessor *pro;
+    AbstractImageProcessor *pro;
 public slots:
     void addFilter();
     void setDilationSize(int value);
@@ -58,9 +58,6 @@ public slots:
     void setMaxColor(const cv::Scalar &value);
     Q_INVOKABLE QImage detectObject(const cv::Mat &t);
 
-signals:
-
-public slots:
 };
 
 #endif // COLORDETECTORCONTROLLER_H

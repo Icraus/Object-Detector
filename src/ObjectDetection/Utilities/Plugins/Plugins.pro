@@ -1,5 +1,8 @@
 TEMPLATE = subdirs
-
+CONFIG += ordered
 SUBDIRS += \
-    CVVideoCapture \
-    CVVideoCaptureLib
+    CVVideoCaptureLib \
+    CVVideoCapture
+
+
+CVVideoCapture.depends = CVVideoCaptureLib

@@ -4,4 +4,5 @@ CONFIG += ordered
 
 SUBDIRS += \
     Utils \
-    Plugins
+    Plugins \
+    Tools

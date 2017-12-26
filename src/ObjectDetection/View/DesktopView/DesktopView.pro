@@ -38,21 +38,30 @@ android{
 INCLUDEPATH += $$_PRO_FILE_PWD_\..\..\include\ImageProcessors
 INCLUDEPATH += $$_PRO_FILE_PWD_\..\..\include\utils
 INCLUDEPATH += $$_PRO_FILE_PWD_\..\..\include\CVVideoCaptureLib
+DEST_PREFIX = $$[QMAKE_SPEC]
+equals(DEST_PREFIX, "win32-g++"){
+DEST_PREFIX = "mingw32"
+}else{
 
+DEST_PREFIX = $$[QMAKE_SPEC]\\$$QMAKE_TARGET.arch
+
+}
 !android{
     CONFIG(debug, debug | release){
-        LIBS += -L$$_PRO_FILE_PWD_\..\..\libs\\$$[QMAKE_SPEC]  \
+        LIBS += -LF:\Important\Object-Detector\src\ObjectDetection\libs\mingw32    \
             -lImageProcessors \
-            -lUtils
-        DESTDIR += $$_PRO_FILE_PWD_\..\..\bin\\$$[QMAKE_SPEC]
+            -lUtils   \
+            -lCVVideoCaptureLib
+
+        DESTDIR += $$_PRO_FILE_PWD_\..\..\bin\\$$DEST_PREFIX
     }
 
     CONFIG(release, debug | release){
-        LIBS += -L$$_PRO_FILE_PWD_\..\..\libs\release  \
+        LIBS += -L$$_PRO_FILE_PWD_\..\..\libs\release\\$$DEST_PREFIX  \
             -lImageProcessors \
             -lUtils \
             -lCVVideoCaptureLib
-        DESTDIR += $$_PRO_FILE_PWD_\..\..\bin\release
+        DESTDIR += $$_PRO_FILE_PWD_\..\..\bin\release\\$$DEST_PREFIX
         }
 }
 contains(ANDROID_TARGET_ARCH,armeabi-v7a) {

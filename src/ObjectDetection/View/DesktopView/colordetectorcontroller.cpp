@@ -26,12 +26,12 @@ void ColorDetectorController::setMinDist(int value)
     emit minDistChanged(value);
 }
 
-ImageProcessor::AbstractImageProcessor *ColorDetectorController::getPro() const
+AbstractImageProcessor *ColorDetectorController::getPro() const
 {
     return pro;
 }
 
-void ColorDetectorController::setPro(ImageProcessor::AbstractImageProcessor *value)
+void ColorDetectorController::setPro(AbstractImageProcessor *value)
 {
     pro = value;
 }

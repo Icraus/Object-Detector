@@ -12,15 +12,23 @@ for(VARS, INSTALL_HEADER){
     eval(header_$${VARS}.path += "$$PWD\include\\$$INSTALL_PREFIX\\$$DIR_VAR_NAME")
     eval(INSTALLS *= header_$${VARS})
 }
+DEST_PREFIX = $$[QMAKE_SPEC]
+equals(DEST_PREFIX, "win32-g++"){
+DEST_PREFIX = "mingw32"
+}else{
+
+DEST_PREFIX = $$[QMAKE_SPEC]\\$$QMAKE_TARGET.arch
+
+}
 CONFIG(release, debug | release){
-DESTDIR += "$$PWD\libs\release"
-DLLDESTDIR += "$$PWD\bin\release"
+DESTDIR += "$$PWD\libs\release\\$$DEST_PREFIX"
+DLLDESTDIR += "$$PWD\bin\release\\$$DEST_PREFIX"
 
 }
 CONFIG(debug, debug | release){
 
-DESTDIR += "$$PWD\libs\\$$[QMAKE_SPEC]"
-DLLDESTDIR += "$$PWD\bin\\$$[QMAKE_SPEC]"
+DESTDIR += "$$PWD\libs\\$$DEST_PREFIX"
+DLLDESTDIR += "$$PWD\bin\\$$DEST_PREFIX"
 
 }
 #message($$PWD)

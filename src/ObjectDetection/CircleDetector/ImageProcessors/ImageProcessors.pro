@@ -36,7 +36,7 @@ HEADERS += \
     ImageProcessor/impl/detectcolorimpl.h \
     ImageProcessor/impl/dilateimpl.h \
     ImageProcessor/impl/objectdetectionimpl.h
-CONFIG(!staticlib){
+!CONFIG(static){
     DEFINES += IMAGEPROCESSORS_LIBRARY
     HEADERS += imageprocessors_global.h
 }

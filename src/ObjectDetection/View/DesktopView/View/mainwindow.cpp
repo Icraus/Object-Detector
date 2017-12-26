@@ -77,6 +77,7 @@ void MainWindow::setXYR(int x, int y, int r)
     if(!_port.isOpen() || !_port.isWritable())
         return;
     const char *lcl = s.toLocal8Bit().data();
+    _port.flush();
     _port.write(lcl);
     qDebug() << lcl;
 }

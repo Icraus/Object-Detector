@@ -1,16 +1,16 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2017-12-11T23:21:29
+# Project created by QtCreator 2017-12-22T00:01:41
 #
 #-------------------------------------------------
 
-QT       += widgets
+QT       += core gui serialport
 
-QT       -= gui
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = CVVideoCaptureLib
-TEMPLATE = lib
-DEFINES += CVVIDEOCAPTURE_LIBRARY
+TARGET = SerialMonitor
+TEMPLATE = app
+
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which as been marked as deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the
@@ -22,15 +22,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
+
 SOURCES += \
-        cvvideocapture.cpp
+        main.cpp \
+        serialmainwindow.cpp \
+    serialportmodel.cpp \
+    processhandler.cpp
 
 HEADERS += \
-        cvvideocapture.h \
-    cvvideocapturelib.h
-unix {
-    target.path = /usr/lib
-    INSTALLS += target
-}
-include(../../../OPENCVLinking.pro)
-include(../../../INSTALL_ALL.pri)
+        serialmainwindow.h \
+    serialportmodel.h \
+    processhandler.h
+
+FORMS += \
+        serialmainwindow.ui
+DESTDIR = $$_PRO_FILE_PWD_/../../../../Tools

@@ -1,4 +1,4 @@
-CONFIG      += plugin release
+CONFIG      += plugin
 TARGET      = $$qtLibraryTarget(cvvideocaptureplugin)
 TEMPLATE    = lib
 
