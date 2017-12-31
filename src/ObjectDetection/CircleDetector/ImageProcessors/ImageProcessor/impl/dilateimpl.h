@@ -1,7 +1,7 @@
 #ifndef DILATEIMPL_H
 #define DILATEIMPL_H
 
-#include "ImageProcessor/Dilate.h"
+#include "ImageProcessor/dilate.h"
 
 #include <QObject>
 #include <headers.h>

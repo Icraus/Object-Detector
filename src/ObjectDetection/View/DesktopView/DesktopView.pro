@@ -36,7 +36,7 @@ android{
 
 }
 INCLUDEPATH += $$_PRO_FILE_PWD_/../../include/ImageProcessors
-INCLUDEPATH += $$_PRO_FILE_PWD_/../../include/utils
+INCLUDEPATH += $$_PRO_FILE_PWD_/../../include/Utils
 INCLUDEPATH += $$_PRO_FILE_PWD_/../../include/CVVideoCaptureLib
 DEST_PREFIX = $$[QMAKE_SPEC]
 equals(DEST_PREFIX, "win32-g++"){
