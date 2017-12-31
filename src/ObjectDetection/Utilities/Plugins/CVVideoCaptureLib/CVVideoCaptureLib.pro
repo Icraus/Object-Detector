@@ -28,9 +28,9 @@ SOURCES += \
 HEADERS += \
         cvvideocapture.h \
     cvvideocapturelib.h
-unix {
-    target.path = /usr/lib
-    INSTALLS += target
-}
+#unix {
+#    target.path = /usr/lib
+#    INSTALLS += target
+#}
 include(../../../OPENCVLinking.pro)
 include(../../../INSTALL_ALL.pri)

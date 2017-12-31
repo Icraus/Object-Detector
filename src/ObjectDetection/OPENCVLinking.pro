@@ -4,7 +4,7 @@ win32{
         INCLUDEPATH += $$(OPENCV_INCLUDE)
     win32-g++{
 #        CONFIG(debug, debug | release){
-        LIBS += -L$$(OPENCV_MINGW_PATH)\lib \
+        LIBS += -L$$(OPENCV_MINGW_PATH)/lib \
          -lopencv_core300.dll \
        -lopencv_highgui300.dll \
        -lopencv_imgcodecs300.dll \
@@ -39,8 +39,8 @@ win32{
         TEMP = $$QMAKE_TARGET.arch
         !equals(TEMP, "x86"){
             CONFIG(debug, debug | release){
-                LIBS += $$(OPENCV_MSVC_PATH)\lib\opencv_ts300d.lib
-                LIBS += $$(OPENCV_MSVC_PATH)\lib\opencv_world300d.lib
+                LIBS += $$(OPENCV_MSVC_PATH)/lib/opencv_ts300d.lib
+                LIBS += $$(OPENCV_MSVC_PATH)/lib/opencv_world300d.lib
            }else{
     #            CONFIG += static
                 LIBS += VFW32.lib
@@ -70,8 +70,8 @@ win32{
     #            LIBS+=$$(OPENCV_MSVC_PATH)\staticlib\opencv_videoio300.lib
     #            LIBS+=$$(OPENCV_MSVC_PATH)\staticlib\opencv_videostab300.lib
     #            LIBS+=$$(OPENCV_MSVC_PATH)\staticlib\zlib.lib
-                LIBS += $$(OPENCV_MSVC_PATH)\lib\opencv_ts300.lib
-                LIBS += $$(OPENCV_MSVC_PATH)\lib\opencv_world300.lib
+                LIBS += $$(OPENCV_MSVC_PATH)/lib/opencv_ts300.lib
+                LIBS += $$(OPENCV_MSVC_PATH)/lib/opencv_world300.lib
             }
         }else{
                 LIBS += VFW32.lib

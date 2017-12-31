@@ -40,9 +40,9 @@ HEADERS += \
     DEFINES += IMAGEPROCESSORS_LIBRARY
     HEADERS += imageprocessors_global.h
 }
-unix {
-    target.path = /usr/lib
-    INSTALLS += target
-}
+#unix {
+#    target.path = /usr/lib
+#    INSTALLS += target
+#}
 include(../../INSTALL_ALL.pri)
 include(../../OPENCVLinking.pro)

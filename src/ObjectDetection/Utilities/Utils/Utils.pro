@@ -19,9 +19,9 @@ SOURCES += \
 HEADERS += \
     Utilities/utils.h \
     headers.h
-unix {
-    target.path = /usr/lib
-    INSTALLS += target
-}
+#unix {
+#    target.path = /usr/lib
+#    INSTALLS += target
+#}
 include(../../INSTALL_ALL.pri)
 include(../../OPENCVLinking.pro)
