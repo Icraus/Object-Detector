@@ -6,11 +6,7 @@
 #include <QObject>
 #include <headers.h>
 namespace ImageProcessor {
-#ifdef IMAGEPROCESSORS_LIBRARY
-class IMAGEPROCESSORSSHARED_EXPORT DetectColor;
-#else
-    class DetectColor;
-#endif
+class IMG_PROC_LIB DetectColor;
 }
 using namespace ImageProcessor;
 

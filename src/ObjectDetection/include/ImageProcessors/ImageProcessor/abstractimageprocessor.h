@@ -6,11 +6,7 @@
 #include <memory>
 
 namespace ImageProcessor {
-#ifdef IMAGEPROCESSORS_LIBRARY
-    class IMAGEPROCESSORSSHARED_EXPORT AbstractImageProcessor;
-#else
-    class AbstractImageProcessor;
-#endif
+    class IMG_PROC_LIB AbstractImageProcessor;
 
 }
 

@@ -60,6 +60,7 @@ DEST_PREFIX = "mingw32"
         DESTDIR += $$_PRO_FILE_PWD_/../../bin/release/$$DEST_PREFIX
         }
 }
+DEFINES += USE_SHARED_LIB
 contains(ANDROID_TARGET_ARCH,armeabi-v7a) {
     ANDROID_EXTRA_LIBS = $$PWD/android/libopencv_java3.so
 }

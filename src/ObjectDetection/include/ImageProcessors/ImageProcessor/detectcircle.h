@@ -6,11 +6,7 @@
 #include <ImageProcessor/abstractimageprocessor.h>
 using namespace ImageProcessor;
 namespace ImageProcessor {
-#ifdef IMAGEPROCESSORS_LIBRARY
-    class IMAGEPROCESSORSSHARED_EXPORT DetectCircle;
-#else
-    class DetectCircle;
-#endif
+    class IMG_PROC_LIB DetectCircle;
 }
 Q_DECLARE_METATYPE(std::vector<cv::Vec3f>)
 class ImageProcessor::DetectCircle : public AbstractImageProcessor

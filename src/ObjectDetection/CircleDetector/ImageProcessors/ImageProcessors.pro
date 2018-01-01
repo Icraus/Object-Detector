@@ -36,9 +36,13 @@ HEADERS += \
     ImageProcessor/impl/detectcolorimpl.h \
     ImageProcessor/impl/dilateimpl.h \
     ImageProcessor/impl/objectdetectionimpl.h
+
+
+HEADERS += imageprocessors_global.h
+
 !CONFIG(static){
     DEFINES += IMAGEPROCESSORS_LIBRARY
-    HEADERS += imageprocessors_global.h
+    DEFINES += USE_SHARED_LIB
 }
 #unix {
 #    target.path = /usr/lib

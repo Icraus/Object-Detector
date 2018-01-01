@@ -8,11 +8,8 @@
 #include <ImageProcessor/abstractimageprocessor.h>
 #include <ImageProcessor/dilate.h>
 namespace ImageProcessor {
-#ifdef IMAGEPROCESSORS_LIBRARY
-    class IMAGEPROCESSORSSHARED_EXPORT ObjectDetection;
-#else
-    class ObjectDetection;
-#endif
+    class IMG_PROC_LIB ObjectDetection;
+
 }
 using namespace ImageProcessor;
 

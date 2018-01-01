@@ -4,11 +4,9 @@
 #include "ImageProcessor/objectdetection.h"
 #include <QObject>
 namespace ImageProcessor {
-#ifdef IMAGEPROCESSORS_LIBRARY
-    class IMAGEPROCESSORSSHARED_EXPORT ObjectDetectorBuilder;
-#else
-    class ObjectDetectorBuilder;
-#endif
+
+    class IMG_PROC_LIB ObjectDetectorBuilder;
+
 }
 namespace imgproc = ImageProcessor;
 class ImageProcessor::ObjectDetectorBuilder : public QObject
