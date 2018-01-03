@@ -20,7 +20,7 @@ void CircleDetectorPluginModel::_CircleDetectorPluginModelImpl::loadPlugins()
         QPluginLoader loader(dir_path.absoluteFilePath(fileName));
         QObject *obj = loader.instance();
         if(obj){
-            QSharedPointer<CircleDetectorPlugins::ImageProcessorPluginIFace>iface(qobject_cast<CircleDetectorPlugins::ImageProcessorPluginIFace *>(obj));
+            PluginSharedPointer iface(qobject_cast<PluginIFace *>(obj));
             if(iface){
                 m_pluginPaths.push_back(dir_path.absoluteFilePath(fileName));
                 m_filters.push_back(iface);

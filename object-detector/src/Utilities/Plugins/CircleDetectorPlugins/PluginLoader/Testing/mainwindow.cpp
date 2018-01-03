@@ -1,8 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include <QMessageBox>
 #include <circledetecorpluginloaderview.h>
-#include "circledetectorpluginmodel.h"
 #include "opencv2/core.hpp"
 #include "opencv2/world.hpp"
 #include "opencv2/imgproc.hpp"
@@ -14,11 +14,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     CircleDetecorPluginLoaderView *view = new CircleDetecorPluginLoaderView;
     ui->gridLayout->addWidget(view, 0, 1);
-    cv::Mat m = cv::imread("E:\\j.png", 0);
-    QAbstractItemModel *model = view->view()->model();
-    auto p = model->index(0, 0).data(CircleDetectorPluginModel::FILTER).value<QSharedPointer<CircleDetectorPlugins::ImageProcessorPluginIFace>>();
-    m = (p)->filter(m);
-    ui->label->setPixmap(QPixmap::fromImage(toImage(m)));
+    connect(view, SIGNAL(filterChanged(PluginSharedPointer)), this, SLOT(setFilter(PluginSharedPointer)));
+    m = cv::imread("E:\\j.png", 0);
 }
 
 QImage MainWindow::toImage(const cv::Mat &m)
@@ -31,6 +28,13 @@ QImage MainWindow::toImage(const cv::Mat &m)
         return QImage(m.data, m.cols, m.rows, m.step, QImage::Format_Grayscale8);
 
     }
+}
+
+void MainWindow::setFilter(PluginSharedPointer filter)
+{
+    m = filter->filter(m);
+    ui->label->setPixmap(QPixmap::fromImage(toImage(m)));
+
 }
 MainWindow::~MainWindow()
 {

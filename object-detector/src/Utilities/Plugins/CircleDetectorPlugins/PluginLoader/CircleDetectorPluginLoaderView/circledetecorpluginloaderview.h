@@ -22,9 +22,13 @@ public:
     QTableView *view() const;
 private slots:
     void on_lineEdit_textChanged(const QString &arg1);
+    void on_buttonBox_accepted();
 
     void on_pushButton_clicked();
+    void on_pushButton_2_clicked();
 
+signals:
+    void filterChanged(PluginSharedPointer selected);
 private:
     class _CircleDetecorPluginLoaderViewImpl;
     friend class _CircleDetecorPluginLoaderViewImpl;

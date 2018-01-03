@@ -7,10 +7,12 @@
 #include <memory>
 #include <imageprocessorpluginiface.h>
 #include "circledetectorpluginmodel_global.h"
-Q_DECLARE_METATYPE(QSharedPointer<CircleDetectorPlugins::ImageProcessorPluginIFace>)
+using PluginIFace = CircleDetectorPlugins::ImageProcessorPluginIFace;
+using PluginSharedPointer  = QSharedPointer<PluginIFace>;
+using PluginSharedPointerList = QList<PluginSharedPointer>;
+Q_DECLARE_METATYPE(PluginSharedPointer)
 
 CIRCLE_MODEL_BEGIN_NAMESPACE
-using PluginSharedPointerList = QList<QSharedPointer<CircleDetectorPlugins::ImageProcessorPluginIFace>>;
 
 class CIRCLE_MODEL_LIB CircleDetectorPluginModel : public QAbstractTableModel
 {

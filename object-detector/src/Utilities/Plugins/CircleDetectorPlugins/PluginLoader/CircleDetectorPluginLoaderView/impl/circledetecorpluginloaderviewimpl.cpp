@@ -44,4 +44,18 @@ QTableView *CircleDetecorPluginLoaderView::_CircleDetecorPluginLoaderViewImpl::v
 {
     return ui->tableView;
 }
+
+void CircleDetecorPluginLoaderView::_CircleDetecorPluginLoaderViewImpl::on_buttonBox_accepted()
+{
+}
+
+void CircleDetecorPluginLoaderView::_CircleDetecorPluginLoaderViewImpl::on_pushButton_2_clicked()
+{
+    QModelIndex ind = this->view()->currentIndex();
+    if(!ind.isValid())
+        return;
+    auto filter = ind.data(CircleDetectorPluginModel::FILTER).value<PluginSharedPointer>();
+    emit _ptr->filterChanged(filter);
+
+}
 CIRCLE_PLUGIN_LOADER_END_NAMESPACE

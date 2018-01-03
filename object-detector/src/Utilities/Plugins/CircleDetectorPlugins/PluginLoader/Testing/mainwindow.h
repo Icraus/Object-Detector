@@ -4,6 +4,7 @@
 #include <QMainWindow>
 
 #include <opencv2/core/mat.hpp>
+#include "circledetectorpluginmodel.h"
 
 namespace Ui {
 class MainWindow;
@@ -18,8 +19,10 @@ public:
     ~MainWindow();
 
     QImage toImage(const cv::Mat &m);
+public slots:
+    void setFilter(PluginSharedPointer filter);
 private:
-    QPixmap pix = QPixmap("E:\\1.png");
+    cv::Mat m;
     Ui::MainWindow *ui;
 };
 

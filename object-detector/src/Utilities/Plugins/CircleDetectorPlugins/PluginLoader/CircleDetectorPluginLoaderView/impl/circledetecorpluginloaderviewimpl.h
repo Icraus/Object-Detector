@@ -24,6 +24,10 @@ public:
     void on_lineEdit_textChanged(const QString &arg1);
     void on_pushButton_clicked();
     QTableView *view() const;
+    void on_buttonBox_accepted();
+
+    void on_pushButton_2_clicked();
+
 private:
 
     Ui::CircleDetecorPluginLoaderView *ui;

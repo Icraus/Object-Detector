@@ -36,9 +36,21 @@ void CircleDetecorPluginLoaderView::on_lineEdit_textChanged(const QString &arg1)
 
 }
 
+void CircleDetecorPluginLoaderView::on_buttonBox_accepted()
+{
+    _pimpl->on_buttonBox_accepted();
+
+}
+
 void CircleDetecorPluginLoaderView::on_pushButton_clicked()
 {
     _pimpl->on_pushButton_clicked();
+
+}
+
+void CircleDetecorPluginLoaderView::on_pushButton_2_clicked()
+{
+    _pimpl->on_pushButton_2_clicked();
 
 }
 CIRCLE_PLUGIN_LOADER_END_NAMESPACE
