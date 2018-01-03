@@ -2,7 +2,8 @@ TEMPLATE = subdirs
 CONFIG += ordered
 SUBDIRS += \
     CVVideoCaptureLib \
-    CVVideoCapture
+    CVVideoCapture \
+    CircleDetectorPlugins
 
 
 CVVideoCapture.depends = CVVideoCaptureLib

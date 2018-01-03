@@ -35,28 +35,26 @@ android{
     ANDROID_PACKAGE_SOURCE_DIR=$$_PRO_FILE_PWD_/android
 
 }
-#INCLUDEPATH += $$_PRO_FILE_PWD_/../../include/ImageProcessors
-#INCLUDEPATH += $$_PRO_FILE_PWD_/../../include/Utils
-#INCLUDEPATH += $$_PRO_FILE_PWD_/../../include/CVVideoCaptureLib
-#INCLUDEPATH += $$_PRO_FILE_PWD_/../../include/SerialPortModel
 
-#DEST_PREFIX = $$[QMAKE_SPEC]
-#equals(DEST_PREFIX, "win32-g++"){
-#DEST_PREFIX = "mingw32"
-#}
 include(../../COMMON_VARS.pri)
 
 INCLUDEPATH += $$INCLUDE_PATH/ImageProcessors
 INCLUDEPATH += $$INCLUDE_PATH/Utils
 INCLUDEPATH += $$INCLUDE_PATH/CVVideoCaptureLib
 INCLUDEPATH += $$INCLUDE_PATH/SerialPortModel
+INCLUDEPATH += $$INCLUDE_PATH/ImageProcessorsPlugin
+INCLUDEPATH += $$INCLUDE_PATH/CircleDetectorPluginModel
+INCLUDEPATH += $$INCLUDE_PATH/CircleDetectorPluginLoaderView
+
 
 !android{
         LIBS += -L$$LIBS_PATH    \
             -lImageProcessors \
             -lUtils   \
             -lCVVideoCaptureLib \
-            -lSerialPortModel
+            -lSerialPortModel \
+            -lCircleDetectorPluginModel \
+            -lCircleDetectorPluginLoaderView
 
 }
 DEFINES += USE_SHARED_LIB

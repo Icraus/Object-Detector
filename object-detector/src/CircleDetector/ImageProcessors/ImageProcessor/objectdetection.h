@@ -39,6 +39,7 @@ public slots:
 
 protected:
     void setResults(QVariant res);
+    cv::Mat applyFilters(cv::Mat dst) const;
     // ImageProcessor::AbstractImageProcessor interface
 public:
     virtual QVariant processImage() override;

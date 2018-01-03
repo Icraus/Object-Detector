@@ -4,12 +4,10 @@
 #include <QObject>
 #include <headers.h>
 #include <memory>
-
 namespace ImageProcessor {
     class IMG_PROC_LIB AbstractImageProcessor;
 
 }
-
 class ImageProcessor::AbstractImageProcessor : public QObject
 {
     Q_OBJECT

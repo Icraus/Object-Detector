@@ -22,6 +22,17 @@ void ObjectDetection::_ObjectDetectionImpl::setFilters(const std::vector<Abstrac
     _filters = value;
 }
 
+Mat ObjectDetection::_ObjectDetectionImpl::applyFilters(Mat dst) const
+{
+    for(ImageProcessor::AbstractImageProcessor *pro : _filters)
+   {
+       pro->setImg(dst);
+       pro->processImage();
+       dst = pro->getDst();
+   }
+   return dst;
+}
+
 ObjectDetection::_ObjectDetectionImpl::_ObjectDetectionImpl(ObjectDetection * const ptr):
     _ptr{ptr}
 {
@@ -85,12 +96,7 @@ std::vector<Vec3f> ObjectDetection::_ObjectDetectionImpl::getCircles()
     getColDetector()->processImage();
     auto dst = getColDetector()->getDst();
 
-    for(AbstractImageProcessor *pro : _filters)
-   {
-       pro->setImg(dst);
-       pro->processImage();
-       dst = pro->getDst();
-   }
+    applyFilters(dst);
     getDiler()->setImg(dst);
     getDiler()->processImage();
     dst = getDiler()->getDst();

@@ -8,7 +8,7 @@
 #include <ImageProcessor/detectcolor.h>
 #include <ImageProcessor/abstractimageprocessor.h>
 #include <ImageProcessor/dilate.h>
-
+//TODO Fix Filters
 
 class ImageProcessor::ObjectDetection::_ObjectDetectionImpl
 {
@@ -19,6 +19,7 @@ private:
     ObjectDetection *const _ptr;
     QVariant results;
     std::vector<AbstractImageProcessor*> _filters;
+    friend class ImageProcessor::ObjectDetection;
 public:
     _ObjectDetectionImpl(ObjectDetection *const ptr);
     Dilate *getDiler() const;
@@ -34,6 +35,7 @@ public:
     void setResults(const QVariant &value);
     std::vector<AbstractImageProcessor *> getFilters() const;
     void setFilters(const std::vector<AbstractImageProcessor *> &value);
+    cv::Mat applyFilters(cv::Mat dst) const;
 };
 
 

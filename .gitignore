@@ -48,4 +48,5 @@ CMakeLists.txt.user*
 libs
 include
 bin
+object-detector/plugins
  

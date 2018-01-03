@@ -2,7 +2,7 @@ INSTALL_HEADER = $$HEADERS
 INSTALL_PREFIX = $$TARGET
 
 INCLUDE_PATH = "$$PWD/../include"
-
+PLUGINS_PATH = "$$PWD/../plugins"
 DEST_PREFIX = $$[QMAKE_SPEC]
 equals(DEST_PREFIX, "win32-g++"){
     DEST_PREFIX = "mingw32"

@@ -1,6 +1,11 @@
 #include "colordetectorcontroller.h"
 
+#include <QDir>
+#include <QPluginLoader>
+#include <imageprocessorpluginiface.h>
 
+#include <QDebug>
+#include <QMessageBox>
 ColorDetectorController::ColorDetectorController(QObject *parent) : QObject(parent)
 {
     pro = new ObjectDetection(this);
@@ -38,9 +43,21 @@ void ColorDetectorController::setPro(AbstractImageProcessor *value)
 
 void ColorDetectorController::addFilter()
 {
-    auto processor = qobject_cast<ObjectDetection*>(getPro());
-    Dilate *dil = new Dilate(this);
-    processor->addFilter(dil);
+//    auto processor = qobject_cast<ObjectDetection*>(getPro());
+//    Dilate *dil = new Dilate(this);
+//    processor->addFilter(dil);
+    QDir path("F:\\Important\\Object-Detector\\object-detector\\plugins");
+    foreach (QString var, path.entryList(QDir::Files)) {
+        qDebug() << var;
+        QPluginLoader l(path.absoluteFilePath(var));
+        auto p = l.instance();
+        if(p){
+            CircleDetectorPlugins::ImageProcessorPluginIFace *i = qobject_cast<CircleDetectorPlugins::ImageProcessorPluginIFace*>(p);
+            qDebug() << i->filterName();
+            QMessageBox::information(nullptr, "", var + i->filterName(), QMessageBox::Ok);
+
+        }
+    }
 }
 
 int ColorDetectorController::getThickness() const

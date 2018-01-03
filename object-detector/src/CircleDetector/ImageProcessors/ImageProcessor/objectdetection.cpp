@@ -68,6 +68,11 @@ void ObjectDetection::setResults(QVariant res)
 {
     _pimpl->setResults(res);
 }
+
+Mat ObjectDetection::applyFilters(Mat dst) const
+{
+    return _pimpl->applyFilters(dst);
+}
 ObjectDetection::~ObjectDetection()
 {
 

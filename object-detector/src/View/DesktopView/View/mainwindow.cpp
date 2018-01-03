@@ -10,6 +10,7 @@
 #include <QDebug>
 #include <QMessageBox>
 #include "serialportmodel.h"
+#include "circledetecorpluginloaderview.h"
 using namespace Utilities;
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -108,5 +109,7 @@ void MainWindow::on_spinBox_valueChanged(int arg1)
 
 void MainWindow::on_pushButton_5_clicked()
 {
-    detector.addFilter();
+    CircleDetecorPluginLoaderView view;
+    view.exec();
+//    detector.addFilter();
 }

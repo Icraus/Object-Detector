@@ -2,7 +2,8 @@
 #define DETECTCOLORIMPL_H
 
 #include "ImageProcessor/detectcolor.h"
-//TODO Use PIMPL C++ Idiom
+
+//TODO DONE Use PIMPL C++ Idiom
 #include <QObject>
 #include <headers.h>
 class ImageProcessor::DetectColor::_DetectColorImpl{
