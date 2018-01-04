@@ -41,7 +41,6 @@ private slots:
 
     void on_spinBox_valueChanged(int arg1);
 
-    void on_pushButton_5_clicked();
 
 private:
     ColorDetectorController detector;
@@ -53,7 +52,7 @@ private:
     QSerialPort *_port = nullptr;
     Ui::MainWindow *ui = nullptr;
     cv::Scalar circleColor = cv::Scalar(0,0,255);
-
+    QDockWidget *dock;
 
 };
 

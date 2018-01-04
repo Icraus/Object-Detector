@@ -12,6 +12,8 @@ cv::Scalar DetectColor::_DetectColorImpl::getMinColor() const
     return minColor;
 }
 
+
+
 void DetectColor::_DetectColorImpl::setMinColor(const cv::Scalar &value)
 {
     minColor = value;

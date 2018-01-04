@@ -3,10 +3,10 @@ using namespace ImageProcessor;
 class ObjectDetectorBuilder::_ObjectDetectorBuilderImpl
 {
     ObjectDetectorBuilder *_ptr;
-    std::vector<imgproc::AbstractImageProcessor*> _processor;
+    std::vector<PluginSharedPointer> _processor;
 public:
     _ObjectDetectorBuilderImpl(ObjectDetectorBuilder *ptr):_ptr{ptr}{}
-    void addFilter(imgproc::AbstractImageProcessor *proc);
+    void addFilter(PluginSharedPointer proc);
     std::unique_ptr<ObjectDetection> build();
 };
 
@@ -21,7 +21,7 @@ ObjectDetectorBuilder::ObjectDetectorBuilder(QObject *parent) : QObject(parent)
 
 }
 
-void ObjectDetectorBuilder::addFilter(imgproc::AbstractImageProcessor *proc)
+void ObjectDetectorBuilder::addFilter(PluginSharedPointer proc)
 {
     _pimpl->addFilter(proc);
 }
@@ -31,7 +31,7 @@ std::unique_ptr<ObjectDetection> ObjectDetectorBuilder::build()
     return _pimpl->build();
 }
 
-void ObjectDetectorBuilder::_ObjectDetectorBuilderImpl::addFilter(imgproc::AbstractImageProcessor *proc)
+void ObjectDetectorBuilder::_ObjectDetectorBuilderImpl::addFilter(PluginSharedPointer proc)
 {
     _processor.push_back(proc);
 }

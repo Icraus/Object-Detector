@@ -15,4 +15,6 @@
 		<h4>added Serial Interfacing To send x, y, r using Serial Port (can use serial bluetooth or serial WIFI)//TODO change Impl to support Device Manager to support bluetooth on android </h4>
 	<h2>v4.0</h2>
 		<h4>FIx Path Issues//TODO change Impl to support Device Manager to support bluetooth on android </h4>
+	<h2>v5.0</h2>
+		<h4>added Filter Plugin to extend the image processing using plugins</h4>
 		

@@ -9,13 +9,25 @@
 #include <math.h>
 #include <QDebug>
 #include <QMessageBox>
+#include <QDockWidget>
 #include "serialportmodel.h"
+#include "circledetecorpluginloaderview.h"
+#include "circledetectorpluginmodel.h"
 using namespace Utilities;
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    CircleDetecorPluginLoaderView *view = new CircleDetecorPluginLoaderView;
+    dock = new QDockWidget("Filter Plugins", this);
+    dock->setWidget(view);
+    connect(ui->pushButton_5, &QPushButton::clicked, [&](){
+       dock->setHidden(!dock->isHidden());
+    });
+
+    addDockWidget(Qt::LeftDockWidgetArea, dock);
+    connect(view, SIGNAL(filterChanged(PluginSharedPointer)), &detector, SLOT(addFilter(PluginSharedPointer)));
     connect(&detector, SIGNAL(xyrChanged(int,int,int)), this, SLOT(setXYR(int, int, int)));
     connect(ui->param1Slider, SIGNAL(sliderMoved(int)), &detector,SLOT(setParam1(int)));
     connect(ui->param2Slider, SIGNAL(sliderMoved(int)), &detector,SLOT(setParam2(int)));
@@ -104,9 +116,4 @@ void MainWindow::on_circleThicknessSlider_valueChanged(int value)
 void MainWindow::on_spinBox_valueChanged(int arg1)
 {
 //    cap.open(arg1);
-}
-
-void MainWindow::on_pushButton_5_clicked()
-{
-    detector.addFilter();
 }

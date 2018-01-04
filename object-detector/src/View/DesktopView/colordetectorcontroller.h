@@ -25,7 +25,7 @@ public:
     void setCircleColor(const cv::Scalar &value);
 
     int getThickness() const;
-    AbstractImageProcessor *getPro() const;
+    ObjectDetection *getPro() const;
 
 public slots:
     void setParam1(int value);
@@ -33,7 +33,7 @@ public slots:
     void setMinDist(int value);
     void setThickness(int value);
 
-    void setPro(AbstractImageProcessor *value);
+    void setPro(ObjectDetection *value);
 
 signals:
     void dilationSizeChanged(int);
@@ -50,9 +50,9 @@ private:
     cv::Scalar minColor;
     cv::Scalar maxColor;
     int param1, param2, minDist, dilationSize;
-    AbstractImageProcessor *pro;
+    ObjectDetection *pro;
 public slots:
-    void addFilter();
+    void addFilter(PluginSharedPointer filter);
     void setDilationSize(int value);
     void setMinColor(const cv::Scalar &value);
     void setMaxColor(const cv::Scalar &value);

@@ -1,10 +1,15 @@
 #include "colordetectorcontroller.h"
 
+#include <QDir>
+#include <QPluginLoader>
+#include <imageprocessorpluginiface.h>
+#include "circledetectorpluginmodel.h"
+#include <QDebug>
 
 ColorDetectorController::ColorDetectorController(QObject *parent) : QObject(parent)
 {
     pro = new ObjectDetection(this);
-    auto processor = qobject_cast<ObjectDetection*>(pro);
+    auto processor = pro;
     connect(this , SIGNAL(dilationSizeChanged(int)), processor->getDiler(), SLOT(setDilationSize(int)));
     connect(this , SIGNAL(maxColorChanged(cv::Scalar)), processor->getColDetector(), SLOT(setMaxColor(cv::Scalar)));
     connect(this , SIGNAL(minColorChanged(cv::Scalar)), processor->getColDetector(), SLOT(setMinColor(cv::Scalar)));
@@ -26,21 +31,20 @@ void ColorDetectorController::setMinDist(int value)
     emit minDistChanged(value);
 }
 
-AbstractImageProcessor *ColorDetectorController::getPro() const
+ObjectDetection *ColorDetectorController::getPro() const
 {
     return pro;
 }
 
-void ColorDetectorController::setPro(AbstractImageProcessor *value)
+void ColorDetectorController::setPro(ObjectDetection *value)
 {
     pro = value;
 }
 
-void ColorDetectorController::addFilter()
+void ColorDetectorController::addFilter(PluginSharedPointer filter)
 {
-    auto processor = qobject_cast<ObjectDetection*>(getPro());
-    Dilate *dil = new Dilate(this);
-    processor->addFilter(dil);
+
+    pro->addFilter(filter);
 }
 
 int ColorDetectorController::getThickness() const

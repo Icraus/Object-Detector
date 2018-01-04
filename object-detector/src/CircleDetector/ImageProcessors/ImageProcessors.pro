@@ -39,14 +39,14 @@ HEADERS += \
 
 
 HEADERS += imageprocessors_global.h
-
 CONFIG(c++14){
     DEFINES += USE_CPP_STD_14
 }
-
+CONFIG(staticlib){
+    DEFINES += USE_STATIC_LIB
+}
 !CONFIG(static){
     DEFINES += IMAGEPROCESSORS_LIBRARY
-    DEFINES += USE_SHARED_LIB
 }
 #unix {
 #    target.path = /usr/lib
@@ -54,3 +54,5 @@ CONFIG(c++14){
 #}
 include(../../COMMON_VARS.pri)
 include(../../OPENCVLinking.pro)
+INCLUDEPATH += $$INCLUDE_PATH/ImageProcessorsPlugin
+

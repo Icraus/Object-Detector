@@ -13,7 +13,7 @@ greaterThan(QT_MAJOR_VERSION, 4) {
     CONFIG += designer
 }
 
-target.path = $$[QT_INSTALL_PLUGINS]/designer
-INSTALLS    += target
+#target.path = $$[QT_INSTALL_PLUGINS]/designer
+#INSTALLS    += target
 include(../../../COMMON_VARS.pri)
 include(cvvideocapture.pri)

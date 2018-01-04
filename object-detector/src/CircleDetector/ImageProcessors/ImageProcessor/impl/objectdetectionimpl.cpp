@@ -12,14 +12,23 @@ void ObjectDetection::_ObjectDetectionImpl::setResults(const QVariant &value)
     results = value;
 }
 
-std::vector<AbstractImageProcessor *> ObjectDetection::_ObjectDetectionImpl::getFilters() const
+std::vector<PluginSharedPointer> ObjectDetection::_ObjectDetectionImpl::getFilters() const
 {
     return _filters;
 }
 
-void ObjectDetection::_ObjectDetectionImpl::setFilters(const std::vector<AbstractImageProcessor *> &value)
+void ObjectDetection::_ObjectDetectionImpl::setFilters(const std::vector<PluginSharedPointer> &value)
 {
     _filters = value;
+}
+
+Mat ObjectDetection::_ObjectDetectionImpl::applyFilters(Mat dst) const
+{
+    for(auto pro : _filters)
+   {
+       dst = pro->filter(dst);
+   }
+   return dst;
 }
 
 ObjectDetection::_ObjectDetectionImpl::_ObjectDetectionImpl(ObjectDetection * const ptr):
@@ -35,7 +44,7 @@ Dilate *ObjectDetection::_ObjectDetectionImpl::getDiler() const
     return _diler;
 }
 
-void ObjectDetection::_ObjectDetectionImpl::addFilter(AbstractImageProcessor *proc)
+void ObjectDetection::_ObjectDetectionImpl::addFilter(PluginSharedPointer proc)
 {
     _filters.push_back(proc);
 }
@@ -85,12 +94,7 @@ std::vector<Vec3f> ObjectDetection::_ObjectDetectionImpl::getCircles()
     getColDetector()->processImage();
     auto dst = getColDetector()->getDst();
 
-    for(AbstractImageProcessor *pro : _filters)
-   {
-       pro->setImg(dst);
-       pro->processImage();
-       dst = pro->getDst();
-   }
+    applyFilters(dst);
     getDiler()->setImg(dst);
     getDiler()->processImage();
     dst = getDiler()->getDst();

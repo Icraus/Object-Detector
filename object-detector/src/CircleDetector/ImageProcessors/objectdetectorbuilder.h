@@ -18,7 +18,7 @@ private:
 public:
     virtual ~ObjectDetectorBuilder();
     explicit ObjectDetectorBuilder(QObject *parent = nullptr);
-    void addFilter(imgproc::AbstractImageProcessor *proc);
+    void addFilter(PluginSharedPointer proc);
     std::unique_ptr<ObjectDetection> build();
 signals:
 

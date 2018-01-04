@@ -44,17 +44,17 @@ void ObjectDetection::setColDetector(DetectColor *colDetector)
     _pimpl->setColDetector(colDetector);
 }
 
-void ObjectDetection::addFilter(ImageProcessor::AbstractImageProcessor *proc)
+void ObjectDetection::addFilter(PluginSharedPointer proc)
 {
     _pimpl->addFilter(proc);
 }
 
-std::vector<ImageProcessor::AbstractImageProcessor *> ObjectDetection::getFilters() const
+std::vector<PluginSharedPointer> ObjectDetection::getFilters() const
 {
     return _pimpl->getFilters();
 }
 
-void ObjectDetection::setFilters(const std::vector<ImageProcessor::AbstractImageProcessor *> &value)
+void ObjectDetection::setFilters(const std::vector<PluginSharedPointer> &value)
 {
     _pimpl->setFilters(value);
 }
@@ -67,6 +67,11 @@ QVariant ObjectDetection::getResults() const
 void ObjectDetection::setResults(QVariant res)
 {
     _pimpl->setResults(res);
+}
+
+Mat ObjectDetection::applyFilters(Mat dst) const
+{
+    return _pimpl->applyFilters(dst);
 }
 ObjectDetection::~ObjectDetection()
 {
