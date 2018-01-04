@@ -18,12 +18,12 @@ private:
     Dilate *_diler;
     ObjectDetection *const _ptr;
     QVariant results;
-    std::vector<AbstractImageProcessor*> _filters;
+    std::vector<PluginSharedPointer> _filters;
     friend class ImageProcessor::ObjectDetection;
 public:
     _ObjectDetectionImpl(ObjectDetection *const ptr);
     Dilate *getDiler() const;
-    void addFilter(AbstractImageProcessor *proc);
+    void addFilter(PluginSharedPointer proc);
     DetectColor *getColDetector() const;
     DetectCircle *getCirDetector() const;
     std::vector<cv::Vec3f> getCircles();
@@ -33,8 +33,8 @@ public:
     QVariant processImage();
     QVariant getResults() const;
     void setResults(const QVariant &value);
-    std::vector<AbstractImageProcessor *> getFilters() const;
-    void setFilters(const std::vector<AbstractImageProcessor *> &value);
+    std::vector<PluginSharedPointer> getFilters() const;
+    void setFilters(const std::vector<PluginSharedPointer> &value);
     cv::Mat applyFilters(cv::Mat dst) const;
 };
 

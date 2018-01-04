@@ -7,6 +7,7 @@
 #include <ImageProcessor/detectcolor.h>
 #include <ImageProcessor/abstractimageprocessor.h>
 #include <ImageProcessor/dilate.h>
+#include "imageprocessorpluginiface.h"
 namespace ImageProcessor {
     class IMG_PROC_LIB ObjectDetection;
 
@@ -32,10 +33,10 @@ public slots:
     void setCirDetector(DetectCircle *cirDetector);
     void setDiler(Dilate *diler);
     void setColDetector(DetectColor *colDetector);
-    void addFilter(AbstractImageProcessor *proc);
+    void addFilter(PluginSharedPointer proc);
     //TODO void removeFilter(AbstractImageProcessor *proc);
-    std::vector<AbstractImageProcessor *> getFilters() const;
-    void setFilters(const std::vector<AbstractImageProcessor *> &value);
+    std::vector<PluginSharedPointer> getFilters() const;
+    void setFilters(const std::vector<PluginSharedPointer> &value);
 
 protected:
     void setResults(QVariant res);

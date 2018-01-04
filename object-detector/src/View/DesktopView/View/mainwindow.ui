@@ -309,7 +309,7 @@
          <item>
           <widget class="QPushButton" name="pushButton_5">
            <property name="text">
-            <string>add More Dilate</string>
+            <string>Show Dock Area</string>
            </property>
           </widget>
          </item>
