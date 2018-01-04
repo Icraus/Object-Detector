@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['objectdetection',['ObjectDetection',['../d0/d2b/class_image_processor_1_1_object_detection.html',1,'ImageProcessor']]],
-  ['observabledata',['ObservableData',['../db/d28/class_devices_1_1_observable_data.html',1,'Devices']]],
-  ['observer',['Observer',['../d0/d5d/class_devices_1_1_observer.html',1,'Devices']]],
-  ['observerimpl',['ObserverImpl',['../d4/df3/class_observer_impl.html',1,'']]]
+  ['mainwindow',['MainWindow',['../d9/dc6/class_main_window.html',1,'MainWindow'],['../d4/d4a/class_ui_1_1_main_window.html',1,'Ui::MainWindow']]]
 ];

@@ -1,0 +1,87 @@
+\hypertarget{class_utilities_1_1_serial_port_model}{}\section{Utilities\+:\+:Serial\+Port\+Model Class Reference}
+\label{class_utilities_1_1_serial_port_model}\index{Utilities\+::\+Serial\+Port\+Model@{Utilities\+::\+Serial\+Port\+Model}}
+
+
+Inheritance diagram for Utilities\+:\+:Serial\+Port\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{da/d95/class_utilities_1_1_serial_port_model__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Utilities\+:\+:Serial\+Port\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{dc/d1e/class_utilities_1_1_serial_port_model__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_utilities_1_1_serial_port_model_a1ed1937a512e4a7f9868207fa6cf3e14}\label{class_utilities_1_1_serial_port_model_a1ed1937a512e4a7f9868207fa6cf3e14}} 
+enum {\bfseries type} \{ \newline
+{\bfseries P\+O\+RT} = Qt\+:\+:User\+Role + 1, 
+{\bfseries P\+O\+R\+T\+\_\+\+I\+N\+FO}, 
+{\bfseries P\+O\+R\+T\+\_\+\+N\+A\+ME}, 
+{\bfseries P\+O\+R\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}, 
+\newline
+{\bfseries P\+O\+R\+T\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+L\+O\+C\+A\+T\+I\+ON}, 
+{\bfseries M\+A\+N\+U\+F\+A\+C\+T\+U\+R\+ER}, 
+{\bfseries S\+E\+R\+I\+A\+L\+\_\+\+N\+UM}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_utilities_1_1_serial_port_model_ac6fd51a5d5c23815a21b7c38b82e3980}\label{class_utilities_1_1_serial_port_model_ac6fd51a5d5c23815a21b7c38b82e3980}} 
+void {\bfseries refresh\+Model} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_utilities_1_1_serial_port_model_ab74ab55a8ca5a6255240701466ba534a}\label{class_utilities_1_1_serial_port_model_ab74ab55a8ca5a6255240701466ba534a}} 
+{\bfseries Serial\+Port\+Model} (Q\+Object $\ast$parent=nullptr)
+\item 
+\mbox{\Hypertarget{class_utilities_1_1_serial_port_model_aca796b65decbcbea757db4478e015559}\label{class_utilities_1_1_serial_port_model_aca796b65decbcbea757db4478e015559}} 
+Q\+List$<$ Q\+Serial\+Port\+Info $>$ {\bfseries ports\+Info} () const
+\item 
+\mbox{\Hypertarget{class_utilities_1_1_serial_port_model_a9357641fbf3a53f7ab97a3624656d0e7}\label{class_utilities_1_1_serial_port_model_a9357641fbf3a53f7ab97a3624656d0e7}} 
+void {\bfseries set\+Ports\+Info} (const Q\+List$<$ Q\+Serial\+Port\+Info $>$ \&ports\+Info)
+\item 
+\mbox{\Hypertarget{class_utilities_1_1_serial_port_model_ae17bdaa1d13f60f60da0d4218cae0fbb}\label{class_utilities_1_1_serial_port_model_ae17bdaa1d13f60f60da0d4218cae0fbb}} 
+Q\+List$<$ Q\+Serial\+Port $\ast$ $>$ {\bfseries avialabe\+Ports} () const
+\item 
+\mbox{\Hypertarget{class_utilities_1_1_serial_port_model_ac8678f219e4a380a8de05f556e48f47c}\label{class_utilities_1_1_serial_port_model_ac8678f219e4a380a8de05f556e48f47c}} 
+void {\bfseries set\+Avialabe\+Ports} (const Q\+List$<$ Q\+Serial\+Port $\ast$$>$ \&avialabe\+Ports)
+\item 
+\mbox{\Hypertarget{class_utilities_1_1_serial_port_model_adebd2b1a062707e998b85e97f30ede95}\label{class_utilities_1_1_serial_port_model_adebd2b1a062707e998b85e97f30ede95}} 
+virtual Q\+Variant {\bfseries header\+Data} (int section, Qt\+::\+Orientation orientation, int role) const override
+\item 
+\mbox{\Hypertarget{class_utilities_1_1_serial_port_model_aa12f773f0b7f7e1bbd5e1110f559f366}\label{class_utilities_1_1_serial_port_model_aa12f773f0b7f7e1bbd5e1110f559f366}} 
+virtual bool {\bfseries remove\+Rows} (int row, int count, const Q\+Model\+Index \&parent) override
+\item 
+\mbox{\Hypertarget{class_utilities_1_1_serial_port_model_ad61015517918391e750673b2d0a2743f}\label{class_utilities_1_1_serial_port_model_ad61015517918391e750673b2d0a2743f}} 
+virtual int {\bfseries row\+Count} (const Q\+Model\+Index \&parent) const override
+\item 
+\mbox{\Hypertarget{class_utilities_1_1_serial_port_model_ad0460ff6a97ffe21fca772327f6440f3}\label{class_utilities_1_1_serial_port_model_ad0460ff6a97ffe21fca772327f6440f3}} 
+virtual int {\bfseries column\+Count} (const Q\+Model\+Index \&parent) const override
+\item 
+\mbox{\Hypertarget{class_utilities_1_1_serial_port_model_abf2e5036c85fea58eea037c7fcd1294f}\label{class_utilities_1_1_serial_port_model_abf2e5036c85fea58eea037c7fcd1294f}} 
+virtual Q\+Variant {\bfseries data} (const Q\+Model\+Index \&index, int role) const override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 16 of file serialportmodel.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+object-\/detector/src/\+Utilities/\+Serial\+Port\+Model/serialportmodel.\+h\item 
+object-\/detector/src/\+Utilities/\+Serial\+Port\+Model/serialportmodel.\+cpp\end{DoxyCompactItemize}

@@ -10,6 +10,7 @@
 #include <QDebug>
 #include <QMessageBox>
 #include <QDockWidget>
+#include <QFileDialog>
 #include "serialportmodel.h"
 #include "circledetecorpluginloaderview.h"
 #include "circledetectorpluginmodel.h"
@@ -19,15 +20,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    CircleDetecorPluginLoaderView *view = new CircleDetecorPluginLoaderView;
-    dock = new QDockWidget("Filter Plugins", this);
-    dock->setWidget(view);
-    connect(ui->pushButton_5, &QPushButton::clicked, [&](){
-       dock->setHidden(!dock->isHidden());
-    });
+    connect(ui->pushButton_5, SIGNAL(clicked()), this, SLOT(openPluginWindw()));
 
-    addDockWidget(Qt::LeftDockWidgetArea, dock);
-    connect(view, SIGNAL(filterChanged(PluginSharedPointer)), &detector, SLOT(addFilter(PluginSharedPointer)));
     connect(&detector, SIGNAL(xyrChanged(int,int,int)), this, SLOT(setXYR(int, int, int)));
     connect(ui->param1Slider, SIGNAL(sliderMoved(int)), &detector,SLOT(setParam1(int)));
     connect(ui->param2Slider, SIGNAL(sliderMoved(int)), &detector,SLOT(setParam2(int)));
@@ -115,5 +109,31 @@ void MainWindow::on_circleThicknessSlider_valueChanged(int value)
 
 void MainWindow::on_spinBox_valueChanged(int arg1)
 {
-//    cap.open(arg1);
+    //    cap.open(arg1);
+}
+
+void MainWindow::openPluginWindw()
+{
+    if(view){
+        delete view;
+        view = nullptr;
+    }
+    if(dock){
+        delete dock;
+        dock = nullptr;
+    }
+
+    view = pluginPath.isEmpty() ? new CircleDetecorPluginLoaderView : new CircleDetecorPluginLoaderView(pluginPath);
+    connect(view, SIGNAL(filterChanged(PluginSharedPointer)), &detector, SLOT(addFilter(PluginSharedPointer)));
+    dock = new QDockWidget("Filter Plugins", this);
+    dock->setWidget(view);
+    addDockWidget(Qt::LeftDockWidgetArea, dock);
+
+}
+
+void MainWindow::on_pushButton_6_clicked()
+{
+    pluginPath = QFileDialog::getExistingDirectory(this, "Plugin Path", QDir::currentPath() ,QFileDialog::ShowDirsOnly
+                                                   | QFileDialog::DontResolveSymlinks);
+
 }

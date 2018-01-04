@@ -7,6 +7,7 @@
 #include <ImageProcessor/objectdetection.h>
 #include <QSerialPort>
 #include <QStringListModel>
+#include <circledetecorpluginloaderview.h>
 #include <tuple>
 #include "opencv2/core.hpp"
 #include "opencv2/imgproc.hpp"
@@ -41,6 +42,8 @@ private slots:
 
     void on_spinBox_valueChanged(int arg1);
 
+    void openPluginWindw();
+    void on_pushButton_6_clicked();
 
 private:
     ColorDetectorController detector;
@@ -49,10 +52,12 @@ private:
     QAbstractItemModel *model = nullptr;
     QStringList ls;
     QTimer timer;
+    CircleDetecorPluginLoaderView *view = nullptr;
     QSerialPort *_port = nullptr;
     Ui::MainWindow *ui = nullptr;
     cv::Scalar circleColor = cv::Scalar(0,0,255);
-    QDockWidget *dock;
+    QDockWidget *dock = nullptr;
+    QString pluginPath;
 
 };
 

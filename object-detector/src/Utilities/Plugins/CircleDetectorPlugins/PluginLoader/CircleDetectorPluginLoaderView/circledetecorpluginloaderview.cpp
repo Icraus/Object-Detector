@@ -1,10 +1,18 @@
 #include "circledetecorpluginloaderview.h"
 #include "impl/circledetecorpluginloaderviewimpl.h"
 CIRCLE_PLUGIN_LOADER_BEGIN_NAMESPACE
+#define PLUGINPATH "/plugins"
 
-CircleDetecorPluginLoaderView::CircleDetecorPluginLoaderView(QWidget *parent) :
-    QDialog(parent),
-    _pimpl{INIT_UNIQUE_PTR(CircleDetecorPluginLoaderView::_CircleDetecorPluginLoaderViewImpl ,this)}
+CircleDetecorPluginLoaderView::CircleDetecorPluginLoaderView(QWidget *parent)
+    : CircleDetecorPluginLoaderView(QDir::currentPath() + PLUGINPATH, parent)
+{
+
+}
+
+CircleDetecorPluginLoaderView::CircleDetecorPluginLoaderView(QString path, QWidget *parent)
+    :QDialog(parent),
+      _pimpl{INIT_UNIQUE_PTR(CircleDetecorPluginLoaderView::_CircleDetecorPluginLoaderViewImpl , this, path)}
+
 {
 
 }

@@ -33,11 +33,11 @@ void {\bfseries set\+Min\+Dist} (int value)
 \mbox{\Hypertarget{class_color_detector_controller_a9e740e8277b4a20331073f06dc21c2b3}\label{class_color_detector_controller_a9e740e8277b4a20331073f06dc21c2b3}} 
 void {\bfseries set\+Thickness} (int value)
 \item 
-\mbox{\Hypertarget{class_color_detector_controller_af0a3dc83cc160531856e27f2e33bbadb}\label{class_color_detector_controller_af0a3dc83cc160531856e27f2e33bbadb}} 
-\hyperlink{class_image_processor_1_1_abstract_image_processor}{Image\+Processor\+::\+Abstract\+Image\+Processor} $\ast$ {\bfseries get\+Pro} () const
+\mbox{\Hypertarget{class_color_detector_controller_a2b54a80644a924cbe41c105fc26ecf6f}\label{class_color_detector_controller_a2b54a80644a924cbe41c105fc26ecf6f}} 
+void {\bfseries set\+Pro} (\hyperlink{class_image_processor_1_1_object_detection}{Object\+Detection} $\ast$value)
 \item 
-\mbox{\Hypertarget{class_color_detector_controller_a1be625213c4974eef58e7563c1df0973}\label{class_color_detector_controller_a1be625213c4974eef58e7563c1df0973}} 
-void {\bfseries set\+Pro} (\hyperlink{class_image_processor_1_1_abstract_image_processor}{Image\+Processor\+::\+Abstract\+Image\+Processor} $\ast$value)
+\mbox{\Hypertarget{class_color_detector_controller_a0f8f5e688e6b6cc636fd9b7b1dd90a0a}\label{class_color_detector_controller_a0f8f5e688e6b6cc636fd9b7b1dd90a0a}} 
+void {\bfseries add\+Filter} (Plugin\+Shared\+Pointer filter)
 \item 
 \mbox{\Hypertarget{class_color_detector_controller_acf885c6d9cc0c81601143d678bb9f890}\label{class_color_detector_controller_acf885c6d9cc0c81601143d678bb9f890}} 
 void {\bfseries set\+Dilation\+Size} (int value)
@@ -49,7 +49,7 @@ void {\bfseries set\+Min\+Color} (const cv\+::\+Scalar \&value)
 void {\bfseries set\+Max\+Color} (const cv\+::\+Scalar \&value)
 \item 
 \mbox{\Hypertarget{class_color_detector_controller_afbf3737d1542b0e1517621b90b7efe15}\label{class_color_detector_controller_afbf3737d1542b0e1517621b90b7efe15}} 
-Q\+Image {\bfseries detect\+Object} (const cv\+::\+Mat \&t)
+Q\+\_\+\+I\+N\+V\+O\+K\+A\+B\+LE Q\+Image {\bfseries detect\+Object} (const cv\+::\+Mat \&t)
 \end{DoxyCompactItemize}
 \subsection*{Signals}
 \begin{DoxyCompactItemize}
@@ -110,6 +110,9 @@ void {\bfseries set\+Circle\+Color} (const cv\+::\+Scalar \&value)
 \item 
 \mbox{\Hypertarget{class_color_detector_controller_a0ca740b6e9e02ad320231c613763f286}\label{class_color_detector_controller_a0ca740b6e9e02ad320231c613763f286}} 
 int {\bfseries get\+Thickness} () const
+\item 
+\mbox{\Hypertarget{class_color_detector_controller_ad1034500aeab80949a9763e9379664db}\label{class_color_detector_controller_ad1034500aeab80949a9763e9379664db}} 
+\hyperlink{class_image_processor_1_1_object_detection}{Object\+Detection} $\ast$ {\bfseries get\+Pro} () const
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -122,7 +125,14 @@ cv\+::\+Mat {\bfseries dialted}
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+
+
+Definition at line 9 of file colordetectorcontroller.\+h.
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-src/\+Object\+Detection/\+View/\+Desktop\+View/colordetectorcontroller.\+h\item 
-src/\+Object\+Detection/\+View/\+Desktop\+View/colordetectorcontroller.\+cpp\end{DoxyCompactItemize}
+object-\/detector/src/\+View/\+Desktop\+View/colordetectorcontroller.\+h\item 
+object-\/detector/src/\+View/\+Desktop\+View/colordetectorcontroller.\+cpp\end{DoxyCompactItemize}

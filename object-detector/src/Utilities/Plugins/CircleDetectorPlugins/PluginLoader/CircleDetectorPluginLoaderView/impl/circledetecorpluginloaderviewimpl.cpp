@@ -1,14 +1,27 @@
 #include "impl/circledetecorpluginloaderviewimpl.h"
 #include "ui_circledetecorpluginloaderview.h"
+
+#include <QMessageBox>
 CIRCLE_PLUGIN_LOADER_BEGIN_NAMESPACE
 
 
-CircleDetecorPluginLoaderView::_CircleDetecorPluginLoaderViewImpl::_CircleDetecorPluginLoaderViewImpl(CircleDetecorPluginLoaderView * const ptr): _ptr{ptr},
-    ui(new Ui::CircleDetecorPluginLoaderView)
+
+CircleDetecorPluginLoaderView::_CircleDetecorPluginLoaderViewImpl::_CircleDetecorPluginLoaderViewImpl(CircleDetecorPluginLoaderView * const ptr)
+    :_CircleDetecorPluginLoaderViewImpl(ptr, QDir::currentPath())
+
+{
+
+}
+
+CircleDetecorPluginLoaderView::_CircleDetecorPluginLoaderViewImpl::_CircleDetecorPluginLoaderViewImpl(CircleDetecorPluginLoaderView * const ptr, QString path)
+    :_ptr{ptr},
+      ui(new Ui::CircleDetecorPluginLoaderView)
+
 {
     ui->setupUi(_ptr);
-    m_pluginsModel = new CircleDetectorPluginModel(QDir::currentPath() + "/plugins");
+    m_pluginsModel = new CircleDetectorPluginModel(path);
     ui->tableView->setModel(m_pluginsModel);
+
 }
 
 CircleDetecorPluginLoaderView::_CircleDetecorPluginLoaderViewImpl::~_CircleDetecorPluginLoaderViewImpl()

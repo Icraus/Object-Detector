@@ -1,6 +1,7 @@
 var class_color_detector_controller =
 [
     [ "ColorDetectorController", "db/d55/class_color_detector_controller.html#a2f35953352a4cba8a1907ca46cf08b62", null ],
+    [ "addFilter", "db/d55/class_color_detector_controller.html#a0f8f5e688e6b6cc636fd9b7b1dd90a0a", null ],
     [ "detectObject", "db/d55/class_color_detector_controller.html#afbf3737d1542b0e1517621b90b7efe15", null ],
     [ "dilationSizeChanged", "db/d55/class_color_detector_controller.html#a0750b4604ba5891c67ff470a37477278", null ],
     [ "getCircleColor", "db/d55/class_color_detector_controller.html#a102cd879ea47cd3143316cd15b752bb0", null ],
@@ -10,7 +11,7 @@ var class_color_detector_controller =
     [ "getMinDist", "db/d55/class_color_detector_controller.html#adaf0bc83b6235e0e9997b34ab757f6fd", null ],
     [ "getParam1", "db/d55/class_color_detector_controller.html#a8cc70b5d53544e5d03ac10b11743c9f5", null ],
     [ "getParam2", "db/d55/class_color_detector_controller.html#a3bea337471bf91256e55c1f729646a32", null ],
-    [ "getPro", "db/d55/class_color_detector_controller.html#af0a3dc83cc160531856e27f2e33bbadb", null ],
+    [ "getPro", "db/d55/class_color_detector_controller.html#ad1034500aeab80949a9763e9379664db", null ],
     [ "getThickCircle", "db/d55/class_color_detector_controller.html#a7393d5517b607068db7f2ea78484c282", null ],
     [ "getThickness", "db/d55/class_color_detector_controller.html#a0ca740b6e9e02ad320231c613763f286", null ],
     [ "maxColorChanged", "db/d55/class_color_detector_controller.html#aac5cf8b463491642ae8b85a89b5675d5", null ],
@@ -25,7 +26,7 @@ var class_color_detector_controller =
     [ "setMinDist", "db/d55/class_color_detector_controller.html#aa2d6bc51226ab600bd98a272f4578eea", null ],
     [ "setParam1", "db/d55/class_color_detector_controller.html#a12cef009b075aee19592b6f9d5bf4d08", null ],
     [ "setParam2", "db/d55/class_color_detector_controller.html#a3a383fee14bb11464f077843fbef6ef3", null ],
-    [ "setPro", "db/d55/class_color_detector_controller.html#a1be625213c4974eef58e7563c1df0973", null ],
+    [ "setPro", "db/d55/class_color_detector_controller.html#a2b54a80644a924cbe41c105fc26ecf6f", null ],
     [ "setThickness", "db/d55/class_color_detector_controller.html#a9e740e8277b4a20331073f06dc21c2b3", null ],
     [ "xyrChanged", "db/d55/class_color_detector_controller.html#a5568479bdc21021dfaad7f61ce82db5d", null ],
     [ "colored", "db/d55/class_color_detector_controller.html#a639034f23f3b7beeaf7001a4a8d5ffd0", null ],

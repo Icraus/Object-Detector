@@ -18,6 +18,8 @@ class CircleDetecorPluginLoaderView::_CircleDetecorPluginLoaderViewImpl
 
 public:
     explicit _CircleDetecorPluginLoaderViewImpl(CircleDetecorPluginLoaderView *const ptr);
+    explicit _CircleDetecorPluginLoaderViewImpl(CircleDetecorPluginLoaderView *const ptr, QString path);
+
     ~_CircleDetecorPluginLoaderViewImpl();
     CircleDetectorPluginModel *pluginsModel() const;
     void setPluginsModel(CircleDetectorPluginModel *pluginsModel);

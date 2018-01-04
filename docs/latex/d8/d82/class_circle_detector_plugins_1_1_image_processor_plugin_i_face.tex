@@ -1,0 +1,154 @@
+\hypertarget{class_circle_detector_plugins_1_1_image_processor_plugin_i_face}{}\section{Circle\+Detector\+Plugins\+:\+:Image\+Processor\+Plugin\+I\+Face Class Reference}
+\label{class_circle_detector_plugins_1_1_image_processor_plugin_i_face}\index{Circle\+Detector\+Plugins\+::\+Image\+Processor\+Plugin\+I\+Face@{Circle\+Detector\+Plugins\+::\+Image\+Processor\+Plugin\+I\+Face}}
+
+
+The \hyperlink{class_circle_detector_plugins_1_1_image_processor_plugin_i_face}{Image\+Processor\+Plugin\+I\+Face} is and interface used to apply filters to Images.  
+
+
+
+
+{\ttfamily \#include $<$imageprocessorpluginiface.\+h$>$}
+
+
+
+Inheritance diagram for Circle\+Detector\+Plugins\+:\+:Image\+Processor\+Plugin\+I\+Face\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{dc/dc8/class_circle_detector_plugins_1_1_image_processor_plugin_i_face__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Circle\+Detector\+Plugins\+:\+:Image\+Processor\+Plugin\+I\+Face\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{d0/d28/class_circle_detector_plugins_1_1_image_processor_plugin_i_face__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual Q\+String \hyperlink{class_circle_detector_plugins_1_1_image_processor_plugin_i_face_a278e7f8e8c7e50e566c65202de58d037}{filter\+Name} () const =0
+\begin{DoxyCompactList}\small\item\em filter\+Name used to describe the filter name \end{DoxyCompactList}\item 
+virtual cv\+::\+Mat \hyperlink{class_circle_detector_plugins_1_1_image_processor_plugin_i_face_a87e2023aca6dffc2ceace999b7ca6b0b}{filter} (cv\+::\+Mat src) const =0
+\begin{DoxyCompactList}\small\item\em filter this member function is used to apply a filter on an image \end{DoxyCompactList}\item 
+virtual Q\+String \hyperlink{class_circle_detector_plugins_1_1_image_processor_plugin_i_face_a5003fd77a4bb84befee299528241d4e5}{filter\+Description} () const =0
+\begin{DoxyCompactList}\small\item\em filter\+Description used to describe filter description \end{DoxyCompactList}\item 
+virtual Q\+String \hyperlink{class_circle_detector_plugins_1_1_image_processor_plugin_i_face_a74b5e4f7aa50140ecc4a94587fb3ed42}{author} () const =0
+\begin{DoxyCompactList}\small\item\em author used to describe the author of the plugin \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_circle_detector_plugins_1_1_image_processor_plugin_i_face}{Image\+Processor\+Plugin\+I\+Face} is and interface used to apply filters to Images. 
+
+this interface is used to implement plugins to apply filters on image the filter is compiled as a plugin for Qt in qmake file 
+\begin{DoxyCode}
+CONFIG += release plugin
+\end{DoxyCode}
+ to implement the plugin you must implement both the Q\+Object class and the interface for exmaple 
+\begin{DoxyCode}
+ \textcolor{keyword}{class }ErodePlugin : \textcolor{keyword}{public} QObject, 
+      \hyperlink{class_circle_detector_plugins_1_1_image_processor_plugin_i_face}{CircleDetectorPlugins::ImageProcessorPluginIFace}
+\{
+   Q\_OBJECT
+   Q\_INTERFACES(\hyperlink{class_circle_detector_plugins_1_1_image_processor_plugin_i_face}{CircleDetectorPlugins::ImageProcessorPluginIFace}
+      )
+   Q\_PLUGIN\_METADATA(IID ErodePlugin\_iid)
+  \textcolor{comment}{// implement virtual members}
+ \}
+\end{DoxyCode}
+
+
+\begin{DoxyAuthor}{Author}
+Mohamed Khaled 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+Definition at line 38 of file imageprocessorpluginiface.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_circle_detector_plugins_1_1_image_processor_plugin_i_face_a74b5e4f7aa50140ecc4a94587fb3ed42}\label{class_circle_detector_plugins_1_1_image_processor_plugin_i_face_a74b5e4f7aa50140ecc4a94587fb3ed42}} 
+\index{Circle\+Detector\+Plugins\+::\+Image\+Processor\+Plugin\+I\+Face@{Circle\+Detector\+Plugins\+::\+Image\+Processor\+Plugin\+I\+Face}!author@{author}}
+\index{author@{author}!Circle\+Detector\+Plugins\+::\+Image\+Processor\+Plugin\+I\+Face@{Circle\+Detector\+Plugins\+::\+Image\+Processor\+Plugin\+I\+Face}}
+\subsubsection{\texorpdfstring{author()}{author()}}
+{\footnotesize\ttfamily virtual Q\+String Circle\+Detector\+Plugins\+::\+Image\+Processor\+Plugin\+I\+Face\+::author (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+author used to describe the author of the plugin 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_morpho_logical_1_1_erode_plugin_a5cd6e9ed96ec99a9586952e70f2a43b5}{Morpho\+Logical\+::\+Erode\+Plugin}.
+
+\mbox{\Hypertarget{class_circle_detector_plugins_1_1_image_processor_plugin_i_face_a87e2023aca6dffc2ceace999b7ca6b0b}\label{class_circle_detector_plugins_1_1_image_processor_plugin_i_face_a87e2023aca6dffc2ceace999b7ca6b0b}} 
+\index{Circle\+Detector\+Plugins\+::\+Image\+Processor\+Plugin\+I\+Face@{Circle\+Detector\+Plugins\+::\+Image\+Processor\+Plugin\+I\+Face}!filter@{filter}}
+\index{filter@{filter}!Circle\+Detector\+Plugins\+::\+Image\+Processor\+Plugin\+I\+Face@{Circle\+Detector\+Plugins\+::\+Image\+Processor\+Plugin\+I\+Face}}
+\subsubsection{\texorpdfstring{filter()}{filter()}}
+{\footnotesize\ttfamily virtual cv\+::\+Mat Circle\+Detector\+Plugins\+::\+Image\+Processor\+Plugin\+I\+Face\+::filter (\begin{DoxyParamCaption}\item[{cv\+::\+Mat}]{src }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+filter this member function is used to apply a filter on an image 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & a cv\+::\+Mat object of the source image \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cv\+::\+Mat object of the image after applying filter 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_morpho_logical_1_1_erode_plugin_adaf5cef6022e87b1facd95063c92a2dc}{Morpho\+Logical\+::\+Erode\+Plugin}.
+
+\mbox{\Hypertarget{class_circle_detector_plugins_1_1_image_processor_plugin_i_face_a5003fd77a4bb84befee299528241d4e5}\label{class_circle_detector_plugins_1_1_image_processor_plugin_i_face_a5003fd77a4bb84befee299528241d4e5}} 
+\index{Circle\+Detector\+Plugins\+::\+Image\+Processor\+Plugin\+I\+Face@{Circle\+Detector\+Plugins\+::\+Image\+Processor\+Plugin\+I\+Face}!filter\+Description@{filter\+Description}}
+\index{filter\+Description@{filter\+Description}!Circle\+Detector\+Plugins\+::\+Image\+Processor\+Plugin\+I\+Face@{Circle\+Detector\+Plugins\+::\+Image\+Processor\+Plugin\+I\+Face}}
+\subsubsection{\texorpdfstring{filter\+Description()}{filterDescription()}}
+{\footnotesize\ttfamily virtual Q\+String Circle\+Detector\+Plugins\+::\+Image\+Processor\+Plugin\+I\+Face\+::filter\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+filter\+Description used to describe filter description 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_morpho_logical_1_1_erode_plugin_a11da98b723970e68dae002337ac36875}{Morpho\+Logical\+::\+Erode\+Plugin}.
+
+\mbox{\Hypertarget{class_circle_detector_plugins_1_1_image_processor_plugin_i_face_a278e7f8e8c7e50e566c65202de58d037}\label{class_circle_detector_plugins_1_1_image_processor_plugin_i_face_a278e7f8e8c7e50e566c65202de58d037}} 
+\index{Circle\+Detector\+Plugins\+::\+Image\+Processor\+Plugin\+I\+Face@{Circle\+Detector\+Plugins\+::\+Image\+Processor\+Plugin\+I\+Face}!filter\+Name@{filter\+Name}}
+\index{filter\+Name@{filter\+Name}!Circle\+Detector\+Plugins\+::\+Image\+Processor\+Plugin\+I\+Face@{Circle\+Detector\+Plugins\+::\+Image\+Processor\+Plugin\+I\+Face}}
+\subsubsection{\texorpdfstring{filter\+Name()}{filterName()}}
+{\footnotesize\ttfamily virtual Q\+String Circle\+Detector\+Plugins\+::\+Image\+Processor\+Plugin\+I\+Face\+::filter\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+filter\+Name used to describe the filter name 
+
+\begin{DoxyReturn}{Returns}
+Q\+String object of the filter name for metadata 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_morpho_logical_1_1_erode_plugin_a7c3de038d5f2451861c021158c942aab}{Morpho\+Logical\+::\+Erode\+Plugin}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+object-\/detector/src/\+Utilities/\+Plugins/\+Circle\+Detector\+Plugins/\+Erode\+Plugin/imageprocessorpluginiface.\+h\end{DoxyCompactItemize}

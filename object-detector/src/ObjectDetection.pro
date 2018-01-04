@@ -6,5 +6,5 @@ SUBDIRS += \
     View
 #    DevicesInterfaces
 CircleDetector.depends += Utilities
-View.depends += CircleDetector
 View.depends += Utilities
+View.depends += CircleDetector

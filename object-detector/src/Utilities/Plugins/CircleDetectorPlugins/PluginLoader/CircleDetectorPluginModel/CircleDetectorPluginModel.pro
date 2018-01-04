@@ -24,13 +24,13 @@ CONFIG(staticlib){
 DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
-        circledetectorpluginmodel.cpp \
-    impl/circledetectorpluginmodelimpl.cpp
+    impl/circledetectorpluginmodelimpl.cpp \
+        circledetectorpluginmodel.cpp
 
 HEADERS += \
-        circledetectorpluginmodel.h \
+    circledetectorpluginmodel_global.h \
     impl/circledetectorpluginmodelimpl.h \
-    circledetectorpluginmodel_global.h
+        circledetectorpluginmodel.h
 
 include(../../../../../COMMON_VARS.pri)
 include(../../../../../OPENCVLinking.pro)

@@ -1,0 +1,84 @@
+\hypertarget{class_c_v_video_capture}{}\section{C\+V\+Video\+Capture Class Reference}
+\label{class_c_v_video_capture}\index{C\+V\+Video\+Capture@{C\+V\+Video\+Capture}}
+
+
+Inheritance diagram for C\+V\+Video\+Capture\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{d9/dbd/class_c_v_video_capture__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for C\+V\+Video\+Capture\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{d3/d5e/class_c_v_video_capture__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_v_video_capture_aa8149e80fb17a0cf98425ebb17756ac0}\label{class_c_v_video_capture_aa8149e80fb17a0cf98425ebb17756ac0}} 
+virtual void {\bfseries capture\+Frame} ()
+\item 
+\mbox{\Hypertarget{class_c_v_video_capture_a4ea7818ffa44635751de5e7bec45262d}\label{class_c_v_video_capture_a4ea7818ffa44635751de5e7bec45262d}} 
+virtual void {\bfseries stop} ()
+\item 
+\mbox{\Hypertarget{class_c_v_video_capture_a50551374a42426ed9e68277458adfa86}\label{class_c_v_video_capture_a50551374a42426ed9e68277458adfa86}} 
+virtual void {\bfseries start} ()
+\item 
+\mbox{\Hypertarget{class_c_v_video_capture_a2a0d45d4ce676b5e7a8cdb8f9e909e0c}\label{class_c_v_video_capture_a2a0d45d4ce676b5e7a8cdb8f9e909e0c}} 
+virtual void {\bfseries change\+Device} (int device)
+\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_v_video_capture_aede6e630cff60ec95bfeb8dcf90902d2}\label{class_c_v_video_capture_aede6e630cff60ec95bfeb8dcf90902d2}} 
+void {\bfseries frame\+Captured} (cv\+::\+Mat frame)
+\item 
+\mbox{\Hypertarget{class_c_v_video_capture_a0c24cf47e8ace4a144e2e1fc250726e0}\label{class_c_v_video_capture_a0c24cf47e8ace4a144e2e1fc250726e0}} 
+void {\bfseries stopped} ()
+\item 
+\mbox{\Hypertarget{class_c_v_video_capture_a9b342b007ec37610ffda32ad9174c4a9}\label{class_c_v_video_capture_a9b342b007ec37610ffda32ad9174c4a9}} 
+void {\bfseries started} ()
+\item 
+\mbox{\Hypertarget{class_c_v_video_capture_ae69915746841326093fc30499902732d}\label{class_c_v_video_capture_ae69915746841326093fc30499902732d}} 
+void {\bfseries device\+Changed} (int device)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_v_video_capture_acd97c41dc5eb80305938e868bb7dddbf}\label{class_c_v_video_capture_acd97c41dc5eb80305938e868bb7dddbf}} 
+{\bfseries C\+V\+Video\+Capture} (Q\+Widget $\ast$parent=0)
+\item 
+\mbox{\Hypertarget{class_c_v_video_capture_ac78117da440fb4ecb6c2904d44e9c534}\label{class_c_v_video_capture_ac78117da440fb4ecb6c2904d44e9c534}} 
+int {\bfseries device} () const
+\item 
+\mbox{\Hypertarget{class_c_v_video_capture_ad1b67ebc004c967fae32effb6853f47f}\label{class_c_v_video_capture_ad1b67ebc004c967fae32effb6853f47f}} 
+void {\bfseries set\+Device} (int device)
+\item 
+\mbox{\Hypertarget{class_c_v_video_capture_a13bab8080f30daa6efec96d0f12e71cf}\label{class_c_v_video_capture_a13bab8080f30daa6efec96d0f12e71cf}} 
+cv\+::\+Mat {\bfseries current\+Frame} () const
+\item 
+\mbox{\Hypertarget{class_c_v_video_capture_a0c493880e905328d48744d47c85843e6}\label{class_c_v_video_capture_a0c493880e905328d48744d47c85843e6}} 
+void {\bfseries set\+Current\+Frame} (const cv\+::\+Mat \&current\+Frame)
+\item 
+\mbox{\Hypertarget{class_c_v_video_capture_a6584618b43c71b60f5bc272382d37c2e}\label{class_c_v_video_capture_a6584618b43c71b60f5bc272382d37c2e}} 
+Q\+Image {\bfseries to\+Image} (const cv\+::\+Mat \&m)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 15 of file cvvideocapture.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+object-\/detector/src/\+Utilities/\+Plugins/\+C\+V\+Video\+Capture\+Lib/cvvideocapture.\+h\item 
+object-\/detector/src/\+Utilities/\+Plugins/\+C\+V\+Video\+Capture\+Lib/cvvideocapture.\+cpp\end{DoxyCompactItemize}

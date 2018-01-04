@@ -1,2 +1,3 @@
 <map id="Ui_MainWindow" name="Ui_MainWindow">
+<area shape="rect" id="node2" href="$d8/d01/class_c_v_video_capture.html" title="{CVVideoCapture\n||+ CVVideoCapture()\l+ ~CVVideoCapture()\l+ device()\l+ setDevice()\l+ currentFrame()\l+ setCurrentFrame()\l+ toImage()\l+ captureFrame()\l+ stop()\l+ start()\l+ changeDevice()\l}" alt="" coords="5,132,152,356"/>
 </map>

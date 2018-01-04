@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['imageprocessortest',['ImageProcessorTest',['../d2/de1/class_image_processor_test.html',1,'']]]
+  ['erodeplugin',['ErodePlugin',['../d4/da0/class_morpho_logical_1_1_erode_plugin.html',1,'MorphoLogical']]]
 ];

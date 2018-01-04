@@ -2,6 +2,11 @@
 \label{class_image_processor_1_1_object_detection}\index{Image\+Processor\+::\+Object\+Detection@{Image\+Processor\+::\+Object\+Detection}}
 
 
+this class is used to detect a a colored circle object(s)  
+
+
+
+
 Inheritance diagram for Image\+Processor\+:\+:Object\+Detection\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -26,69 +31,222 @@ class {\bfseries \+\_\+\+Object\+Detection\+Impl}
 \subsection*{Public Slots}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_image_processor_1_1_object_detection_afb439c3f4c9bb2e084674ce34e965430}\label{class_image_processor_1_1_object_detection_afb439c3f4c9bb2e084674ce34e965430}} 
-void {\bfseries set\+Cir\+Detector} (\hyperlink{class_image_processor_1_1_detect_circle}{Detect\+Circle} $\ast$cir\+Detector)
-\item 
-\mbox{\Hypertarget{class_image_processor_1_1_object_detection_a727fcf4d318c9a3ccb63348b957c1e94}\label{class_image_processor_1_1_object_detection_a727fcf4d318c9a3ccb63348b957c1e94}} 
-void {\bfseries set\+Diler} (\hyperlink{class_image_processor_1_1_dilate}{Dilate} $\ast$diler)
-\item 
+void \hyperlink{class_image_processor_1_1_object_detection_afb439c3f4c9bb2e084674ce34e965430}{set\+Cir\+Detector} (\hyperlink{class_image_processor_1_1_detect_circle}{Detect\+Circle} $\ast$cir\+Detector)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_image_processor_1_1_object_detection_afb439c3f4c9bb2e084674ce34e965430}{Object\+Detection\+::set\+Cir\+Detector} sets the circle\+Detector. \end{DoxyCompactList}\item 
+void \hyperlink{class_image_processor_1_1_object_detection_a727fcf4d318c9a3ccb63348b957c1e94}{set\+Diler} (\hyperlink{class_image_processor_1_1_dilate}{Dilate} $\ast$diler)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_image_processor_1_1_object_detection_a727fcf4d318c9a3ccb63348b957c1e94}{Object\+Detection\+::set\+Diler} sets the dilate object. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_image_processor_1_1_object_detection_abb46bcf3c33130babf9508cb34b08bdf}\label{class_image_processor_1_1_object_detection_abb46bcf3c33130babf9508cb34b08bdf}} 
 void {\bfseries set\+Col\+Detector} (\hyperlink{class_image_processor_1_1_detect_color}{Detect\+Color} $\ast$col\+Detector)
 \item 
-\mbox{\Hypertarget{class_image_processor_1_1_object_detection_a4989f9da33a3a2a1f5530754e88f1b39}\label{class_image_processor_1_1_object_detection_a4989f9da33a3a2a1f5530754e88f1b39}} 
-void {\bfseries set\+Cir\+Detector} (\hyperlink{class_image_processor_1_1_detect_circle}{Detect\+Circle} $\ast$cir\+Detector)
+void \hyperlink{class_image_processor_1_1_object_detection_a494ede82feb2611a4c3e610e45472b78}{add\+Filter} (Plugin\+Shared\+Pointer proc)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_image_processor_1_1_object_detection_a494ede82feb2611a4c3e610e45472b78}{Object\+Detection\+::add\+Filter} adds a filter from a plugin. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_image_processor_1_1_object_detection_ae96f26a784103d2542f5b4b7a19cad7f}\label{class_image_processor_1_1_object_detection_ae96f26a784103d2542f5b4b7a19cad7f}} 
+std\+::vector$<$ Plugin\+Shared\+Pointer $>$ {\bfseries get\+Filters} () const
 \item 
-\mbox{\Hypertarget{class_image_processor_1_1_object_detection_aa93f6201bb261ee5f1354cb352d7cfb9}\label{class_image_processor_1_1_object_detection_aa93f6201bb261ee5f1354cb352d7cfb9}} 
-void {\bfseries set\+Diler} (\hyperlink{class_image_processor_1_1_dilate}{Dilate} $\ast$diler)
-\item 
-\mbox{\Hypertarget{class_image_processor_1_1_object_detection_a6824414dd70b579edfd0beced8ee58b1}\label{class_image_processor_1_1_object_detection_a6824414dd70b579edfd0beced8ee58b1}} 
-void {\bfseries set\+Col\+Detector} (\hyperlink{class_image_processor_1_1_detect_color}{Detect\+Color} $\ast$col\+Detector)
+\mbox{\Hypertarget{class_image_processor_1_1_object_detection_a16ef9b01c8e0b9616ff410ff5fed7207}\label{class_image_processor_1_1_object_detection_a16ef9b01c8e0b9616ff410ff5fed7207}} 
+void {\bfseries set\+Filters} (const std\+::vector$<$ Plugin\+Shared\+Pointer $>$ \&value)
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_image_processor_1_1_object_detection_ab80e0235c8882a62f21faea4796b325f}\label{class_image_processor_1_1_object_detection_ab80e0235c8882a62f21faea4796b325f}} 
-{\bfseries Object\+Detection} (Q\+Object $\ast$parent=nullptr)
-\item 
-\mbox{\Hypertarget{class_image_processor_1_1_object_detection_a2b5e3886ae9770e412cc4d21dfe031dd}\label{class_image_processor_1_1_object_detection_a2b5e3886ae9770e412cc4d21dfe031dd}} 
-\hyperlink{class_image_processor_1_1_dilate}{Dilate} $\ast$ {\bfseries get\+Diler} () const
-\item 
-\mbox{\Hypertarget{class_image_processor_1_1_object_detection_a65da5b494041b0da792dd01a90bcf065}\label{class_image_processor_1_1_object_detection_a65da5b494041b0da792dd01a90bcf065}} 
-\hyperlink{class_image_processor_1_1_detect_color}{Detect\+Color} $\ast$ {\bfseries get\+Col\+Detector} () const
-\item 
-\mbox{\Hypertarget{class_image_processor_1_1_object_detection_a8a9535796772b425c44fd5a318adbe5f}\label{class_image_processor_1_1_object_detection_a8a9535796772b425c44fd5a318adbe5f}} 
-\hyperlink{class_image_processor_1_1_detect_circle}{Detect\+Circle} $\ast$ {\bfseries get\+Cir\+Detector} () const
-\item 
-\mbox{\Hypertarget{class_image_processor_1_1_object_detection_aa0f939d2dcf5ec755be433db03fafda6}\label{class_image_processor_1_1_object_detection_aa0f939d2dcf5ec755be433db03fafda6}} 
-std\+::vector$<$ cv\+::\+Vec3f $>$ {\bfseries get\+Circles} ()
+\hyperlink{class_image_processor_1_1_object_detection_ab80e0235c8882a62f21faea4796b325f}{Object\+Detection} (Q\+Object $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_image_processor_1_1_object_detection_ab80e0235c8882a62f21faea4796b325f}{Object\+Detection\+::\+Object\+Detection}. \end{DoxyCompactList}\item 
+\hyperlink{class_image_processor_1_1_dilate}{Dilate} $\ast$ \hyperlink{class_image_processor_1_1_object_detection_a2b5e3886ae9770e412cc4d21dfe031dd}{get\+Diler} () const
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_image_processor_1_1_object_detection_a2b5e3886ae9770e412cc4d21dfe031dd}{Object\+Detection\+::get\+Diler}. \end{DoxyCompactList}\item 
+\hyperlink{class_image_processor_1_1_detect_color}{Detect\+Color} $\ast$ \hyperlink{class_image_processor_1_1_object_detection_a65da5b494041b0da792dd01a90bcf065}{get\+Col\+Detector} () const
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_image_processor_1_1_object_detection_a65da5b494041b0da792dd01a90bcf065}{Object\+Detection\+::get\+Col\+Detector}. \end{DoxyCompactList}\item 
+\hyperlink{class_image_processor_1_1_detect_circle}{Detect\+Circle} $\ast$ \hyperlink{class_image_processor_1_1_object_detection_a8a9535796772b425c44fd5a318adbe5f}{get\+Cir\+Detector} () const
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_image_processor_1_1_object_detection_a8a9535796772b425c44fd5a318adbe5f}{Object\+Detection\+::get\+Cir\+Detector}. \end{DoxyCompactList}\item 
+std\+::vector$<$ cv\+::\+Vec3f $>$ \hyperlink{class_image_processor_1_1_object_detection_aa0f939d2dcf5ec755be433db03fafda6}{get\+Circles} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_image_processor_1_1_object_detection_aa0f939d2dcf5ec755be433db03fafda6}{Object\+Detection\+::get\+Circles}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_image_processor_1_1_object_detection_af4cd20926a8acb22a005e0a76104461e}\label{class_image_processor_1_1_object_detection_af4cd20926a8acb22a005e0a76104461e}} 
+Q\+Variant {\bfseries get\+Results} () const
 \item 
 virtual Q\+Variant \hyperlink{class_image_processor_1_1_object_detection_ac5561650d95eac1672e2d049ed36201d}{process\+Image} () override
-\begin{DoxyCompactList}\small\item\em Pure Virtual Function representes the operation to be done on the Image to be processed. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_image_processor_1_1_object_detection_ad1197739e0daec4c336f17b280e8eb9b}\label{class_image_processor_1_1_object_detection_ad1197739e0daec4c336f17b280e8eb9b}} 
-{\bfseries Object\+Detection} (Q\+Object $\ast$parent=nullptr)
-\item 
-\mbox{\Hypertarget{class_image_processor_1_1_object_detection_a3b7e2ae3fe985fddad4198046823e13f}\label{class_image_processor_1_1_object_detection_a3b7e2ae3fe985fddad4198046823e13f}} 
-\hyperlink{class_image_processor_1_1_dilate}{Dilate} $\ast$ {\bfseries get\+Diler} () const
-\item 
-\mbox{\Hypertarget{class_image_processor_1_1_object_detection_a2ac4cebc016409d1dfc26b6109669735}\label{class_image_processor_1_1_object_detection_a2ac4cebc016409d1dfc26b6109669735}} 
-\hyperlink{class_image_processor_1_1_detect_color}{Detect\+Color} $\ast$ {\bfseries get\+Col\+Detector} () const
-\item 
-\mbox{\Hypertarget{class_image_processor_1_1_object_detection_a469f3df59addb87b1371c37f81a28a16}\label{class_image_processor_1_1_object_detection_a469f3df59addb87b1371c37f81a28a16}} 
-\hyperlink{class_image_processor_1_1_detect_circle}{Detect\+Circle} $\ast$ {\bfseries get\+Cir\+Detector} () const
-\item 
-\mbox{\Hypertarget{class_image_processor_1_1_object_detection_ae84bd5ac8ccbf2e62b400dd2dbdb2469}\label{class_image_processor_1_1_object_detection_ae84bd5ac8ccbf2e62b400dd2dbdb2469}} 
-std\+::vector$<$ cv\+::\+Vec3f $>$ {\bfseries get\+Circles} ()
-\item 
-virtual Q\+Variant \hyperlink{class_image_processor_1_1_object_detection_ad8ff5b55d6da63f30dc397082f97370c}{process\+Image} () override
 \begin{DoxyCompactList}\small\item\em Pure Virtual Function representes the operation to be done on the Image to be processed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_image_processor_1_1_object_detection_afc4689978c5643c90de7feab7ad9d6b9}\label{class_image_processor_1_1_object_detection_afc4689978c5643c90de7feab7ad9d6b9}} 
+void {\bfseries set\+Results} (Q\+Variant res)
+\item 
+cv\+::\+Mat \hyperlink{class_image_processor_1_1_object_detection_a8879a8d088a9a7cd4aa97ac967531feb}{apply\+Filters} (cv\+::\+Mat dst) const
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_image_processor_1_1_object_detection_a8879a8d088a9a7cd4aa97ac967531feb}{Object\+Detection\+::apply\+Filters} applies filters to the image. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
+\subsection{Detailed Description}
+this class is used to detect a a colored circle object(s) 
+
+the class first thresholds the image to get the colored object using cv\+::threshold algorthim so you must supply a max and min colors as cv\+::\+Scalar using \hyperlink{class_image_processor_1_1_detect_color}{Image\+Processor\+::\+Detect\+Color} after detecting color it applies a Morphological operation (dilation) using cv\+::\+Dilate algorthim and guassian blur to decrease the noise using cv\+::\+Guassian\+Blur using Image\+Procssor\+::\+Dilate then applies filters using Plugins \hyperlink{class_circle_detector_plugins_1_1_image_processor_plugin_i_face}{Circle\+Detector\+Plugins\+::\+Image\+Processor\+Plugin\+I\+Face} then detect Circles using cv\+::\+Hough\+Circles \hyperlink{class_image_processor_1_1_detect_circle}{Image\+Processor\+::\+Detect\+Circle} 
+\begin{DoxyCode}
+ \hyperlink{class_image_processor_1_1_object_detection}{ImageProcessor::ObjectDetection} objdet;
+ objdet.setImg(cv::imread(IMG\_PATH));
+ \textcolor{keyword}{auto} var = objdet.\hyperlink{class_image_processor_1_1_object_detection_ac5561650d95eac1672e2d049ed36201d}{processImage}();
+ \textcolor{keyword}{auto} vec = var.value<std::vector<cv::Vec3f>>(); \textcolor{comment}{//or use var.getResults();}
+\textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i : vec)\{
+     cout << \textcolor{stringliteral}{"x: "} << i[0] << \textcolor{stringliteral}{" y:"} << i[1] << \textcolor{stringliteral}{" radius: "} << i[2] << endl;
+\}
+\end{DoxyCode}
+ \begin{DoxyAuthor}{Author}
+Mohamed Khaled 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+5.\+0 
+\end{DoxyVersion}
+
+
+Definition at line 17 of file objectdetection.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_image_processor_1_1_object_detection_ab80e0235c8882a62f21faea4796b325f}\label{class_image_processor_1_1_object_detection_ab80e0235c8882a62f21faea4796b325f}} 
+\index{Image\+Processor\+::\+Object\+Detection@{Image\+Processor\+::\+Object\+Detection}!Object\+Detection@{Object\+Detection}}
+\index{Object\+Detection@{Object\+Detection}!Image\+Processor\+::\+Object\+Detection@{Image\+Processor\+::\+Object\+Detection}}
+\subsubsection{\texorpdfstring{Object\+Detection()}{ObjectDetection()}}
+{\footnotesize\ttfamily Object\+Detection\+::\+Object\+Detection (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\hyperlink{class_image_processor_1_1_object_detection_ab80e0235c8882a62f21faea4796b325f}{Object\+Detection\+::\+Object\+Detection}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 9 of file objectdetection.\+cpp.
+
+
+
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_image_processor_1_1_object_detection_a494ede82feb2611a4c3e610e45472b78}\label{class_image_processor_1_1_object_detection_a494ede82feb2611a4c3e610e45472b78}} 
+\index{Image\+Processor\+::\+Object\+Detection@{Image\+Processor\+::\+Object\+Detection}!add\+Filter@{add\+Filter}}
+\index{add\+Filter@{add\+Filter}!Image\+Processor\+::\+Object\+Detection@{Image\+Processor\+::\+Object\+Detection}}
+\subsubsection{\texorpdfstring{add\+Filter}{addFilter}}
+{\footnotesize\ttfamily void Object\+Detection\+::add\+Filter (\begin{DoxyParamCaption}\item[{Plugin\+Shared\+Pointer}]{proc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+\hyperlink{class_image_processor_1_1_object_detection_a494ede82feb2611a4c3e610e45472b78}{Object\+Detection\+::add\+Filter} adds a filter from a plugin. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_circle_detector_plugins_1_1_image_processor_plugin_i_face}{Circle\+Detector\+Plugins\+::\+Image\+Processor\+Plugin\+I\+Face} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em proc} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 73 of file objectdetection.\+cpp.
+
+\mbox{\Hypertarget{class_image_processor_1_1_object_detection_a8879a8d088a9a7cd4aa97ac967531feb}\label{class_image_processor_1_1_object_detection_a8879a8d088a9a7cd4aa97ac967531feb}} 
+\index{Image\+Processor\+::\+Object\+Detection@{Image\+Processor\+::\+Object\+Detection}!apply\+Filters@{apply\+Filters}}
+\index{apply\+Filters@{apply\+Filters}!Image\+Processor\+::\+Object\+Detection@{Image\+Processor\+::\+Object\+Detection}}
+\subsubsection{\texorpdfstring{apply\+Filters()}{applyFilters()}}
+{\footnotesize\ttfamily Mat Object\+Detection\+::apply\+Filters (\begin{DoxyParamCaption}\item[{cv\+::\+Mat}]{dst }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\hyperlink{class_image_processor_1_1_object_detection_a8879a8d088a9a7cd4aa97ac967531feb}{Object\+Detection\+::apply\+Filters} applies filters to the image. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em cv\+::\+Excpetion} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyWarning}{Warning}
+neither exception safe nor thread safe 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 104 of file objectdetection.\+cpp.
+
+\mbox{\Hypertarget{class_image_processor_1_1_object_detection_aa0f939d2dcf5ec755be433db03fafda6}\label{class_image_processor_1_1_object_detection_aa0f939d2dcf5ec755be433db03fafda6}} 
+\index{Image\+Processor\+::\+Object\+Detection@{Image\+Processor\+::\+Object\+Detection}!get\+Circles@{get\+Circles}}
+\index{get\+Circles@{get\+Circles}!Image\+Processor\+::\+Object\+Detection@{Image\+Processor\+::\+Object\+Detection}}
+\subsubsection{\texorpdfstring{get\+Circles()}{getCircles()}}
+{\footnotesize\ttfamily std\+::vector$<$ Vec3f $>$ Object\+Detection\+::get\+Circles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_image_processor_1_1_object_detection_aa0f939d2dcf5ec755be433db03fafda6}{Object\+Detection\+::get\+Circles}. 
+
+\begin{DoxyReturn}{Returns}
+returns the std\+::vector$<$cv\+::\+Vec3f$>$ which encapsulate the data about circles like x,y and radius 
+\end{DoxyReturn}
+
+
+Definition at line 42 of file objectdetection.\+cpp.
+
+\mbox{\Hypertarget{class_image_processor_1_1_object_detection_a8a9535796772b425c44fd5a318adbe5f}\label{class_image_processor_1_1_object_detection_a8a9535796772b425c44fd5a318adbe5f}} 
+\index{Image\+Processor\+::\+Object\+Detection@{Image\+Processor\+::\+Object\+Detection}!get\+Cir\+Detector@{get\+Cir\+Detector}}
+\index{get\+Cir\+Detector@{get\+Cir\+Detector}!Image\+Processor\+::\+Object\+Detection@{Image\+Processor\+::\+Object\+Detection}}
+\subsubsection{\texorpdfstring{get\+Cir\+Detector()}{getCirDetector()}}
+{\footnotesize\ttfamily \hyperlink{class_image_processor_1_1_detect_circle}{Detect\+Circle} $\ast$ Object\+Detection\+::get\+Cir\+Detector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\hyperlink{class_image_processor_1_1_object_detection_a8a9535796772b425c44fd5a318adbe5f}{Object\+Detection\+::get\+Cir\+Detector}. 
+
+\begin{DoxyReturn}{Returns}
+a pointer to \hyperlink{class_image_processor_1_1_detect_circle}{Image\+Processor\+::\+Detect\+Circle} used to to detect circles 
+\end{DoxyReturn}
+
+
+Definition at line 34 of file objectdetection.\+cpp.
+
+\mbox{\Hypertarget{class_image_processor_1_1_object_detection_a65da5b494041b0da792dd01a90bcf065}\label{class_image_processor_1_1_object_detection_a65da5b494041b0da792dd01a90bcf065}} 
+\index{Image\+Processor\+::\+Object\+Detection@{Image\+Processor\+::\+Object\+Detection}!get\+Col\+Detector@{get\+Col\+Detector}}
+\index{get\+Col\+Detector@{get\+Col\+Detector}!Image\+Processor\+::\+Object\+Detection@{Image\+Processor\+::\+Object\+Detection}}
+\subsubsection{\texorpdfstring{get\+Col\+Detector()}{getColDetector()}}
+{\footnotesize\ttfamily \hyperlink{class_image_processor_1_1_detect_color}{Detect\+Color} $\ast$ Object\+Detection\+::get\+Col\+Detector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\hyperlink{class_image_processor_1_1_object_detection_a65da5b494041b0da792dd01a90bcf065}{Object\+Detection\+::get\+Col\+Detector}. 
+
+\begin{DoxyReturn}{Returns}
+a pointer to the \hyperlink{class_image_processor_1_1_detect_color}{Image\+Processor\+::\+Detect\+Color} used to detect colors 
+\end{DoxyReturn}
+
+
+Definition at line 26 of file objectdetection.\+cpp.
+
+\mbox{\Hypertarget{class_image_processor_1_1_object_detection_a2b5e3886ae9770e412cc4d21dfe031dd}\label{class_image_processor_1_1_object_detection_a2b5e3886ae9770e412cc4d21dfe031dd}} 
+\index{Image\+Processor\+::\+Object\+Detection@{Image\+Processor\+::\+Object\+Detection}!get\+Diler@{get\+Diler}}
+\index{get\+Diler@{get\+Diler}!Image\+Processor\+::\+Object\+Detection@{Image\+Processor\+::\+Object\+Detection}}
+\subsubsection{\texorpdfstring{get\+Diler()}{getDiler()}}
+{\footnotesize\ttfamily \hyperlink{class_image_processor_1_1_dilate}{Dilate} $\ast$ Object\+Detection\+::get\+Diler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\hyperlink{class_image_processor_1_1_object_detection_a2b5e3886ae9770e412cc4d21dfe031dd}{Object\+Detection\+::get\+Diler}. 
+
+\begin{DoxyReturn}{Returns}
+an \hyperlink{class_image_processor_1_1_dilate}{Image\+Processor\+::\+Dilate} pointer to object 
+\end{DoxyReturn}
+
+
+Definition at line 17 of file objectdetection.\+cpp.
+
 \mbox{\Hypertarget{class_image_processor_1_1_object_detection_ac5561650d95eac1672e2d049ed36201d}\label{class_image_processor_1_1_object_detection_ac5561650d95eac1672e2d049ed36201d}} 
 \index{Image\+Processor\+::\+Object\+Detection@{Image\+Processor\+::\+Object\+Detection}!process\+Image@{process\+Image}}
 \index{process\+Image@{process\+Image}!Image\+Processor\+::\+Object\+Detection@{Image\+Processor\+::\+Object\+Detection}}
-\subsubsection{\texorpdfstring{process\+Image()}{processImage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\subsubsection{\texorpdfstring{process\+Image()}{processImage()}}
 {\footnotesize\ttfamily Q\+Variant Object\+Detection\+::process\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
@@ -110,41 +268,51 @@ Q\+Variant Object which represents the output of the processing operation and it
 
 Implements \hyperlink{class_image_processor_1_1_abstract_image_processor_ad033ae911918b0f6842b7b1d6cdd2b90}{Image\+Processor\+::\+Abstract\+Image\+Processor}.
 
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{d0/d2b/class_image_processor_1_1_object_detection_ac5561650d95eac1672e2d049ed36201d_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_image_processor_1_1_object_detection_ad8ff5b55d6da63f30dc397082f97370c}\label{class_image_processor_1_1_object_detection_ad8ff5b55d6da63f30dc397082f97370c}} 
-\index{Image\+Processor\+::\+Object\+Detection@{Image\+Processor\+::\+Object\+Detection}!process\+Image@{process\+Image}}
-\index{process\+Image@{process\+Image}!Image\+Processor\+::\+Object\+Detection@{Image\+Processor\+::\+Object\+Detection}}
-\subsubsection{\texorpdfstring{process\+Image()}{processImage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily virtual Q\+Variant Image\+Processor\+::\+Object\+Detection\+::process\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+Definition at line 113 of file objectdetection.\+cpp.
+
+\mbox{\Hypertarget{class_image_processor_1_1_object_detection_afb439c3f4c9bb2e084674ce34e965430}\label{class_image_processor_1_1_object_detection_afb439c3f4c9bb2e084674ce34e965430}} 
+\index{Image\+Processor\+::\+Object\+Detection@{Image\+Processor\+::\+Object\+Detection}!set\+Cir\+Detector@{set\+Cir\+Detector}}
+\index{set\+Cir\+Detector@{set\+Cir\+Detector}!Image\+Processor\+::\+Object\+Detection@{Image\+Processor\+::\+Object\+Detection}}
+\subsubsection{\texorpdfstring{set\+Cir\+Detector}{setCirDetector}}
+{\footnotesize\ttfamily void Object\+Detection\+::set\+Cir\+Detector (\begin{DoxyParamCaption}\item[{\hyperlink{class_image_processor_1_1_detect_circle}{Detect\+Circle} $\ast$}]{cir\+Detector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
 
 
 
-Pure Virtual Function representes the operation to be done on the Image to be processed. 
+\hyperlink{class_image_processor_1_1_object_detection_afb439c3f4c9bb2e084674ce34e965430}{Object\+Detection\+::set\+Cir\+Detector} sets the circle\+Detector. 
 
 
-\begin{DoxyExceptions}{Exceptions}
-{\em cv\+::\+Exception.\+not} & garunteed to throw this exception \\
+\begin{DoxyParams}{Parameters}
+{\em cir\+Detector} & \\
 \hline
-\end{DoxyExceptions}
-\begin{DoxyWarning}{Warning}
-not exception nor thread safe. 
-\end{DoxyWarning}
-\begin{DoxyReturn}{Returns}
-Q\+Variant Object which represents the output of the processing operation and it doesn\textquotesingle{}t have to be cv\+::\+Mat. 
-\end{DoxyReturn}
+\end{DoxyParams}
 
 
-Implements \hyperlink{class_image_processor_1_1_abstract_image_processor_ad033ae911918b0f6842b7b1d6cdd2b90}{Image\+Processor\+::\+Abstract\+Image\+Processor}.
+Definition at line 51 of file objectdetection.\+cpp.
+
+\mbox{\Hypertarget{class_image_processor_1_1_object_detection_a727fcf4d318c9a3ccb63348b957c1e94}\label{class_image_processor_1_1_object_detection_a727fcf4d318c9a3ccb63348b957c1e94}} 
+\index{Image\+Processor\+::\+Object\+Detection@{Image\+Processor\+::\+Object\+Detection}!set\+Diler@{set\+Diler}}
+\index{set\+Diler@{set\+Diler}!Image\+Processor\+::\+Object\+Detection@{Image\+Processor\+::\+Object\+Detection}}
+\subsubsection{\texorpdfstring{set\+Diler}{setDiler}}
+{\footnotesize\ttfamily void Object\+Detection\+::set\+Diler (\begin{DoxyParamCaption}\item[{\hyperlink{class_image_processor_1_1_dilate}{Dilate} $\ast$}]{diler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+\hyperlink{class_image_processor_1_1_object_detection_a727fcf4d318c9a3ccb63348b957c1e94}{Object\+Detection\+::set\+Diler} sets the dilate object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em diler} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 59 of file objectdetection.\+cpp.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-src/\+Object\+Detection/\+Circle\+Detector/\+Image\+Processors/\+Image\+Processor/objectdetection.\+h\item 
-src/\+Object\+Detection/\+Circle\+Detector/\+Image\+Processors/\+Image\+Processor/objectdetection.\+cpp\end{DoxyCompactItemize}
+object-\/detector/src/\+Circle\+Detector/\+Image\+Processors/\+Image\+Processor/objectdetection.\+h\item 
+object-\/detector/src/\+Circle\+Detector/\+Image\+Processors/\+Image\+Processor/objectdetection.\+cpp\end{DoxyCompactItemize}

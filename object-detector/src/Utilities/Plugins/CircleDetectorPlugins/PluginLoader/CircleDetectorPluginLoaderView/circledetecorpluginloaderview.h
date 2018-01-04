@@ -15,6 +15,8 @@ class CIRCLE_PLUGIN_LOADER_LIB CircleDetecorPluginLoaderView : public QDialog
 
 public:
     explicit CircleDetecorPluginLoaderView(QWidget *parent = 0);
+    explicit CircleDetecorPluginLoaderView(QString path, QWidget *parent = 0);
+
     ~CircleDetecorPluginLoaderView();
 
     CircleDetectorPluginModel *pluginsModel() const;

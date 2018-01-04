@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node2" href="$d9/dc6/class_main_window.html" title="MainWindow" alt="" coords="160,5,256,32"/>
+<area shape="rect" id="node2" href="$dc/daa/class_circle_detector_plugin_model.html" title="CircleDetectorPluginModel" alt="" coords="200,5,375,32"/>
+<area shape="rect" id="node3" href="$d1/dc2/class_serial_port_model.html" title="SerialPortModel" alt="" coords="230,56,345,83"/>
+<area shape="rect" id="node4" href="$d4/d6b/class_utilities_1_1_serial_port_model.html" title="Utilities::SerialPortModel" alt="" coords="205,107,370,133"/>
 </map>

@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['ui_5fmainwindow',['Ui_MainWindow',['../df/dd7/class_ui___main_window.html',1,'']]],
-  ['utils',['Utils',['../dd/dbc/class_utilities_1_1_utils.html',1,'Utilities::Utils'],['../d5/df1/class_utils.html',1,'Utils']]]
+  ['serialhandler',['SerialHandler',['../d8/d12/class_devices_1_1_serial_handler.html',1,'Devices']]],
+  ['serialmainwindow',['SerialMainWindow',['../db/d40/class_serial_main_window.html',1,'']]],
+  ['serialportmodel',['SerialPortModel',['../d1/dc2/class_serial_port_model.html',1,'SerialPortModel'],['../d4/d6b/class_utilities_1_1_serial_port_model.html',1,'Utilities::SerialPortModel']]],
+  ['subject',['Subject',['../d0/db2/class_devices_1_1_subject.html',1,'Devices']]],
+  ['subjectimpl',['SubjectImpl',['../dd/d6e/class_subject_impl.html',1,'']]]
 ];

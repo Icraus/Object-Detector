@@ -1,0 +1,84 @@
+\hypertarget{class_circle_detector_plugin_model}{}\section{Circle\+Detector\+Plugin\+Model Class Reference}
+\label{class_circle_detector_plugin_model}\index{Circle\+Detector\+Plugin\+Model@{Circle\+Detector\+Plugin\+Model}}
+
+
+Inheritance diagram for Circle\+Detector\+Plugin\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{df/de3/class_circle_detector_plugin_model__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Circle\+Detector\+Plugin\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{d0/d73/class_circle_detector_plugin_model__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries \+\_\+\+Circle\+Detector\+Plugin\+Model\+Impl}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_circle_detector_plugin_model_a40fe8ab5c9722199aa94febf4e1ea6f0}\label{class_circle_detector_plugin_model_a40fe8ab5c9722199aa94febf4e1ea6f0}} 
+enum {\bfseries Type} \{ \newline
+{\bfseries F\+I\+L\+T\+ER} = Qt\+:\+:User\+Role + 1, 
+{\bfseries F\+I\+L\+T\+E\+R\+\_\+\+N\+A\+ME}, 
+{\bfseries F\+I\+L\+T\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}, 
+{\bfseries F\+I\+L\+T\+E\+R\+\_\+\+A\+U\+T\+H\+OR}, 
+\newline
+{\bfseries F\+I\+L\+T\+E\+R\+\_\+\+P\+A\+TH}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_circle_detector_plugin_model_acd29120e67a9ad1b63d0ebb9483eec8c}\label{class_circle_detector_plugin_model_acd29120e67a9ad1b63d0ebb9483eec8c}} 
+{\bfseries Circle\+Detector\+Plugin\+Model} (Q\+String path=Q\+Dir\+::current\+Path(), Q\+Object $\ast$parent=nullptr)
+\item 
+\mbox{\Hypertarget{class_circle_detector_plugin_model_aa3d6f8433e2ec9e002e8992fae8a4804}\label{class_circle_detector_plugin_model_aa3d6f8433e2ec9e002e8992fae8a4804}} 
+void {\bfseries load\+Plugins} ()
+\item 
+\mbox{\Hypertarget{class_circle_detector_plugin_model_a011bb7a9fbac9b5e8d170a6ee03aec91}\label{class_circle_detector_plugin_model_a011bb7a9fbac9b5e8d170a6ee03aec91}} 
+virtual int {\bfseries row\+Count} (const Q\+Model\+Index \&parent) const override
+\item 
+\mbox{\Hypertarget{class_circle_detector_plugin_model_ace00c94a10e90079a346b945ea66dbd5}\label{class_circle_detector_plugin_model_ace00c94a10e90079a346b945ea66dbd5}} 
+virtual int {\bfseries column\+Count} (const Q\+Model\+Index \&parent) const override
+\item 
+\mbox{\Hypertarget{class_circle_detector_plugin_model_a18ad35fdf00c48e3c235c6a84f6e9c45}\label{class_circle_detector_plugin_model_a18ad35fdf00c48e3c235c6a84f6e9c45}} 
+virtual Q\+Variant {\bfseries data} (const Q\+Model\+Index \&index, int role) const override
+\item 
+\mbox{\Hypertarget{class_circle_detector_plugin_model_ac175bfdbffa6f2017bc23b58af481afd}\label{class_circle_detector_plugin_model_ac175bfdbffa6f2017bc23b58af481afd}} 
+Q\+String {\bfseries plugin\+Path} () const
+\item 
+\mbox{\Hypertarget{class_circle_detector_plugin_model_a0be77904ba2361f24fe153cd6c2c9ebe}\label{class_circle_detector_plugin_model_a0be77904ba2361f24fe153cd6c2c9ebe}} 
+void {\bfseries set\+Plugin\+Path} (const Q\+String \&plugin\+Path)
+\item 
+\mbox{\Hypertarget{class_circle_detector_plugin_model_a11ea7f6135e738d6b2f6a2aba7ded3ae}\label{class_circle_detector_plugin_model_a11ea7f6135e738d6b2f6a2aba7ded3ae}} 
+Q\+List$<$ Q\+String $>$ {\bfseries plugin\+Paths} () const
+\item 
+\mbox{\Hypertarget{class_circle_detector_plugin_model_a44171dff30b2c54ed105381f28bdd0b6}\label{class_circle_detector_plugin_model_a44171dff30b2c54ed105381f28bdd0b6}} 
+Plugin\+Shared\+Pointer\+List {\bfseries filters} () const
+\item 
+\mbox{\Hypertarget{class_circle_detector_plugin_model_a9466b1266d62ae59488512484cd4f8d3}\label{class_circle_detector_plugin_model_a9466b1266d62ae59488512484cd4f8d3}} 
+void {\bfseries set\+Filters} (const Plugin\+Shared\+Pointer\+List \&filters)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 14 of file circledetectorpluginmodel.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+object-\/detector/src/\+Utilities/\+Plugins/\+Circle\+Detector\+Plugins/\+Plugin\+Loader/\+Circle\+Detector\+Plugin\+Model/circledetectorpluginmodel.\+h\item 
+object-\/detector/src/\+Utilities/\+Plugins/\+Circle\+Detector\+Plugins/\+Plugin\+Loader/\+Circle\+Detector\+Plugin\+Model/circledetectorpluginmodel.\+cpp\end{DoxyCompactItemize}

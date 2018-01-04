@@ -11,7 +11,7 @@ Inheritance diagram for Image\+Processor\+:\+:Detect\+Circle\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=550pt]{de/dd4/class_image_processor_1_1_detect_circle__inherit__graph}
+\includegraphics[width=226pt]{de/dd4/class_image_processor_1_1_detect_circle__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -20,7 +20,7 @@ Collaboration diagram for Image\+Processor\+:\+:Detect\+Circle\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=550pt]{d0/d8b/class_image_processor_1_1_detect_circle__coll__graph}
+\includegraphics[width=226pt]{d0/d8b/class_image_processor_1_1_detect_circle__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Classes}
@@ -38,25 +38,12 @@ void {\bfseries set\+Param2} (int value)
 \item 
 \mbox{\Hypertarget{class_image_processor_1_1_detect_circle_afbc2f237cbac9eb26334953aa5d2b9f0}\label{class_image_processor_1_1_detect_circle_afbc2f237cbac9eb26334953aa5d2b9f0}} 
 void {\bfseries set\+Param1} (int value)
-\item 
-\mbox{\Hypertarget{class_image_processor_1_1_detect_circle_a58bc964674c740de77dd7ae7a8a4ad9f}\label{class_image_processor_1_1_detect_circle_a58bc964674c740de77dd7ae7a8a4ad9f}} 
-void {\bfseries set\+Min\+Dist} (int value)
-\item 
-\mbox{\Hypertarget{class_image_processor_1_1_detect_circle_ac625b7c625afc225d71f82faa2a90b59}\label{class_image_processor_1_1_detect_circle_ac625b7c625afc225d71f82faa2a90b59}} 
-void {\bfseries set\+Param2} (int value)
-\item 
-\mbox{\Hypertarget{class_image_processor_1_1_detect_circle_adcdd5320b45b5387750bfa75e11c3ceb}\label{class_image_processor_1_1_detect_circle_adcdd5320b45b5387750bfa75e11c3ceb}} 
-void {\bfseries set\+Param1} (int value)
 \end{DoxyCompactItemize}
 \subsection*{Signals}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_image_processor_1_1_detect_circle_a24faeddbf059ed7011835dedbc7a2971}\label{class_image_processor_1_1_detect_circle_a24faeddbf059ed7011835dedbc7a2971}} 
-void {\bfseries circles\+Detected} (const std\+::vector$<$ cv\+::\+Vec3f $>$ \&)
-\item 
-\mbox{\Hypertarget{class_image_processor_1_1_detect_circle_a24faeddbf059ed7011835dedbc7a2971}\label{class_image_processor_1_1_detect_circle_a24faeddbf059ed7011835dedbc7a2971}} 
-void {\bfseries circles\+Detected} (const std\+::vector$<$ cv\+::\+Vec3f $>$ \&)
-\end{DoxyCompactItemize}
+void \hyperlink{class_image_processor_1_1_detect_circle_a2c399b3380a2830317c701d47d4db004}{circles\+Detected} (const std\+::vector$<$ cv\+::\+Vec3f $>$ \&)
+\begin{DoxyCompactList}\small\item\em this signal is emitted after detecting All the circles in the image being processed. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -65,8 +52,9 @@ void {\bfseries circles\+Detected} (const std\+::vector$<$ cv\+::\+Vec3f $>$ \&)
 \item 
 std\+::vector$<$ cv\+::\+Vec3f $>$ \hyperlink{class_image_processor_1_1_detect_circle_a6324c8bfcc4e8df8d584a037250b22b2}{detect\+Circle} () const
 \begin{DoxyCompactList}\small\item\em this helper Function is used to detect circles in an Image using Hough\+Circle Algorithm. \end{DoxyCompactList}\item 
-int \hyperlink{class_image_processor_1_1_detect_circle_a9e83f089602650f7afcb97172a23f329}{get\+Min\+Dist} () const
-\begin{DoxyCompactList}\small\item\em the minimum distance between two circles \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_image_processor_1_1_detect_circle_a9e83f089602650f7afcb97172a23f329}\label{class_image_processor_1_1_detect_circle_a9e83f089602650f7afcb97172a23f329}} 
+int {\bfseries get\+Min\+Dist} () const
+\item 
 \mbox{\Hypertarget{class_image_processor_1_1_detect_circle_a8a54460ead0a0204e6321215851d9234}\label{class_image_processor_1_1_detect_circle_a8a54460ead0a0204e6321215851d9234}} 
 int {\bfseries get\+Param2} () const
 \item 
@@ -74,45 +62,52 @@ int {\bfseries get\+Param2} () const
 int {\bfseries get\+Param1} () const
 \item 
 Q\+Variant \hyperlink{class_image_processor_1_1_detect_circle_ae0c7b4759827b218a03b16567233b4d5}{process\+Image} () override
-\begin{DoxyCompactList}\small\item\em reimplemented Function. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_image_processor_1_1_detect_circle_a0555aef83fdcd99655e724f4bf49aeb4}\label{class_image_processor_1_1_detect_circle_a0555aef83fdcd99655e724f4bf49aeb4}} 
-{\bfseries Detect\+Circle} (Q\+Object $\ast$parent=nullptr)
-\item 
-\mbox{\Hypertarget{class_image_processor_1_1_detect_circle_a391f7d6e95895d778093c84112eef561}\label{class_image_processor_1_1_detect_circle_a391f7d6e95895d778093c84112eef561}} 
-std\+::vector$<$ cv\+::\+Vec3f $>$ {\bfseries detect\+Circle} () const
-\item 
-\mbox{\Hypertarget{class_image_processor_1_1_detect_circle_ae6477945f825e5d3e325024fd84b4096}\label{class_image_processor_1_1_detect_circle_ae6477945f825e5d3e325024fd84b4096}} 
-int {\bfseries get\+Min\+Dist} () const
-\item 
-\mbox{\Hypertarget{class_image_processor_1_1_detect_circle_a8611cbc8bd0e5416983641f7f683b660}\label{class_image_processor_1_1_detect_circle_a8611cbc8bd0e5416983641f7f683b660}} 
-int {\bfseries get\+Param2} () const
-\item 
-\mbox{\Hypertarget{class_image_processor_1_1_detect_circle_a8b2b83d109d8c929e2510c93b47927f9}\label{class_image_processor_1_1_detect_circle_a8b2b83d109d8c929e2510c93b47927f9}} 
-int {\bfseries get\+Param1} () const
-\item 
-Q\+Variant \hyperlink{class_image_processor_1_1_detect_circle_ae59a596ca1e992a8d8f859b5f79239f5}{process\+Image} () override
-\begin{DoxyCompactList}\small\item\em Pure Virtual Function representes the operation to be done on the Image to be processed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em reimplemented Function. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
 this class is used To Detect circles in an image 
 
-using this class you can detect x, y and radius of a circle in an image after calling \hyperlink{class_image_processor_1_1_detect_color_afb14622f8e1390f1cf887cc8bf1da568}{Detect\+Color\+::process\+Image} there are many possible ways to get The output for example you can connect the signal Image\+Processor\+::\+Detect\+Circle\+::circles\+Detected to any Q\+Object Slot that takes std\+::vector$<$cv\+::\+Vec3f$>$ as a parameter another way is to use the return of process\+Image and convert the Q\+Varient to std\+::vector$<$cv\+::\+Vec3f$>$ 
+using this class you can detect x, y and radius of a circle in an image after calling \hyperlink{class_image_processor_1_1_detect_color_afb14622f8e1390f1cf887cc8bf1da568}{Detect\+Color\+::process\+Image} there are many possible ways to get The output for example you can connect the signal \hyperlink{class_image_processor_1_1_detect_circle_a2c399b3380a2830317c701d47d4db004}{Image\+Processor\+::\+Detect\+Circle\+::circles\+Detected} to any Q\+Object Slot that takes std\+::vector$<$cv\+::\+Vec3f$>$ as a parameter another way is to use the return of process\+Image and convert the Q\+Varient to std\+::vector$<$cv\+::\+Vec3f$>$ 
 \begin{DoxyCode}
- connect(crcleDetector, &DetectCircle::circlesDetected, [=](\textcolor{keyword}{const} std::vector<cv::Vec3f>& vec)\{
+ connect(crcleDetector, &\hyperlink{class_image_processor_1_1_detect_circle_a2c399b3380a2830317c701d47d4db004}{DetectCircle::circlesDetected}, [=](\textcolor{keyword}{const} 
+      std::vector<cv::Vec3f>& vec)\{
      for\_each(vec.begin(), vec.end(), [](cv::Vec3f v)\{ qDebug() << v[0] << \textcolor{stringliteral}{", "} << v[1] << \textcolor{stringliteral}{", "} << v[2];\});
 \});
  std::vector<cv::Vec3f> vec = crcleDetector.processImage().value<std::vector<cv::Vec3f>>(); \textcolor{comment}{//and prints
        each x, y, r of every circle.}
 \end{DoxyCode}
  \begin{DoxySeeAlso}{See also}
-Image\+Processor\+::\+Detect\+Circle\+::circles\+Detected 
+\hyperlink{class_image_processor_1_1_detect_circle_a2c399b3380a2830317c701d47d4db004}{Image\+Processor\+::\+Detect\+Circle\+::circles\+Detected} 
 \end{DoxySeeAlso}
 
 
+Definition at line 12 of file detectcircle.\+h.
+
+
+
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{class_image_processor_1_1_detect_circle_a6324c8bfcc4e8df8d584a037250b22b2}\label{class_image_processor_1_1_detect_circle_a6324c8bfcc4e8df8d584a037250b22b2}} 
+\mbox{\Hypertarget{class_image_processor_1_1_detect_circle_a2c399b3380a2830317c701d47d4db004}\label{class_image_processor_1_1_detect_circle_a2c399b3380a2830317c701d47d4db004}} 
+\index{Image\+Processor\+::\+Detect\+Circle@{Image\+Processor\+::\+Detect\+Circle}!circles\+Detected@{circles\+Detected}}
+\index{circles\+Detected@{circles\+Detected}!Image\+Processor\+::\+Detect\+Circle@{Image\+Processor\+::\+Detect\+Circle}}
+\subsubsection{\texorpdfstring{circles\+Detected}{circlesDetected}}
+{\footnotesize\ttfamily Image\+Processor\+::\+Detect\+Circle\+::circles\+Detected (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ cv\+::\+Vec3f $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+this signal is emitted after detecting All the circles in the image being processed. 
+
+can Be connected with other objects to get the circles in an image.
+
+
+\begin{DoxyCode}
+connect(crcleDetector, &\hyperlink{class_image_processor_1_1_detect_circle_a2c399b3380a2830317c701d47d4db004}{DetectCircle::circlesDetected}, [=](\textcolor{keyword}{const} 
+      std::vector<cv::Vec3f>& vec)\{
+     for\_each(vec.begin(), vec.end(), [](cv::Vec3f v)\{ qDebug() << v[0] << \textcolor{stringliteral}{", "} << v[1] << \textcolor{stringliteral}{", "} << v[2];\});
+\}; \textcolor{comment}{//prints each x, y, r of every circle.}
+\end{DoxyCode}
+ \mbox{\Hypertarget{class_image_processor_1_1_detect_circle_a6324c8bfcc4e8df8d584a037250b22b2}\label{class_image_processor_1_1_detect_circle_a6324c8bfcc4e8df8d584a037250b22b2}} 
 \index{Image\+Processor\+::\+Detect\+Circle@{Image\+Processor\+::\+Detect\+Circle}!detect\+Circle@{detect\+Circle}}
 \index{detect\+Circle@{detect\+Circle}!Image\+Processor\+::\+Detect\+Circle@{Image\+Processor\+::\+Detect\+Circle}}
 \subsubsection{\texorpdfstring{detect\+Circle()}{detectCircle()}}
@@ -128,40 +123,14 @@ a vector of 3 points vector each represents the x, y, r of all circles in the im
 \begin{DoxySeeAlso}{See also}
 Image\+Processor\+::\+Detect\+Cirlce\+::process\+Image. 
 \end{DoxySeeAlso}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{d6/d8e/class_image_processor_1_1_detect_circle_a6324c8bfcc4e8df8d584a037250b22b2_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_image_processor_1_1_detect_circle_a9e83f089602650f7afcb97172a23f329}\label{class_image_processor_1_1_detect_circle_a9e83f089602650f7afcb97172a23f329}} 
-\index{Image\+Processor\+::\+Detect\+Circle@{Image\+Processor\+::\+Detect\+Circle}!get\+Min\+Dist@{get\+Min\+Dist}}
-\index{get\+Min\+Dist@{get\+Min\+Dist}!Image\+Processor\+::\+Detect\+Circle@{Image\+Processor\+::\+Detect\+Circle}}
-\subsubsection{\texorpdfstring{get\+Min\+Dist()}{getMinDist()}}
-{\footnotesize\ttfamily int Detect\+Circle\+::get\+Min\+Dist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
+Definition at line 66 of file detectcircle.\+cpp.
 
-the minimum distance between two circles 
-
-\begin{DoxyReturn}{Returns}
-integer of minimum distance 
-\end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
-\hyperlink{class_image_processor_1_1_detect_circle_a09bb7bbe753372179b49f94370800021}{Image\+Processor\+::\+Detect\+Circle\+::set\+Min\+Dist} 
-\end{DoxySeeAlso}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{d6/d8e/class_image_processor_1_1_detect_circle_a9e83f089602650f7afcb97172a23f329_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_image_processor_1_1_detect_circle_ae0c7b4759827b218a03b16567233b4d5}\label{class_image_processor_1_1_detect_circle_ae0c7b4759827b218a03b16567233b4d5}} 
 \index{Image\+Processor\+::\+Detect\+Circle@{Image\+Processor\+::\+Detect\+Circle}!process\+Image@{process\+Image}}
 \index{process\+Image@{process\+Image}!Image\+Processor\+::\+Detect\+Circle@{Image\+Processor\+::\+Detect\+Circle}}
-\subsubsection{\texorpdfstring{process\+Image()}{processImage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\subsubsection{\texorpdfstring{process\+Image()}{processImage()}}
 {\footnotesize\ttfamily Q\+Variant Detect\+Circle\+::process\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
@@ -187,6 +156,10 @@ std\+::vector$<$cv\+::\+Vec3f$>$ a vector of cv\+::\+Vec3f where each index in i
 
 Implements \hyperlink{class_image_processor_1_1_abstract_image_processor_ad033ae911918b0f6842b7b1d6cdd2b90}{Image\+Processor\+::\+Abstract\+Image\+Processor}.
 
+
+
+Definition at line 51 of file detectcircle.\+cpp.
+
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -194,31 +167,6 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{d6/d8e/class_image_processor_1_1_detect_circle_ae0c7b4759827b218a03b16567233b4d5_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_image_processor_1_1_detect_circle_ae59a596ca1e992a8d8f859b5f79239f5}\label{class_image_processor_1_1_detect_circle_ae59a596ca1e992a8d8f859b5f79239f5}} 
-\index{Image\+Processor\+::\+Detect\+Circle@{Image\+Processor\+::\+Detect\+Circle}!process\+Image@{process\+Image}}
-\index{process\+Image@{process\+Image}!Image\+Processor\+::\+Detect\+Circle@{Image\+Processor\+::\+Detect\+Circle}}
-\subsubsection{\texorpdfstring{process\+Image()}{processImage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Q\+Variant Image\+Processor\+::\+Detect\+Circle\+::process\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Pure Virtual Function representes the operation to be done on the Image to be processed. 
-
-
-\begin{DoxyExceptions}{Exceptions}
-{\em cv\+::\+Exception.\+not} & garunteed to throw this exception \\
-\hline
-\end{DoxyExceptions}
-\begin{DoxyWarning}{Warning}
-not exception nor thread safe. 
-\end{DoxyWarning}
-\begin{DoxyReturn}{Returns}
-Q\+Variant Object which represents the output of the processing operation and it doesn\textquotesingle{}t have to be cv\+::\+Mat. 
-\end{DoxyReturn}
-
-
-Implements \hyperlink{class_image_processor_1_1_abstract_image_processor_ad033ae911918b0f6842b7b1d6cdd2b90}{Image\+Processor\+::\+Abstract\+Image\+Processor}.
-
 \mbox{\Hypertarget{class_image_processor_1_1_detect_circle_a09bb7bbe753372179b49f94370800021}\label{class_image_processor_1_1_detect_circle_a09bb7bbe753372179b49f94370800021}} 
 \index{Image\+Processor\+::\+Detect\+Circle@{Image\+Processor\+::\+Detect\+Circle}!set\+Min\+Dist@{set\+Min\+Dist}}
 \index{set\+Min\+Dist@{set\+Min\+Dist}!Image\+Processor\+::\+Detect\+Circle@{Image\+Processor\+::\+Detect\+Circle}}
@@ -235,11 +183,15 @@ sets the minimum value between two circles
 \hline
 \end{DoxyParams}
 \begin{DoxySeeAlso}{See also}
-\hyperlink{class_image_processor_1_1_detect_circle_a9e83f089602650f7afcb97172a23f329}{Image\+Processor\+::\+Detect\+Circle\+::get\+Min\+Dist} 
+Image\+Processor\+::\+Detect\+Circle\+::get\+Min\+Dist 
 \end{DoxySeeAlso}
+
+
+Definition at line 14 of file detectcircle.\+cpp.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-src/\+Object\+Detection/\+Circle\+Detector/\+Image\+Processors/\+Image\+Processor/detectcircle.\+h\item 
-src/\+Object\+Detection/\+Circle\+Detector/\+Image\+Processors/\+Image\+Processor/detectcircle.\+cpp\end{DoxyCompactItemize}
+object-\/detector/src/\+Circle\+Detector/\+Image\+Processors/\+Image\+Processor/detectcircle.\+h\item 
+object-\/detector/src/\+Circle\+Detector/\+Image\+Processors/\+Image\+Processor/detectcircle.\+cpp\end{DoxyCompactItemize}

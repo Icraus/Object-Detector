@@ -17,17 +17,17 @@ CONFIG(static){
 
 }
 !CONFIG(staticlib){
-    DEFINES += CIRCLEDETECTORMODEL_LIBRARY
+    DEFINES += CIRCLEDETECTORVIEW_LIBRARY
 
 }
 SOURCES += \
-    circledetecorpluginloaderview.cpp \
-    impl/circledetecorpluginloaderviewimpl.cpp
+    impl/circledetecorpluginloaderviewimpl.cpp  \
+    circledetecorpluginloaderview.cpp
 
 HEADERS += \
-    circledetecorpluginloaderview.h \
-    impl/circledetecorpluginloaderviewimpl.h \
-    circledetectorpluginloaderview_global.h
+    circledetectorpluginloaderview_global.h  \
+    impl/circledetecorpluginloaderviewimpl.h  \
+    circledetecorpluginloaderview.h
 
 FORMS += \
     circledetecorpluginloaderview.ui

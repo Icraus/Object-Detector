@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Object Detection
-   &#160;<span id="projectnumber">4.0</span>
+   &#160;<span id="projectnumber">5.0</span>
    </div>
    <div id="projectbrief">A Simple Library For Image Processing Using Qt and Opencv</div>
   </td>
@@ -102,10 +102,10 @@ $(document).ready(function(){initNavTree('dc/d61/class_image_processor_1_1_abstr
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d5/d49/class_image_processor_1_1_abstract_image_processor__inherit__graph.png" border="0" usemap="#_image_processor_1_1_abstract_image_processor_inherit__map" alt="Inheritance graph"/></div>
 <map name="_image_processor_1_1_abstract_image_processor_inherit__map" id="_image_processor_1_1_abstract_image_processor_inherit__map">
-<area shape="rect" id="node3" href="../../d6/d8e/class_image_processor_1_1_detect_circle.html" title="this class is used To Detect circles in an image " alt="" coords="5,461,200,817"/>
-<area shape="rect" id="node4" href="../../dc/d23/class_image_processor_1_1_detect_color.html" title="this class is used to Detect Color given it&#39;s range(min, max) of hsv colors. " alt="" coords="224,491,416,788"/>
-<area shape="rect" id="node5" href="../../de/daf/class_image_processor_1_1_dilate.html" title="this Class is used to perform morphological dilate operation on image see Morphological Operation..." alt="" coords="440,491,597,788"/>
-<area shape="rect" id="node6" href="../../d0/d2b/class_image_processor_1_1_object_detection.html" title="{ImageProcessor::ObjectDetection\n||+ ObjectDetection()\l+ getDiler()\l+ getColDetector()\l+ getCirDetector()\l+ getCircles()\l+ ~ObjectDetection()\l+ processImage()\l+ ObjectDetection()\l+ getDiler()\l+ getColDetector()\l+ getCirDetector()\l+ getCircles()\l+ ~ObjectDetection()\l+ processImage()\l+ setCirDetector()\l+ setDiler()\l+ setColDetector()\l+ setCirDetector()\l+ setDiler()\l+ setColDetector()\l}" alt="" coords="622,461,839,817"/>
+<area shape="rect" id="node3" href="../../d6/d8e/class_image_processor_1_1_detect_circle.html" title="this class is used To Detect circles in an image " alt="" coords="5,403,200,612"/>
+<area shape="rect" id="node4" href="../../dc/d23/class_image_processor_1_1_detect_color.html" title="this class is used to Detect Color given it&#39;s range(min, max) of hsv colors. " alt="" coords="224,417,416,597"/>
+<area shape="rect" id="node5" href="../../de/daf/class_image_processor_1_1_dilate.html" title="this Class is used to perform morphological dilate operation on image see Morphological Operation..." alt="" coords="440,417,597,597"/>
+<area shape="rect" id="node6" href="../../d0/d2b/class_image_processor_1_1_object_detection.html" title="this class is used to detect a a colored circle object(s) " alt="" coords="622,359,839,656"/>
 </map>
 </div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -129,27 +129,16 @@ Public Slots</h2></td></tr>
 <tr class="memitem:a08c1e75c34cb5724e8b3ed4e55d90fb9"><td class="memItemLeft" align="right" valign="top"><a id="a08c1e75c34cb5724e8b3ed4e55d90fb9"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setImg</b> (const cv::Mat &amp;img)</td></tr>
 <tr class="separator:a08c1e75c34cb5724e8b3ed4e55d90fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3cb6442277dc17f1cf2f2215c2cdab2"><td class="memItemLeft" align="right" valign="top"><a id="ac3cb6442277dc17f1cf2f2215c2cdab2"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setDst</b> (const cv::Mat &amp;dst)</td></tr>
-<tr class="separator:ac3cb6442277dc17f1cf2f2215c2cdab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a240c3eec8500e5d2432b27a7b68b55b2"><td class="memItemLeft" align="right" valign="top"><a id="a240c3eec8500e5d2432b27a7b68b55b2"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setImg</b> (const cv::Mat &amp;img)</td></tr>
-<tr class="separator:a240c3eec8500e5d2432b27a7b68b55b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Signals</h2></td></tr>
-<tr class="memitem:a5a252ccaca15ae5609bf490dff410a44"><td class="memItemLeft" align="right" valign="top"><a id="a5a252ccaca15ae5609bf490dff410a44"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>imageChanged</b> (const cv::Mat &amp;img)</td></tr>
-<tr class="separator:a5a252ccaca15ae5609bf490dff410a44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98d198ad26991ee5fa200d8a1a740448"><td class="memItemLeft" align="right" valign="top"><a id="a98d198ad26991ee5fa200d8a1a740448"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>dstChanged</b> (const cv::Mat &amp;img)</td></tr>
-<tr class="separator:a98d198ad26991ee5fa200d8a1a740448"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a252ccaca15ae5609bf490dff410a44"><td class="memItemLeft" align="right" valign="top"><a id="a5a252ccaca15ae5609bf490dff410a44"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>imageChanged</b> (const cv::Mat &amp;img)</td></tr>
-<tr class="separator:a5a252ccaca15ae5609bf490dff410a44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98d198ad26991ee5fa200d8a1a740448"><td class="memItemLeft" align="right" valign="top"><a id="a98d198ad26991ee5fa200d8a1a740448"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>dstChanged</b> (const cv::Mat &amp;img)</td></tr>
-<tr class="separator:a98d198ad26991ee5fa200d8a1a740448"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bd02b01c61941e2b0e69be7d890a22a"><td class="memItemLeft" align="right" valign="top"><a id="a4bd02b01c61941e2b0e69be7d890a22a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d61/class_image_processor_1_1_abstract_image_processor.html#a4bd02b01c61941e2b0e69be7d890a22a">imageChanged</a> (const cv::Mat &amp;img)</td></tr>
+<tr class="memdesc:a4bd02b01c61941e2b0e69be7d890a22a"><td class="mdescLeft">&#160;</td><td class="mdescRight">this Signal Is Emited When the source cv::Mat Object Changed. <br /></td></tr>
+<tr class="separator:a4bd02b01c61941e2b0e69be7d890a22a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab42f4411848b924971026c104b9a5342"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d61/class_image_processor_1_1_abstract_image_processor.html#ab42f4411848b924971026c104b9a5342">dstChanged</a> (const cv::Mat &amp;img)</td></tr>
+<tr class="memdesc:ab42f4411848b924971026c104b9a5342"><td class="mdescLeft">&#160;</td><td class="mdescRight">this Signal Is Emited When the destnation cv::Mat Object Changed. <b>example:</b>  <a href="#ab42f4411848b924971026c104b9a5342">More...</a><br /></td></tr>
+<tr class="separator:ab42f4411848b924971026c104b9a5342"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -162,30 +151,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad033ae911918b0f6842b7b1d6cdd2b90"><td class="memItemLeft" align="right" valign="top">virtual QVariant&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d61/class_image_processor_1_1_abstract_image_processor.html#ad033ae911918b0f6842b7b1d6cdd2b90">processImage</a> ()=0</td></tr>
 <tr class="memdesc:ad033ae911918b0f6842b7b1d6cdd2b90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure Virtual Function representes the operation to be done on the Image to be processed.  <a href="#ad033ae911918b0f6842b7b1d6cdd2b90">More...</a><br /></td></tr>
 <tr class="separator:ad033ae911918b0f6842b7b1d6cdd2b90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a767ac703d0d95f54ac3cfc1fe223f6b1"><td class="memItemLeft" align="right" valign="top"><a id="a767ac703d0d95f54ac3cfc1fe223f6b1"></a>
-cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><b>getImg</b> () const</td></tr>
-<tr class="separator:a767ac703d0d95f54ac3cfc1fe223f6b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca36f6820247320a27d5ba8ee923a57e"><td class="memItemLeft" align="right" valign="top"><a id="aca36f6820247320a27d5ba8ee923a57e"></a>
-cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><b>getDst</b> () const</td></tr>
-<tr class="separator:aca36f6820247320a27d5ba8ee923a57e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefc5e0bf8333b94feca18d2b6458d3ab"><td class="memItemLeft" align="right" valign="top"><a id="aefc5e0bf8333b94feca18d2b6458d3ab"></a>
-virtual QVariant&#160;</td><td class="memItemRight" valign="bottom"><b>processImage</b> ()=0</td></tr>
-<tr class="separator:aefc5e0bf8333b94feca18d2b6458d3ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a5d89a80ba5924d41809a877e4128039a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d61/class_image_processor_1_1_abstract_image_processor.html#a5d89a80ba5924d41809a877e4128039a">AbstractImageProcessor</a> (QObject *parent=nullptr)</td></tr>
 <tr class="memdesc:a5d89a80ba5924d41809a877e4128039a"><td class="mdescLeft">&#160;</td><td class="mdescRight">accpets A pointer To the Parent Class For The Qt Meta-object Model See <a href="http://doc.qt.io/qt-5/metaobjects.html">Qt Meta-Object</a>  <a href="#a5d89a80ba5924d41809a877e4128039a">More...</a><br /></td></tr>
 <tr class="separator:a5d89a80ba5924d41809a877e4128039a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afed21785fad3fc501ba80714c5f10c0b"><td class="memItemLeft" align="right" valign="top"><a id="afed21785fad3fc501ba80714c5f10c0b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>AbstractImageProcessor</b> (QObject *parent=nullptr)</td></tr>
-<tr class="separator:afed21785fad3fc501ba80714c5f10c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="../../dc/d61/class_image_processor_1_1_abstract_image_processor.html" title="The ImageProcessor::AbstractImageProcessor is an Abstract Base Class For All Image Processor Classes...">ImageProcessor::AbstractImageProcessor</a> is an Abstract Base Class For All Image Processor Classes. </p>
 <p>this Class Provides A Common Data Structure For All Image Processor Classes That Inherits From It The class Provides cv::Mat Img Variable Which is used as The Soruce Image and cv::Mat dst Varaible Which is the Destnation cv::Mat Object. </p><dl class="section note"><dt>Note</dt><dd>using getDst and getImg is using deep copy of image to avoid invalid access of member objects.</dd></dl>
-<div class="fragment"><div class="line"><span class="keyword">using namespace </span><a class="code" href="../../d2/dc2/namespace_image_processor.html">ImageProcessor</a>;</div><div class="line">std::unique_ptr&lt;ImageProcessor::AbstractImageProcessor&gt; imgproc = std::make_unique&lt;ImageProcessor::DetectColor&gt;(<span class="keyword">this</span>);</div><div class="line">imgproc-&gt;setImg(cv::imread(IMG_PATH));</div><div class="line">connect(imgproc.get(), &amp;AbstractImageProcessor::dstChanged,[=](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; img){qDebug() &lt;&lt; <span class="stringliteral">&quot;Image Changed&quot;</span>;});</div><div class="line">imgproc-&gt;processImage();</div><div class="line"><span class="keyword">auto</span> img = imgproc-&gt;getDst(); <span class="comment">//returns cv::Mat and prints &quot;Image Changed&quot;</span></div></div><!-- fragment --> <dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d2/dc2/namespace_image_processor.html" title="Common Namespace for all Image Processor Algorithms. ">ImageProcessor</a> </dd></dl>
+<div class="fragment"><div class="line"><span class="keyword">using namespace </span><a class="code" href="../../d2/dc2/namespace_image_processor.html">ImageProcessor</a>;</div><div class="line">std::unique_ptr&lt;ImageProcessor::AbstractImageProcessor&gt; <a class="code" href="../../d2/dc2/namespace_image_processor.html">imgproc</a> = std::make_unique&lt;ImageProcessor::DetectColor&gt;(<span class="keyword">this</span>);</div><div class="line"><a class="code" href="../../d2/dc2/namespace_image_processor.html">imgproc</a>-&gt;setImg(cv::imread(IMG_PATH));</div><div class="line">connect(<a class="code" href="../../d2/dc2/namespace_image_processor.html">imgproc</a>.get(), &amp;<a class="code" href="../../dc/d61/class_image_processor_1_1_abstract_image_processor.html#ab42f4411848b924971026c104b9a5342">AbstractImageProcessor::dstChanged</a>,[=](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; img){qDebug() &lt;&lt; <span class="stringliteral">&quot;Image Changed&quot;</span>;});</div><div class="line"><a class="code" href="../../d2/dc2/namespace_image_processor.html">imgproc</a>-&gt;processImage();</div><div class="line"><span class="keyword">auto</span> img = <a class="code" href="../../d2/dc2/namespace_image_processor.html">imgproc</a>-&gt;getDst(); <span class="comment">//returns cv::Mat and prints &quot;Image Changed&quot;</span></div></div><!-- fragment --> <dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d2/dc2/namespace_image_processor.html" title="Common Namespace for all Image Processor Algorithms. ">ImageProcessor</a> </dd></dl>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000001">Todo:</a></b></dt><dd>add cv::Mat cache(may be using flyweight pattern) To avoid heavy copy of cv::Mat obejcts. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/dd2/abstractimageprocessor_8h_source.html#l00011">11</a> of file <a class="el" href="../../dc/dd2/abstractimageprocessor_8h_source.html">abstractimageprocessor.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5d89a80ba5924d41809a877e4128039a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5d89a80ba5924d41809a877e4128039a">&#9670;&nbsp;</a></span>AbstractImageProcessor()</h2>
@@ -218,6 +197,8 @@ Protected Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d0c/abstractimageprocessor_8cpp_source.html#l00009">9</a> of file <a class="el" href="../../d9/d0c/abstractimageprocessor_8cpp_source.html">abstractimageprocessor.cpp</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -232,6 +213,44 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab42f4411848b924971026c104b9a5342"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab42f4411848b924971026c104b9a5342">&#9670;&nbsp;</a></span>dstChanged</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ImageProcessor::AbstractImageProcessor::dstChanged </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>img</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>this Signal Is Emited When the destnation cv::Mat Object Changed. <b>example:</b> </p>
+<div class="fragment"><div class="line"><span class="keyword">using namespace </span><a class="code" href="../../d2/dc2/namespace_image_processor.html">ImageProcessor</a>;</div><div class="line">std::unique_ptr&lt;ImageProcessor::AbstractImageProcessor&gt; imgproc = std::make_unique&lt;ImageProcessor::DetectColor&gt;(<span class="keyword">this</span>);</div><div class="line">imgproc-&gt;setImg(cv::imread(IMG_PATH));</div><div class="line">connect(imgproc.get(), &amp;<a class="code" href="../../dc/d61/class_image_processor_1_1_abstract_image_processor.html#ab42f4411848b924971026c104b9a5342">AbstractImageProcessor::dstChanged</a>,[=](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; img){qDebug() &lt;&lt; <span class="stringliteral">&quot;Image Changed&quot;</span>;});</div><div class="line">imgproc-&gt;processImage();</div><div class="line"><span class="keyword">auto</span> img = imgproc-&gt;getDst(); <span class="comment">//returns cv::Mat and prints &quot;Image Changed&quot;</span></div></div><!-- fragment --> <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../dc/d61/class_image_processor_1_1_abstract_image_processor_ab42f4411848b924971026c104b9a5342_icgraph.png" border="0" usemap="#dc/d61/class_image_processor_1_1_abstract_image_processor_ab42f4411848b924971026c104b9a5342_icgraph" alt=""/></div>
+<map name="dc/d61/class_image_processor_1_1_abstract_image_processor_ab42f4411848b924971026c104b9a5342_icgraph" id="dc/d61/class_image_processor_1_1_abstract_image_processor_ab42f4411848b924971026c104b9a5342_icgraph">
+<area shape="rect" id="node2" href="../../dc/d61/class_image_processor_1_1_abstract_image_processor.html#a8d9dcbea1b426f4accdd8fcc650eb6ab" title="sets The output of the operation " alt="" coords="247,5,420,47"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="acbf98498ebece7b9f339222097a3429a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acbf98498ebece7b9f339222097a3429a">&#9670;&nbsp;</a></span>getDst()</h2>
 
@@ -249,16 +268,8 @@ Protected Member Functions</h2></td></tr>
 
 <p>returns A cv::Mat Object which represents the output of the image processing operation </p>
 <dl class="section return"><dt>Returns</dt><dd>cv::Mat </dd></dl>
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../dc/d61/class_image_processor_1_1_abstract_image_processor_acbf98498ebece7b9f339222097a3429a_icgraph.png" border="0" usemap="#dc/d61/class_image_processor_1_1_abstract_image_processor_acbf98498ebece7b9f339222097a3429a_icgraph" alt=""/></div>
-<map name="dc/d61/class_image_processor_1_1_abstract_image_processor_acbf98498ebece7b9f339222097a3429a_icgraph" id="dc/d61/class_image_processor_1_1_abstract_image_processor_acbf98498ebece7b9f339222097a3429a_icgraph">
-<area shape="rect" id="node2" href="../../d0/d2b/class_image_processor_1_1_object_detection.html#ac5561650d95eac1672e2d049ed36201d" title="Pure Virtual Function representes the operation to be done on the Image to be processed. " alt="" coords="227,5,444,47"/>
-</map>
-</div>
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d0c/abstractimageprocessor_8cpp_source.html#l00020">20</a> of file <a class="el" href="../../d9/d0c/abstractimageprocessor_8cpp_source.html">abstractimageprocessor.cpp</a>.</p>
 
 </div>
 </div>
@@ -279,16 +290,8 @@ Protected Member Functions</h2></td></tr>
 
 <p><a class="el" href="../../dc/d61/class_image_processor_1_1_abstract_image_processor.html#a904d1619b2c6be2c5382469325ca43e3" title="AbstractImageProcessor::getImg. ">AbstractImageProcessor::getImg</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>cv::Matreturns A copy of The Source Image uses cv::Mat::clone(). <b>example:</b> <div class="fragment"><div class="line">cv::Mat img = cv::imread(IMG_PATH);</div><div class="line">imgproc.setImg(img);</div><div class="line">cv::Mat img2 = imgproc.getImg(); <span class="comment">//uses Deep Copy like img2 = img.clone();</span></div></div><!-- fragment --> </dd></dl>
-<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../dc/d61/class_image_processor_1_1_abstract_image_processor_a904d1619b2c6be2c5382469325ca43e3_icgraph.png" border="0" usemap="#dc/d61/class_image_processor_1_1_abstract_image_processor_a904d1619b2c6be2c5382469325ca43e3_icgraph" alt=""/></div>
-<map name="dc/d61/class_image_processor_1_1_abstract_image_processor_a904d1619b2c6be2c5382469325ca43e3_icgraph" id="dc/d61/class_image_processor_1_1_abstract_image_processor_a904d1619b2c6be2c5382469325ca43e3_icgraph">
-<area shape="rect" id="node2" href="../../d6/d8e/class_image_processor_1_1_detect_circle.html#a6324c8bfcc4e8df8d584a037250b22b2" title="this helper Function is used to detect circles in an Image using HoughCircle Algorithm. " alt="" coords="227,5,421,47"/>
-</map>
-</div>
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d0c/abstractimageprocessor_8cpp_source.html#l00046">46</a> of file <a class="el" href="../../d9/d0c/abstractimageprocessor_8cpp_source.html">abstractimageprocessor.cpp</a>.</p>
 
 </div>
 </div>
@@ -325,7 +328,7 @@ Protected Member Functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>not exception nor thread safe. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>QVariant Object which represents the output of the processing operation and it doesn't have to be cv::Mat. </dd></dl>
 
-<p>Implemented in <a class="el" href="../../d6/d8e/class_image_processor_1_1_detect_circle.html#ae0c7b4759827b218a03b16567233b4d5">ImageProcessor::DetectCircle</a>, <a class="el" href="../../d6/d8e/class_image_processor_1_1_detect_circle.html#ae59a596ca1e992a8d8f859b5f79239f5">ImageProcessor::DetectCircle</a>, <a class="el" href="../../d0/d2b/class_image_processor_1_1_object_detection.html#ac5561650d95eac1672e2d049ed36201d">ImageProcessor::ObjectDetection</a>, <a class="el" href="../../d0/d2b/class_image_processor_1_1_object_detection.html#ad8ff5b55d6da63f30dc397082f97370c">ImageProcessor::ObjectDetection</a>, <a class="el" href="../../de/daf/class_image_processor_1_1_dilate.html#ac4af4d83e97990416f1ccc6b80fd140b">ImageProcessor::Dilate</a>, <a class="el" href="../../de/daf/class_image_processor_1_1_dilate.html#a47c84e673efe4a1280eede2ea9cb4ef9">ImageProcessor::Dilate</a>, <a class="el" href="../../dc/d23/class_image_processor_1_1_detect_color.html#afb14622f8e1390f1cf887cc8bf1da568">ImageProcessor::DetectColor</a>, and <a class="el" href="../../dc/d23/class_image_processor_1_1_detect_color.html#a7dc9d23817afafa44a9c022dff64b4a5">ImageProcessor::DetectColor</a>.</p>
+<p>Implemented in <a class="el" href="../../d0/d2b/class_image_processor_1_1_object_detection.html#ac5561650d95eac1672e2d049ed36201d">ImageProcessor::ObjectDetection</a>, <a class="el" href="../../d6/d8e/class_image_processor_1_1_detect_circle.html#ae0c7b4759827b218a03b16567233b4d5">ImageProcessor::DetectCircle</a>, <a class="el" href="../../de/daf/class_image_processor_1_1_dilate.html#ac4af4d83e97990416f1ccc6b80fd140b">ImageProcessor::Dilate</a>, and <a class="el" href="../../dc/d23/class_image_processor_1_1_detect_color.html#afb14622f8e1390f1cf887cc8bf1da568">ImageProcessor::DetectColor</a>.</p>
 
 </div>
 </div>
@@ -361,11 +364,13 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="../../d9/d0c/abstractimageprocessor_8cpp_source.html#l00030">30</a> of file <a class="el" href="../../d9/d0c/abstractimageprocessor_8cpp_source.html">abstractimageprocessor.cpp</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>src/ObjectDetection/CircleDetector/ImageProcessors/ImageProcessor/<a class="el" href="../../dc/d2a/_circle_detector_2_image_processors_2_image_processor_2abstractimageprocessor_8h_source.html">abstractimageprocessor.h</a></li>
-<li>src/ObjectDetection/CircleDetector/ImageProcessors/ImageProcessor/abstractimageprocessor.cpp</li>
+<li>object-detector/src/CircleDetector/ImageProcessors/ImageProcessor/<a class="el" href="../../dc/dd2/abstractimageprocessor_8h_source.html">abstractimageprocessor.h</a></li>
+<li>object-detector/src/CircleDetector/ImageProcessors/ImageProcessor/<a class="el" href="../../d9/d0c/abstractimageprocessor_8cpp_source.html">abstractimageprocessor.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Object Detection
-   &#160;<span id="projectnumber">4.0</span>
+   &#160;<span id="projectnumber">5.0</span>
    </div>
    <div id="projectbrief">A Simple Library For Image Processing Using Qt and Opencv</div>
   </td>
@@ -120,12 +120,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setMinDist</b> (int v
 <tr class="memitem:a9e740e8277b4a20331073f06dc21c2b3"><td class="memItemLeft" align="right" valign="top"><a id="a9e740e8277b4a20331073f06dc21c2b3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setThickness</b> (int value)</td></tr>
 <tr class="separator:a9e740e8277b4a20331073f06dc21c2b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0a3dc83cc160531856e27f2e33bbadb"><td class="memItemLeft" align="right" valign="top"><a id="af0a3dc83cc160531856e27f2e33bbadb"></a>
-<a class="el" href="../../dc/d61/class_image_processor_1_1_abstract_image_processor.html">ImageProcessor::AbstractImageProcessor</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getPro</b> () const</td></tr>
-<tr class="separator:af0a3dc83cc160531856e27f2e33bbadb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1be625213c4974eef58e7563c1df0973"><td class="memItemLeft" align="right" valign="top"><a id="a1be625213c4974eef58e7563c1df0973"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setPro</b> (<a class="el" href="../../dc/d61/class_image_processor_1_1_abstract_image_processor.html">ImageProcessor::AbstractImageProcessor</a> *value)</td></tr>
-<tr class="separator:a1be625213c4974eef58e7563c1df0973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b54a80644a924cbe41c105fc26ecf6f"><td class="memItemLeft" align="right" valign="top"><a id="a2b54a80644a924cbe41c105fc26ecf6f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setPro</b> (<a class="el" href="../../d0/d2b/class_image_processor_1_1_object_detection.html">ObjectDetection</a> *value)</td></tr>
+<tr class="separator:a2b54a80644a924cbe41c105fc26ecf6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f8f5e688e6b6cc636fd9b7b1dd90a0a"><td class="memItemLeft" align="right" valign="top"><a id="a0f8f5e688e6b6cc636fd9b7b1dd90a0a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addFilter</b> (PluginSharedPointer filter)</td></tr>
+<tr class="separator:a0f8f5e688e6b6cc636fd9b7b1dd90a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf885c6d9cc0c81601143d678bb9f890"><td class="memItemLeft" align="right" valign="top"><a id="acf885c6d9cc0c81601143d678bb9f890"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setDilationSize</b> (int value)</td></tr>
 <tr class="separator:acf885c6d9cc0c81601143d678bb9f890"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,7 +136,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setMinColor</b> (cons
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setMaxColor</b> (const cv::Scalar &amp;value)</td></tr>
 <tr class="separator:ac143c0f40e57336aac8a05f6d6148d12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afbf3737d1542b0e1517621b90b7efe15"><td class="memItemLeft" align="right" valign="top"><a id="afbf3737d1542b0e1517621b90b7efe15"></a>
-QImage&#160;</td><td class="memItemRight" valign="bottom"><b>detectObject</b> (const cv::Mat &amp;t)</td></tr>
+Q_INVOKABLE QImage&#160;</td><td class="memItemRight" valign="bottom"><b>detectObject</b> (const cv::Mat &amp;t)</td></tr>
 <tr class="separator:afbf3737d1542b0e1517621b90b7efe15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
@@ -198,6 +198,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setCircleColor</b> (c
 <tr class="memitem:a0ca740b6e9e02ad320231c613763f286"><td class="memItemLeft" align="right" valign="top"><a id="a0ca740b6e9e02ad320231c613763f286"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>getThickness</b> () const</td></tr>
 <tr class="separator:a0ca740b6e9e02ad320231c613763f286"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1034500aeab80949a9763e9379664db"><td class="memItemLeft" align="right" valign="top"><a id="ad1034500aeab80949a9763e9379664db"></a>
+<a class="el" href="../../d0/d2b/class_image_processor_1_1_object_detection.html">ObjectDetection</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getPro</b> () const</td></tr>
+<tr class="separator:ad1034500aeab80949a9763e9379664db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -208,9 +211,12 @@ cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><b>colored</b></td></
 cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><b>dialted</b></td></tr>
 <tr class="separator:ab5ae6d433e9192bd1cbd2bb6e95cf675"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>src/ObjectDetection/View/DesktopView/<a class="el" href="../../da/d33/colordetectorcontroller_8h_source.html">colordetectorcontroller.h</a></li>
-<li>src/ObjectDetection/View/DesktopView/colordetectorcontroller.cpp</li>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../da/d33/colordetectorcontroller_8h_source.html#l00009">9</a> of file <a class="el" href="../../da/d33/colordetectorcontroller_8h_source.html">colordetectorcontroller.h</a>.</p>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
+<li>object-detector/src/View/DesktopView/<a class="el" href="../../da/d33/colordetectorcontroller_8h_source.html">colordetectorcontroller.h</a></li>
+<li>object-detector/src/View/DesktopView/<a class="el" href="../../d2/dfe/colordetectorcontroller_8cpp_source.html">colordetectorcontroller.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

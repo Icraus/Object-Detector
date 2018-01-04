@@ -1,4 +1,26 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$df/dd7/class_ui___main_window.html" title="Ui_MainWindow" alt="" coords="5,5,120,32"/>
-<area shape="rect" id="node2" href="$d4/d4a/class_ui_1_1_main_window.html" title="Ui::MainWindow" alt="" coords="168,5,284,32"/>
+<area shape="rect" id="node1" href="$d8/d82/class_circle_detector_plugins_1_1_image_processor_plugin_i_face.html" title="The ImageProcessorPluginIFace is and interface used to apply filters to Images. " alt="" coords="19,5,211,47"/>
+<area shape="rect" id="node2" href="$d4/da0/class_morpho_logical_1_1_erode_plugin.html" title="MorphoLogical::ErodePlugin" alt="" coords="285,14,469,41"/>
+<area shape="rect" id="node4" href="$d6/d65/class_c_v_video_capture_plugin.html" title="CVVideoCapturePlugin" alt="" coords="300,69,455,95"/>
+<area shape="rect" id="node6" href="$db/d55/class_color_detector_controller.html" title="ColorDetectorController" alt="" coords="299,439,455,466"/>
+<area shape="rect" id="node7" href="$df/daa/class_devices_1_1_device_manager.html" title="Devices::DeviceManager" alt="" coords="296,490,459,517"/>
+<area shape="rect" id="node8" href="$db/d28/class_devices_1_1_observable_data.html" title="Devices::ObservableData" alt="" coords="294,541,461,567"/>
+<area shape="rect" id="node9" href="$d0/d5d/class_devices_1_1_observer.html" title="Devices::Observer" alt="" coords="314,591,441,618"/>
+<area shape="rect" id="node14" href="$d0/db2/class_devices_1_1_subject.html" title="Devices::Subject" alt="" coords="318,642,437,669"/>
+<area shape="rect" id="node16" href="$dc/d61/class_image_processor_1_1_abstract_image_processor.html" title="The ImageProcessor::AbstractImageProcessor is an Abstract Base Class For All Image Processor Classes..." alt="" coords="291,736,464,777"/>
+<area shape="rect" id="node21" href="$d9/d1b/class_image_processor_1_1_object_detector_builder.html" title="ImageProcessor::ObjectDetector\lBuilder" alt="" coords="272,120,483,161"/>
+<area shape="rect" id="node22" href="$d2/de1/class_image_processor_test.html" title="ImageProcessorTest" alt="" coords="307,186,448,213"/>
+<area shape="rect" id="node23" href="$d2/def/class_process_handler.html" title="ProcessHandler" alt="" coords="320,237,435,263"/>
+<area shape="rect" id="node24" href="$df/d7b/class_test_observer_subject_test.html" title="TestObserverSubjectTest" alt="" coords="294,287,461,314"/>
+<area shape="rect" id="node25" href="$d5/dc3/class_test_work.html" title="TestWork" alt="" coords="338,338,417,365"/>
+<area shape="rect" id="node26" href="$dd/dbc/class_utilities_1_1_utils.html" title="Utilities::Utils" alt="" coords="328,389,427,415"/>
+<area shape="rect" id="node10" href="$d3/d05/class_devices_1_1_abstract_device_writer.html" title="Devices::AbstractDeviceWriter" alt="" coords="541,591,738,618"/>
+<area shape="rect" id="node13" href="$d4/df3/class_observer_impl.html" title="ObserverImpl" alt="" coords="591,541,688,567"/>
+<area shape="rect" id="node11" href="$d1/db9/class_devices_1_1_bluetooth_handler.html" title="Devices::BluetoothHandler" alt="" coords="796,566,971,593"/>
+<area shape="rect" id="node12" href="$d8/d12/class_devices_1_1_serial_handler.html" title="Devices::SerialHandler" alt="" coords="807,617,959,643"/>
+<area shape="rect" id="node15" href="$dd/d6e/class_subject_impl.html" title="SubjectImpl" alt="" coords="594,642,685,669"/>
+<area shape="rect" id="node17" href="$d6/d8e/class_image_processor_1_1_detect_circle.html" title="this class is used To Detect circles in an image " alt="" coords="542,743,737,770"/>
+<area shape="rect" id="node18" href="$dc/d23/class_image_processor_1_1_detect_color.html" title="this class is used to Detect Color given it&#39;s range(min, max) of hsv colors. " alt="" coords="543,794,735,821"/>
+<area shape="rect" id="node19" href="$de/daf/class_image_processor_1_1_dilate.html" title="this Class is used to perform morphological dilate operation on image see Morphological Operation..." alt="" coords="561,845,718,871"/>
+<area shape="rect" id="node20" href="$d0/d2b/class_image_processor_1_1_object_detection.html" title="this class is used to detect a a colored circle object(s) " alt="" coords="531,693,748,719"/>
 </map>
