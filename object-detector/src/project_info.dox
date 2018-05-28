@@ -1,0 +1,42 @@
+/*! \mainpage  
+*a Cross platform app for circle object detection
+*written in c++ 11/14 with Opencv and Qt
+*\author Mohamed Khaled (icraus)
+*\version 5.0 <br/>
+* Project page:
+*https://github.com/Icraus/Object-Detector
+*
+*<h3>Features:</h3> 
+*	1- <b> Cross platform</b>
+*		<br/>.linux  
+*		<br/>.windows  
+*		<br/>.android(todo Add Tests, add android_ios view)   
+*		<br/>.raspian (not Tested)  
+*
+*	2- <b> Can Be extended using Plugins</b>
+*		<br/>Plugins are dynamically linked librarys loaded at run time The Object detector uses this feature for better detection
+*		See ObjectDetector::AddFilters
+*
+*	3- \b Performance:
+*		the Imageprocessing library provides high performance as it uses c++ and qt so there is no run time overhead even when using plugins
+*
+*<h3>Utility Frameworks provides</h3>:
+*	<br/>1- From cv::Mat to QImage Library
+*	<br/>2- a Qt Designer widget Plugin For using Opencv Video Capture 
+*	<br/>3- SerialPort Tool For Debugging and testing Serial ports
+*	<br/>4- SerialPort Model/View widget for loading serial ports
+*	<br/>5- Image Filters Plugins used to extend Object Detector Functionality 
+*\note
+*\note by default the library is linked as shared library but u can compile it for static compilation 
+*\note by default the project is compiled using c++14 but you can compile it using c++11 
+*\todo:
+*     <br/>1- add Cuda Support to provide parallel computing capilities
+*     <br/>2- improved UI using QML
+*     <br/>3- add Device interface to provide a unified api for device interactions like serial and bluetooth
+*     <br/>4- migration to opencv Classifier for object tracking and detection
+*\details The Core Part of this project is the ImageProcessors library 
+*\sa ImageProcessors
+*\image html test.png "Example" width=800 height=600
+*
+*
+*/

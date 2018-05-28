@@ -4,28 +4,25 @@ using namespace cv;
 using namespace std;
 int main( int argc, char** argv )
 {
-    Mat src;
-    // the first command-line parameter must be a filename of the binary
-    // (black-n-white) image
-    if( argc != 2 || !(src=imread(argv[1], 0)).data)
-        return -1;
-    Mat dst = Mat::zeros(src.rows, src.cols, CV_8UC3);
-    src = src > 1;
-    namedWindow( "Source", 1 );
-    imshow( "Source", src );
-    vector<vector<Point> > contours;
-    vector<Vec4i> hierarchy;
-    findContours( src, contours, hierarchy,
-        RETR_CCOMP, CHAIN_APPROX_SIMPLE );
-    // iterate through all the top-level contours,
-    // draw each connected component with its own random color
-    int idx = 0;
-    for( ; idx >= 0; idx = hierarchy[idx][0] )
-    {
-        Scalar color( rand()&255, rand()&255, rand()&255 );
-        drawContours( dst, contours, idx, color, FILLED, 8, hierarchy );
-    }
-    namedWindow( "Components", 1 );
-    imshow( "Components", dst );
-    waitKey(0);
+    cv::Mat src = imread("C:\\Users\\Shoka\\Pictures\\Camera\ Roll\\2.jpg");
+    cv::Mat temp = imread("C:\\Users\\Shoka\\Pictures\\Camera\ Roll\\1.jpg");
+    cv::Mat res;
+    int cols = src.cols + 1;
+    int rows = src.rows + 1;
+
+    res.create(rows, cols, CV_32FC1);
+
+    matchTemplate(src, temp, res,  CV_TM_SQDIFF_NORMED);
+    normalize( res, res, 0, 1, NORM_MINMAX, -1, Mat() );
+    double minVal; double maxVal; Point minLoc; Point maxLoc;
+    Point matchLoc;
+    minMaxLoc( res, &minVal, &maxVal, &minLoc, &maxLoc, Mat() );
+    matchLoc = minLoc;
+    rectangle( src, matchLoc, Point( matchLoc.x + temp.cols , matchLoc.y + temp.rows ), Scalar::all(0), 2, 8, 0 );
+      rectangle( res, matchLoc, Point( matchLoc.x + temp.cols , matchLoc.y + temp.rows ), Scalar::all(0), 2, 8, 0 );
+
+      imshow("A", src);
+      imshow("B", res);
+    waitKey();
+
 }

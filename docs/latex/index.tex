@@ -1,0 +1,45 @@
+a Cross platform app for circle object detection written in c++ 11/14 with Opencv and Qt \begin{DoxyAuthor}{Author}
+Mohamed Khaled (icraus) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+5.\+0 ~\newline
+ Project page\+: \href{https://github.com/Icraus/Object-Detector}{\tt https\+://github.\+com/\+Icraus/\+Object-\/\+Detector}
+\end{DoxyVersion}
+\subsubsection*{Features\+:}
+
+1-\/ {\bfseries  Cross platform} ~\newline
+.linux ~\newline
+.windows ~\newline
+.android(todo Add Tests, add android\+\_\+ios view) ~\newline
+.raspian (not Tested)
+
+2-\/ {\bfseries  Can Be extended using Plugins} ~\newline
+Plugins are dynamically linked librarys loaded at run time The Object detector uses this feature for better detection See Object\+Detector\+::\+Add\+Filters
+
+3-\/ {\bfseries Performance\+:} the Imageprocessing library provides high performance as it uses c++ and qt so there is no run time overhead even when using plugins
+
+\subsubsection*{Utility Frameworks provides}
+
+\+: ~\newline
+1-\/ From cv\+::\+Mat to Q\+Image Library ~\newline
+2-\/ a Qt Designer widget Plugin For using Opencv Video Capture ~\newline
+3-\/ Serial\+Port Tool For Debugging and testing Serial ports ~\newline
+4-\/ Serial\+Port Model/\+View widget for loading serial ports ~\newline
+5-\/ Image Filters Plugins used to extend Object Detector Functionality \begin{DoxyNote}{Note}
+
+
+by default the library is linked as shared library but u can compile it for static compilation 
+
+by default the project is compiled using c++14 but you can compile it using c++11 
+\end{DoxyNote}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000004}{Todo}]\+: ~\newline
+1-\/ add Cuda Support to provide parallel computing capilities ~\newline
+2-\/ improved UI using Q\+ML ~\newline
+3-\/ add Device interface to provide a unified api for device interactions like serial and bluetooth ~\newline
+4-\/ migration to opencv Classifier for object tracking and detection \end{DoxyRefDesc}
+
+
+The Core Part of this project is the Image\+Processors library \begin{DoxySeeAlso}{See also}
+Image\+Processors  
+\end{DoxySeeAlso}

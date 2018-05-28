@@ -19,4 +19,6 @@ CONFIG(release, debug | release){
     DLLDESTDIR_PATH = "$$PWD/../bin/release/$$DEST_PREFIX"
     BIN_PATH = $$DLLDESTDIR_PATH
 }
+!android{
 include(INSTALL_ALL.pri)
+}

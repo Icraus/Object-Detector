@@ -31,7 +31,7 @@
    <div id="projectname">Object Detection
    &#160;<span id="projectnumber">5.0</span>
    </div>
-   <div id="projectbrief">A Simple Library For Image Processing Using Qt and Opencv</div>
+   <div id="projectbrief">Image Processing Using Qt and Opencv</div>
   </td>
  </tr>
  </tbody>
@@ -85,7 +85,40 @@ $(document).ready(function(){initNavTree('index.html','');});
 <div class="title">Object Detection Documentation</div>  </div>
 </div><!--header-->
 <div class="contents">
-</div><!-- contents -->
+<div class="textblock"><p>a Cross platform app for circle object detection written in c++ 11/14 with Opencv and Qt </p><dl class="section author"><dt>Author</dt><dd>Mohamed Khaled (icraus) </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>5.0 <br />
+ Project page: <a href="https://github.com/Icraus/Object-Detector">https://github.com/Icraus/Object-Detector</a></dd></dl>
+<h3>Features:</h3>
+<p>1- <b> Cross platform</b> <br />
+.linux <br />
+.windows <br />
+.android(todo Add Tests, add android_ios view) <br />
+.raspian (not Tested)</p>
+<p>2- <b> Can Be extended using Plugins</b> <br />
+Plugins are dynamically linked librarys loaded at run time The Object detector uses this feature for better detection See ObjectDetector::AddFilters</p>
+<p>3- <b>Performance:</b> the Imageprocessing library provides high performance as it uses c++ and qt so there is no run time overhead even when using plugins</p>
+<h3>Utility Frameworks provides</h3>
+<p>: <br />
+1- From cv::Mat to QImage Library <br />
+2- a Qt Designer widget Plugin For using Opencv Video Capture <br />
+3- SerialPort Tool For Debugging and testing Serial ports <br />
+4- SerialPort Model/View widget for loading serial ports <br />
+5- Image Filters Plugins used to extend Object Detector Functionality </p><dl class="section note"><dt>Note</dt><dd></dd>
+<dd>
+by default the library is linked as shared library but u can compile it for static compilation </dd>
+<dd>
+by default the project is compiled using c++14 but you can compile it using c++11 </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="dd/da0/todo.html#_todo000004">Todo:</a></b></dt><dd>: <br />
+1- add Cuda Support to provide parallel computing capilities <br />
+2- improved UI using QML <br />
+3- add Device interface to provide a unified api for device interactions like serial and bluetooth <br />
+4- migration to opencv Classifier for object tracking and detection </dd></dl>
+<p>The Core Part of this project is the ImageProcessors library </p><dl class="section see"><dt>See also</dt><dd>ImageProcessors <div class="image">
+<img src="test.png" alt="test.png" width="800" height="600"/>
+<div class="caption">
+Example</div></div>
+ </dd></dl>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

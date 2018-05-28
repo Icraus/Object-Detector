@@ -1,4 +1,4 @@
 <map id="Ui::MainWindow" name="Ui::MainWindow">
-<area shape="rect" id="node2" href="$df/dd7/class_ui___main_window.html" title="{Ui_MainWindow\n|+ centralWidget\l+ gridLayout_3\l+ label_3\l+ label_2\l+ gridLayout_2\l+ gridLayout\l+ pushButton_3\l+ vMaxSlider\l+ sMinSlider\l+ horizontalLayout\land 41 more...\l|+ setupUi()\l+ retranslateUi()\l}" alt="" coords="14,419,143,657"/>
+<area shape="rect" id="node2" href="$df/dd7/class_ui___main_window.html" title="{Ui_MainWindow\n|+ centralWidget\l+ gridLayout_3\l+ label_3\l+ label_2\l+ gridLayout_2\l+ gridLayout\l+ pushButton_3\l+ vMaxSlider\l+ sMinSlider\l+ horizontalLayout\land 42 more...\l|+ setupUi()\l+ retranslateUi()\l}" alt="" coords="14,419,143,657"/>
 <area shape="rect" id="node3" href="$d8/d01/class_c_v_video_capture.html" title="{CVVideoCapture\n||+ CVVideoCapture()\l+ ~CVVideoCapture()\l+ device()\l+ setDevice()\l+ currentFrame()\l+ setCurrentFrame()\l+ toImage()\l+ captureFrame()\l+ stop()\l+ start()\l+ changeDevice()\l}" alt="" coords="5,132,152,356"/>
 </map>

@@ -31,6 +31,7 @@ var class_ui___main_window =
     [ "pushButton_3", "df/dd7/class_ui___main_window.html#ac92cce0478c1025ace05ff4f8870bb1c", null ],
     [ "pushButton_4", "df/dd7/class_ui___main_window.html#acb0b2f196dc2224f287b67594233297f", null ],
     [ "pushButton_5", "df/dd7/class_ui___main_window.html#adafdad7c065227c5d14b68d75789cbe2", null ],
+    [ "pushButton_6", "df/dd7/class_ui___main_window.html#a3f20112708231220f3a4f567802130c5", null ],
     [ "radioButton", "df/dd7/class_ui___main_window.html#a61269a10bc342763a5a51a93a235944d", null ],
     [ "radioButton_2", "df/dd7/class_ui___main_window.html#aae7b8581981931a792a768767fbf755f", null ],
     [ "radioButton_3", "df/dd7/class_ui___main_window.html#a279bf4f986f7426fcede6af133190055", null ],

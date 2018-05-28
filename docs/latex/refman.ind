@@ -1,0 +1,191 @@
+\begin{theindex}
+
+  \item {Abstract\+Image\+Processor}
+    \subitem {Image\+Processor\+::\+Abstract\+Image\+Processor}, 
+		\hyperpage{18}
+  \item {add\+Filter}
+    \subitem {Image\+Processor\+::\+Object\+Detection}, \hyperpage{65}
+  \item {apply\+Filters}
+    \subitem {Image\+Processor\+::\+Object\+Detection}, \hyperpage{65}
+  \item {author}
+    \subitem {Circle\+Detector\+Plugins\+::\+Image\+Processor\+Plugin\+I\+Face}, 
+		\hyperpage{55}
+    \subitem {Morpho\+Logical\+::\+Erode\+Plugin}, \hyperpage{51}
+
+  \indexspace
+
+  \item {C\+V\+Video\+Capture}, \hyperpage{30}
+  \item {C\+V\+Video\+Capture\+Plugin}, \hyperpage{32}
+  \item {Circle\+Detecor\+Plugin\+Loader\+View}, \hyperpage{23}
+  \item {Circle\+Detector\+Plugin\+Model}, \hyperpage{25}
+  \item {Circle\+Detector\+Plugins}, \hyperpage{11}
+  \item {Circle\+Detector\+Plugins\+::\+Image\+Processor\+Plugin\+I\+Face}, 
+		\hyperpage{53}
+    \subitem {author}, \hyperpage{55}
+    \subitem {filter}, \hyperpage{55}
+    \subitem {filter\+Description}, \hyperpage{55}
+    \subitem {filter\+Name}, \hyperpage{55}
+  \item {circles\+Detected}
+    \subitem {Image\+Processor\+::\+Detect\+Circle}, \hyperpage{36}
+  \item {Color\+Detector\+Controller}, \hyperpage{27}
+
+  \indexspace
+
+  \item {detect\+Circle}
+    \subitem {Image\+Processor\+::\+Detect\+Circle}, \hyperpage{37}
+  \item {detect\+Color}
+    \subitem {Image\+Processor\+::\+Detect\+Color}, \hyperpage{41}
+  \item {Devices\+::\+Abstract\+Device\+Writer}, \hyperpage{14}
+  \item {Devices\+::\+Bluetooth\+Handler}, \hyperpage{21}
+  \item {Devices\+::\+Device\+Manager}, \hyperpage{44}
+  \item {Devices\+::\+Observable\+Data}, \hyperpage{70}
+  \item {Devices\+::\+Observer}, \hyperpage{72}
+  \item {Devices\+::\+Serial\+Handler}, \hyperpage{78}
+  \item {Devices\+::\+Subject}, \hyperpage{86}
+  \item {dst\+Changed}
+    \subitem {Image\+Processor\+::\+Abstract\+Image\+Processor}, 
+		\hyperpage{19}
+
+  \indexspace
+
+  \item {filter}
+    \subitem {Circle\+Detector\+Plugins\+::\+Image\+Processor\+Plugin\+I\+Face}, 
+		\hyperpage{55}
+    \subitem {Morpho\+Logical\+::\+Erode\+Plugin}, \hyperpage{52}
+  \item {filter\+Description}
+    \subitem {Circle\+Detector\+Plugins\+::\+Image\+Processor\+Plugin\+I\+Face}, 
+		\hyperpage{55}
+    \subitem {Morpho\+Logical\+::\+Erode\+Plugin}, \hyperpage{52}
+  \item {filter\+Name}
+    \subitem {Circle\+Detector\+Plugins\+::\+Image\+Processor\+Plugin\+I\+Face}, 
+		\hyperpage{55}
+    \subitem {Morpho\+Logical\+::\+Erode\+Plugin}, \hyperpage{52}
+
+  \indexspace
+
+  \item {get\+Cir\+Detector}
+    \subitem {Image\+Processor\+::\+Object\+Detection}, \hyperpage{66}
+  \item {get\+Circles}
+    \subitem {Image\+Processor\+::\+Object\+Detection}, \hyperpage{66}
+  \item {get\+Col\+Detector}
+    \subitem {Image\+Processor\+::\+Object\+Detection}, \hyperpage{66}
+  \item {get\+Dilation\+Size}
+    \subitem {Image\+Processor\+::\+Dilate}, \hyperpage{48}
+  \item {get\+Diler}
+    \subitem {Image\+Processor\+::\+Object\+Detection}, \hyperpage{67}
+  \item {get\+Dst}
+    \subitem {Image\+Processor\+::\+Abstract\+Image\+Processor}, 
+		\hyperpage{19}
+  \item {get\+Img}
+    \subitem {Image\+Processor\+::\+Abstract\+Image\+Processor}, 
+		\hyperpage{19}
+  \item {get\+Max\+Color}
+    \subitem {Image\+Processor\+::\+Detect\+Color}, \hyperpage{41}
+  \item {get\+Min\+Color}
+    \subitem {Image\+Processor\+::\+Detect\+Color}, \hyperpage{42}
+
+  \indexspace
+
+  \item {Image\+Processor}, \hyperpage{11}
+  \item {Image\+Processor\+::\+Abstract\+Image\+Processor}, 
+		\hyperpage{16}
+    \subitem {Abstract\+Image\+Processor}, \hyperpage{18}
+    \subitem {dst\+Changed}, \hyperpage{19}
+    \subitem {get\+Dst}, \hyperpage{19}
+    \subitem {get\+Img}, \hyperpage{19}
+    \subitem {process\+Image}, \hyperpage{20}
+    \subitem {set\+Dst}, \hyperpage{20}
+  \item {Image\+Processor\+::\+Detect\+Circle}, \hyperpage{34}
+    \subitem {circles\+Detected}, \hyperpage{36}
+    \subitem {detect\+Circle}, \hyperpage{37}
+    \subitem {process\+Image}, \hyperpage{37}
+    \subitem {set\+Min\+Dist}, \hyperpage{38}
+  \item {Image\+Processor\+::\+Detect\+Color}, \hyperpage{39}
+    \subitem {detect\+Color}, \hyperpage{41}
+    \subitem {get\+Max\+Color}, \hyperpage{41}
+    \subitem {get\+Min\+Color}, \hyperpage{42}
+    \subitem {process\+Image}, \hyperpage{42}
+    \subitem {set\+Max\+Color}, \hyperpage{42}
+    \subitem {set\+Min\+Color}, \hyperpage{43}
+  \item {Image\+Processor\+::\+Dilate}, \hyperpage{45}
+    \subitem {get\+Dilation\+Size}, \hyperpage{48}
+    \subitem {process\+Image}, \hyperpage{48}
+    \subitem {set\+Dilation\+Size}, \hyperpage{49}
+    \subitem {set\+Shap}, \hyperpage{49}
+  \item {Image\+Processor\+::\+Object\+Detection}, \hyperpage{62}
+    \subitem {add\+Filter}, \hyperpage{65}
+    \subitem {apply\+Filters}, \hyperpage{65}
+    \subitem {get\+Cir\+Detector}, \hyperpage{66}
+    \subitem {get\+Circles}, \hyperpage{66}
+    \subitem {get\+Col\+Detector}, \hyperpage{66}
+    \subitem {get\+Diler}, \hyperpage{67}
+    \subitem {Object\+Detection}, \hyperpage{65}
+    \subitem {process\+Image}, \hyperpage{67}
+    \subitem {set\+Cir\+Detector}, \hyperpage{67}
+    \subitem {set\+Diler}, \hyperpage{68}
+  \item {Image\+Processor\+::\+Object\+Detector\+Builder}, 
+		\hyperpage{69}
+  \item {Image\+Processor\+Test}, \hyperpage{56}
+
+  \indexspace
+
+  \item {Main\+Window}, \hyperpage{58}
+  \item {Morpho\+Logical\+::\+Erode\+Plugin}, \hyperpage{50}
+    \subitem {author}, \hyperpage{51}
+    \subitem {filter}, \hyperpage{52}
+    \subitem {filter\+Description}, \hyperpage{52}
+    \subitem {filter\+Name}, \hyperpage{52}
+
+  \indexspace
+
+  \item {Object\+Detection}
+    \subitem {Image\+Processor\+::\+Object\+Detection}, \hyperpage{65}
+  \item {Observer\+Impl}, \hyperpage{74}
+
+  \indexspace
+
+  \item {Process\+Handler}, \hyperpage{76}
+  \item {process\+Image}
+    \subitem {Image\+Processor\+::\+Abstract\+Image\+Processor}, 
+		\hyperpage{20}
+    \subitem {Image\+Processor\+::\+Detect\+Circle}, \hyperpage{37}
+    \subitem {Image\+Processor\+::\+Detect\+Color}, \hyperpage{42}
+    \subitem {Image\+Processor\+::\+Dilate}, \hyperpage{48}
+    \subitem {Image\+Processor\+::\+Object\+Detection}, \hyperpage{67}
+
+  \indexspace
+
+  \item {Serial\+Main\+Window}, \hyperpage{80}
+  \item {Serial\+Port\+Model}, \hyperpage{82}
+  \item {set\+Cir\+Detector}
+    \subitem {Image\+Processor\+::\+Object\+Detection}, \hyperpage{67}
+  \item {set\+Dilation\+Size}
+    \subitem {Image\+Processor\+::\+Dilate}, \hyperpage{49}
+  \item {set\+Diler}
+    \subitem {Image\+Processor\+::\+Object\+Detection}, \hyperpage{68}
+  \item {set\+Dst}
+    \subitem {Image\+Processor\+::\+Abstract\+Image\+Processor}, 
+		\hyperpage{20}
+  \item {set\+Max\+Color}
+    \subitem {Image\+Processor\+::\+Detect\+Color}, \hyperpage{42}
+  \item {set\+Min\+Color}
+    \subitem {Image\+Processor\+::\+Detect\+Color}, \hyperpage{43}
+  \item {set\+Min\+Dist}
+    \subitem {Image\+Processor\+::\+Detect\+Circle}, \hyperpage{38}
+  \item {set\+Shap}
+    \subitem {Image\+Processor\+::\+Dilate}, \hyperpage{49}
+  \item {Subject\+Impl}, \hyperpage{88}
+
+  \indexspace
+
+  \item {Test\+Observer\+Subject\+Test}, \hyperpage{90}
+  \item {Test\+Work}, \hyperpage{91}
+
+  \indexspace
+
+  \item {Ui\+::\+Main\+Window}, \hyperpage{60}
+  \item {Ui\+\_\+\+Main\+Window}, \hyperpage{92}
+  \item {Utilities\+::\+Serial\+Port\+Model}, \hyperpage{84}
+  \item {Utilities\+::\+Utils}, \hyperpage{95}
+
+\end{theindex}

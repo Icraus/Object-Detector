@@ -133,7 +133,7 @@ void MainWindow::openPluginWindw()
 
 void MainWindow::on_pushButton_6_clicked()
 {
-    pluginPath = QFileDialog::getExistingDirectory(this, "Plugin Path", QDir::currentPath() ,QFileDialog::ShowDirsOnly
+    pluginPath = QFileDialog::getExistingDirectory(this, "Plugin Path", QDir::currentPath(), QFileDialog::ShowDirsOnly
                                                    | QFileDialog::DontResolveSymlinks);
 
 }

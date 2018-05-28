@@ -10,7 +10,9 @@
   <h4>OPENCV_INCLUDE = //Include Path of opencv header files</h4>
   <h4>OPENCV_MINGW_PATH = //Mingw Build Directory</h4>
   <h4>OPENCV_MSVC_PATH = //MSVC Build Directory</h4>
-  
+### run qmake win32-g++  or qmake win32-msvc2015  for win or qmake linux-g++ for linux
+### run make for linux  mingw32_make or jom for win
+### make install
 Don't Forget add Opencv/$$Complier/Bin to $Path
 
 For static Build use Qt static Build (u can get it from <a href="https://www.npcglib.org/~stathis/blog/precompiled-qt4-qt5" target="_blank">here</a> ) and static Libraries From Opencv for MSCV 13
@@ -23,3 +25,4 @@ For static Build use Qt static Build (u can get it from <a href="https://www.npc
     <h4>4- opencv 3 for android sdk</h4>  
 <h3>Known Issues: </h3>
 	<h4>Due to Opencv 3.0 on android we can't use Camera Because Opencv dropped Support For Android Camera Instead Use version 2.x you could use QtCamera Module</h4>	
+	
